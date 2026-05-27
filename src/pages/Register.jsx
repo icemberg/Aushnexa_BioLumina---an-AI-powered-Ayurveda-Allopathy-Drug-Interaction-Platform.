@@ -46,21 +46,13 @@ export default function Register() {
           </div>
         )}
 
-        {/* Multi-step Indicator */}
-        <div className="flex items-center gap-3 mb-6 w-full max-w-sm">
-
-          <div className="flex-1 h-1 rounded-full progress-gradient shadow-[0_0_8px_rgba(207,188,255,0.4)]"></div>
-          <div className="flex-1 h-1 rounded-full bg-surface-container-highest"></div>
-          <span className="font-technical-sm text-xs text-surface-tint ml-2">Step 1/2</span>
-        </div>
-
-        <form className="flex flex-col gap-4 w-full max-w-md" onSubmit={handleSubmit}>
-          <div className="flex flex-col gap-2">
+        <form className="flex flex-col gap-3 w-full max-w-md" onSubmit={handleSubmit}>
+          <div className="flex flex-col gap-1">
             <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider" htmlFor="fullName">Full Name</label>
             <div className="relative">
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">person</span>
               <input
-                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2.5 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
+                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
                 id="fullName"
                 placeholder="Dr. Jane Doe"
                 type="text"
@@ -71,12 +63,12 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider" htmlFor="email">Secure Email</label>
             <div className="relative">
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">mail</span>
               <input
-                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2.5 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
+                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
                 id="email"
                 placeholder="user@institute.edu"
                 type="email"
@@ -87,12 +79,12 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider" htmlFor="password">Passphrase</label>
             <div className="relative">
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">lock</span>
               <input
-                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2.5 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
+                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
                 id="password"
                 placeholder="Minimum 8 characters"
                 type="password"
@@ -104,12 +96,12 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider" htmlFor="affiliation">Clinical Affiliation</label>
             <div className="relative">
               <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">account_balance</span>
               <input
-                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2.5 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
+                className="w-full bg-surface-container border border-outline-variant rounded-lg py-2 pl-9 pr-4 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all placeholder:text-outline/50 font-body-md text-sm"
                 id="affiliation"
                 placeholder="e.g. Genesis Labs"
                 type="text"
@@ -119,18 +111,18 @@ export default function Register() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider">Classification Role</label>
-            <div className="grid grid-cols-2 gap-3 mt-1">
+            <div className="grid grid-cols-2 gap-2 mt-1">
               {[
                 { id: 'PATIENT', label: 'Patient', icon: 'person' },
                 { id: 'CLINICIAN', label: 'Clinician', icon: 'stethoscope' },
                 { id: 'PHARMACIST', label: 'Pharmacist', icon: 'local_pharmacy' },
                 { id: 'RESEARCHER', label: 'Researcher', icon: 'science' },
               ].map((r) => (
-                <label 
-                  key={r.id} 
-                  className={`flex items-center gap-2 p-3 rounded-lg border cursor-pointer transition-colors ${role === r.id ? 'border-primary bg-primary/10 text-primary' : 'border-outline-variant/50 bg-surface-container hover:bg-surface-container-high text-on-surface-variant'}`}
+                <label
+                  key={r.id}
+                  className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-colors ${role === r.id ? 'border-primary bg-primary/10 text-primary' : 'border-outline-variant/50 bg-surface-container hover:bg-surface-container-high text-on-surface-variant'}`}
                 >
                   <input
                     type="radio"

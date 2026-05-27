@@ -7,10 +7,10 @@ export default function Footer() {
         <div className="md:col-span-1 flex flex-col gap-6">
           <span className="font-headline-md text-headline-md font-bold text-on-surface">Aushnexa BioLumina</span>
           <p className="font-technical-sm text-technical-sm text-on-surface-variant max-w-xs">
-            © 2024 Aushnexa BioLumina. For clinical research use only. BioLumina AI protocols are calibrated to international pharmacopeia standards. Not a substitute for professional medical advice.
+            © 2026 Aushnexa BioLumina. For clinical research use only. BioLumina AI protocols are calibrated to international pharmacopeia standards. Not a substitute for professional medical advice.
           </p>
         </div>
-        
+
         <div className="md:col-span-3 flex flex-wrap gap-x-12 gap-y-6 md:justify-end">
           <div className="flex flex-col gap-4">
             <span className="font-label-caps text-label-caps text-on-surface opacity-50">LEGAL & ETHICS</span>
