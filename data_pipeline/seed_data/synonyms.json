@@ -1,0 +1,6210 @@
+﻿{
+  "hypericum": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "hierba de san juan": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "hypericum perforatum": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "hipérico": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "corazoncillo": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "st. john's wort": {
+    "canonical": "Hierba de San Juan",
+    "type": "herb"
+  },
+  "curcuma": {
+    "canonical": "Cúrcuma / Curcumina",
+    "type": "herb"
+  },
+  "cúrcuma / curcumina": {
+    "canonical": "Cúrcuma / Curcumina",
+    "type": "herb"
+  },
+  "curcuma longa": {
+    "canonical": "Cúrcuma / Curcumina",
+    "type": "herb"
+  },
+  "turmeric": {
+    "canonical": "Cúrcuma / Curcumina",
+    "type": "herb"
+  },
+  "palillo": {
+    "canonical": "Cúrcuma / Curcumina",
+    "type": "herb"
+  },
+  "ginkgo": {
+    "canonical": "Ginkgo",
+    "type": "herb"
+  },
+  "ginkgo biloba": {
+    "canonical": "Ginkgo",
+    "type": "herb"
+  },
+  "árbol de los cuarenta escudos": {
+    "canonical": "Ginkgo",
+    "type": "herb"
+  },
+  "ajo": {
+    "canonical": "Ajo",
+    "type": "herb"
+  },
+  "allium sativum": {
+    "canonical": "Ajo",
+    "type": "herb"
+  },
+  "garlic": {
+    "canonical": "Ajo",
+    "type": "herb"
+  },
+  "ginseng": {
+    "canonical": "Ginseng",
+    "type": "herb"
+  },
+  "panax ginseng": {
+    "canonical": "Ginseng",
+    "type": "herb"
+  },
+  "ginseng coreano": {
+    "canonical": "Ginseng",
+    "type": "herb"
+  },
+  "ginseng asiático": {
+    "canonical": "Ginseng",
+    "type": "herb"
+  },
+  "korean ginseng": {
+    "canonical": "Ginseng",
+    "type": "herb"
+  },
+  "valeriana": {
+    "canonical": "Valeriana",
+    "type": "herb"
+  },
+  "valeriana officinalis": {
+    "canonical": "Valeriana",
+    "type": "herb"
+  },
+  "valerian": {
+    "canonical": "Valeriana",
+    "type": "herb"
+  },
+  "equinacea": {
+    "canonical": "Equinácea",
+    "type": "herb"
+  },
+  "equinácea": {
+    "canonical": "Equinácea",
+    "type": "herb"
+  },
+  "echinacea purpurea": {
+    "canonical": "Equinácea",
+    "type": "herb"
+  },
+  "echinacea": {
+    "canonical": "Equinácea",
+    "type": "herb"
+  },
+  "kava": {
+    "canonical": "Kava",
+    "type": "herb"
+  },
+  "piper methysticum": {
+    "canonical": "Kava",
+    "type": "herb"
+  },
+  "kava-kava": {
+    "canonical": "Kava",
+    "type": "herb"
+  },
+  "jengibre": {
+    "canonical": "Jengibre",
+    "type": "herb"
+  },
+  "zingiber officinale": {
+    "canonical": "Jengibre",
+    "type": "herb"
+  },
+  "ginger": {
+    "canonical": "Jengibre",
+    "type": "herb"
+  },
+  "kión": {
+    "canonical": "Jengibre",
+    "type": "herb"
+  },
+  "berberina": {
+    "canonical": "Berberina",
+    "type": "herb"
+  },
+  "berberis vulgaris / coptis chinensis": {
+    "canonical": "Berberina",
+    "type": "herb"
+  },
+  "berberine": {
+    "canonical": "Berberina",
+    "type": "herb"
+  },
+  "una_de_gato": {
+    "canonical": "Uña de Gato",
+    "type": "herb"
+  },
+  "uña de gato": {
+    "canonical": "Uña de Gato",
+    "type": "herb"
+  },
+  "uncaria tomentosa": {
+    "canonical": "Uña de Gato",
+    "type": "herb"
+  },
+  "cat's claw": {
+    "canonical": "Uña de Gato",
+    "type": "herb"
+  },
+  "ayahuasca": {
+    "canonical": "Ayahuasca",
+    "type": "herb"
+  },
+  "banisteriopsis caapi + psychotria viridis": {
+    "canonical": "Ayahuasca",
+    "type": "herb"
+  },
+  "yagé": {
+    "canonical": "Ayahuasca",
+    "type": "herb"
+  },
+  "chanca_piedra": {
+    "canonical": "Chanca Piedra",
+    "type": "herb"
+  },
+  "chanca piedra": {
+    "canonical": "Chanca Piedra",
+    "type": "herb"
+  },
+  "phyllanthus niruri": {
+    "canonical": "Chanca Piedra",
+    "type": "herb"
+  },
+  "stone breaker": {
+    "canonical": "Chanca Piedra",
+    "type": "herb"
+  },
+  "quebra pedra": {
+    "canonical": "Chanca Piedra",
+    "type": "herb"
+  },
+  "sangre_de_drago": {
+    "canonical": "Sangre de Drago",
+    "type": "herb"
+  },
+  "sangre de drago": {
+    "canonical": "Sangre de Drago",
+    "type": "herb"
+  },
+  "croton lechleri": {
+    "canonical": "Sangre de Drago",
+    "type": "herb"
+  },
+  "dragon's blood": {
+    "canonical": "Sangre de Drago",
+    "type": "herb"
+  },
+  "sangre de grado": {
+    "canonical": "Sangre de Drago",
+    "type": "herb"
+  },
+  "saw_palmetto": {
+    "canonical": "Saw Palmetto",
+    "type": "herb"
+  },
+  "saw palmetto": {
+    "canonical": "Saw Palmetto",
+    "type": "herb"
+  },
+  "serenoa repens": {
+    "canonical": "Saw Palmetto",
+    "type": "herb"
+  },
+  "palma enana americana": {
+    "canonical": "Saw Palmetto",
+    "type": "herb"
+  },
+  "sabal": {
+    "canonical": "Saw Palmetto",
+    "type": "herb"
+  },
+  "te_verde": {
+    "canonical": "Té verde (EGCG)",
+    "type": "herb"
+  },
+  "té verde (egcg)": {
+    "canonical": "Té verde (EGCG)",
+    "type": "herb"
+  },
+  "camellia sinensis": {
+    "canonical": "Té verde (EGCG)",
+    "type": "herb"
+  },
+  "green tea": {
+    "canonical": "Té verde (EGCG)",
+    "type": "herb"
+  },
+  "matcha": {
+    "canonical": "Té verde (EGCG)",
+    "type": "herb"
+  },
+  "hoja_de_coca": {
+    "canonical": "Hoja de Coca",
+    "type": "herb"
+  },
+  "hoja de coca": {
+    "canonical": "Hoja de Coca",
+    "type": "herb"
+  },
+  "erythroxylum coca": {
+    "canonical": "Coca (mate)",
+    "type": "herb"
+  },
+  "coca leaf": {
+    "canonical": "Hoja de Coca",
+    "type": "herb"
+  },
+  "guayusa": {
+    "canonical": "Guayusa",
+    "type": "herb"
+  },
+  "ilex guayusa": {
+    "canonical": "Guayusa",
+    "type": "herb"
+  },
+  "guarana": {
+    "canonical": "Guaraná",
+    "type": "herb"
+  },
+  "guaraná": {
+    "canonical": "Guaraná",
+    "type": "herb"
+  },
+  "paullinia cupana": {
+    "canonical": "Guaraná",
+    "type": "herb"
+  },
+  "maca": {
+    "canonical": "Maca",
+    "type": "herb"
+  },
+  "lepidium meyenii": {
+    "canonical": "Maca",
+    "type": "herb"
+  },
+  "maca peruana": {
+    "canonical": "Maca",
+    "type": "herb"
+  },
+  "maca andina": {
+    "canonical": "Maca",
+    "type": "herb"
+  },
+  "peruvian maca": {
+    "canonical": "Maca",
+    "type": "herb"
+  },
+  "melon_amargo": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "melón amargo": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "momordica charantia": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "bitter melon": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "cundeamor": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "balsamina": {
+    "canonical": "Melón Amargo",
+    "type": "herb"
+  },
+  "achiote": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "achiote / bixina": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "bixa orellana": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "annatto": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "bija": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "urucú": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "onoto": {
+    "canonical": "Achiote / Bixina",
+    "type": "herb"
+  },
+  "sacha_inchi": {
+    "canonical": "Sacha Inchi",
+    "type": "herb"
+  },
+  "sacha inchi": {
+    "canonical": "Sacha Inchi",
+    "type": "herb"
+  },
+  "plukenetia volubilis": {
+    "canonical": "Sacha Inchi",
+    "type": "herb"
+  },
+  "maní del inca": {
+    "canonical": "Sacha Inchi",
+    "type": "herb"
+  },
+  "inca peanut": {
+    "canonical": "Sacha Inchi",
+    "type": "herb"
+  },
+  "chiric_sanango": {
+    "canonical": "Chiric Sanango",
+    "type": "herb"
+  },
+  "chiric sanango": {
+    "canonical": "Chiric Sanango",
+    "type": "herb"
+  },
+  "brunfelsia grandiflora": {
+    "canonical": "Chiric Sanango",
+    "type": "herb"
+  },
+  "chiricaspi": {
+    "canonical": "Chiric Sanango",
+    "type": "herb"
+  },
+  "manacá": {
+    "canonical": "Chiric Sanango",
+    "type": "herb"
+  },
+  "aguaymanto": {
+    "canonical": "Aguaymanto",
+    "type": "herb"
+  },
+  "physalis peruviana": {
+    "canonical": "Aguaymanto",
+    "type": "herb"
+  },
+  "uchuva": {
+    "canonical": "Aguaymanto",
+    "type": "herb"
+  },
+  "golden berry": {
+    "canonical": "Aguaymanto",
+    "type": "herb"
+  },
+  "cape gooseberry": {
+    "canonical": "Aguaymanto",
+    "type": "herb"
+  },
+  "camu_camu": {
+    "canonical": "Camu Camu",
+    "type": "herb"
+  },
+  "camu camu": {
+    "canonical": "Camu Camu",
+    "type": "herb"
+  },
+  "myrciaria dubia": {
+    "canonical": "Camu Camu",
+    "type": "herb"
+  },
+  "camu-camu": {
+    "canonical": "Camu Camu",
+    "type": "herb"
+  },
+  "graviola": {
+    "canonical": "Graviola",
+    "type": "herb"
+  },
+  "annona muricata": {
+    "canonical": "Graviola",
+    "type": "herb"
+  },
+  "guanábana": {
+    "canonical": "Graviola",
+    "type": "herb"
+  },
+  "soursop": {
+    "canonical": "Graviola",
+    "type": "herb"
+  },
+  "espino_blanco": {
+    "canonical": "Espino Blanco",
+    "type": "herb"
+  },
+  "espino blanco": {
+    "canonical": "Espino Blanco",
+    "type": "herb"
+  },
+  "crataegus monogyna": {
+    "canonical": "Espino Blanco",
+    "type": "herb"
+  },
+  "hawthorn": {
+    "canonical": "Espino Blanco",
+    "type": "herb"
+  },
+  "majuelo": {
+    "canonical": "Espino Blanco",
+    "type": "herb"
+  },
+  "hercampuri": {
+    "canonical": "Hercampuri",
+    "type": "herb"
+  },
+  "gentianella alborosea": {
+    "canonical": "Hercampuri",
+    "type": "herb"
+  },
+  "hircampuri": {
+    "canonical": "Hercampuri",
+    "type": "herb"
+  },
+  "té amargo": {
+    "canonical": "Hercampuri",
+    "type": "herb"
+  },
+  "carqueja": {
+    "canonical": "Carqueja",
+    "type": "herb"
+  },
+  "baccharis trimera": {
+    "canonical": "Carqueja",
+    "type": "herb"
+  },
+  "carqueja amarga": {
+    "canonical": "Carqueja",
+    "type": "herb"
+  },
+  "manayupa": {
+    "canonical": "Manayupa",
+    "type": "herb"
+  },
+  "desmodium molliculum": {
+    "canonical": "Manayupa",
+    "type": "herb"
+  },
+  "pata de perro": {
+    "canonical": "Manayupa",
+    "type": "herb"
+  },
+  "amor seco": {
+    "canonical": "Manayupa",
+    "type": "herb"
+  },
+  "muna": {
+    "canonical": "Muña",
+    "type": "herb"
+  },
+  "muña": {
+    "canonical": "Muña",
+    "type": "herb"
+  },
+  "minthostachys mollis": {
+    "canonical": "Muña",
+    "type": "herb"
+  },
+  "muña andina": {
+    "canonical": "Muña",
+    "type": "herb"
+  },
+  "tipo": {
+    "canonical": "Muña",
+    "type": "herb"
+  },
+  "pasuchaca": {
+    "canonical": "Pasuchaca",
+    "type": "herb"
+  },
+  "geranium dielsianum": {
+    "canonical": "Pasuchaca",
+    "type": "herb"
+  },
+  "pasuchaka": {
+    "canonical": "Pasuchaca",
+    "type": "herb"
+  },
+  "arandano": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "arándano": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "vaccinium myrtillus": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "bilberry": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "blueberry": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "mirtilo": {
+    "canonical": "Arándano",
+    "type": "herb"
+  },
+  "tarwi": {
+    "canonical": "Tarwi / Chocho",
+    "type": "herb"
+  },
+  "tarwi / chocho": {
+    "canonical": "Tarwi / Chocho",
+    "type": "herb"
+  },
+  "lupinus mutabilis": {
+    "canonical": "Tarwi / Chocho",
+    "type": "herb"
+  },
+  "lupino andino": {
+    "canonical": "Tarwi / Chocho",
+    "type": "herb"
+  },
+  "chocho": {
+    "canonical": "Tarwi / Chocho",
+    "type": "herb"
+  },
+  "ashwagandha": {
+    "canonical": "Ashwagandha",
+    "type": "herb"
+  },
+  "withania somnifera": {
+    "canonical": "Ashwagandha",
+    "type": "herb"
+  },
+  "ginseng indio": {
+    "canonical": "Ashwagandha",
+    "type": "herb"
+  },
+  "bufera": {
+    "canonical": "Ashwagandha",
+    "type": "herb"
+  },
+  "indian ginseng": {
+    "canonical": "Ashwagandha",
+    "type": "herb"
+  },
+  "rhodiola": {
+    "canonical": "Rhodiola",
+    "type": "herb"
+  },
+  "rhodiola rosea": {
+    "canonical": "Rhodiola",
+    "type": "herb"
+  },
+  "raíz de oro": {
+    "canonical": "Rhodiola",
+    "type": "herb"
+  },
+  "golden root": {
+    "canonical": "Rhodiola",
+    "type": "herb"
+  },
+  "roseroot": {
+    "canonical": "Rhodiola",
+    "type": "herb"
+  },
+  "cardo_mariano": {
+    "canonical": "Cardo Mariano",
+    "type": "herb"
+  },
+  "cardo mariano": {
+    "canonical": "Cardo Mariano",
+    "type": "herb"
+  },
+  "silybum marianum": {
+    "canonical": "Cardo Mariano",
+    "type": "herb"
+  },
+  "milk thistle": {
+    "canonical": "Cardo Mariano",
+    "type": "herb"
+  },
+  "silimarina": {
+    "canonical": "Cardo Mariano",
+    "type": "herb"
+  },
+  "cimicifuga": {
+    "canonical": "Cimicífuga",
+    "type": "herb"
+  },
+  "cimicífuga": {
+    "canonical": "Cimicífuga",
+    "type": "herb"
+  },
+  "actaea racemosa": {
+    "canonical": "Cimicífuga",
+    "type": "herb"
+  },
+  "black cohosh": {
+    "canonical": "Cimicífuga",
+    "type": "herb"
+  },
+  "cohosh negro": {
+    "canonical": "Cimicífuga",
+    "type": "herb"
+  },
+  "dong_quai": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "dong quai": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "angelica sinensis": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "angélica china": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "dang gui": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "female ginseng": {
+    "canonical": "Dong Quai",
+    "type": "herb"
+  },
+  "matricaria": {
+    "canonical": "Matricaria",
+    "type": "herb"
+  },
+  "tanacetum parthenium": {
+    "canonical": "Matricaria",
+    "type": "herb"
+  },
+  "feverfew": {
+    "canonical": "Matricaria",
+    "type": "herb"
+  },
+  "altamisa": {
+    "canonical": "Matricaria",
+    "type": "herb"
+  },
+  "onagra": {
+    "canonical": "Onagra",
+    "type": "herb"
+  },
+  "oenothera biennis": {
+    "canonical": "Onagra",
+    "type": "herb"
+  },
+  "evening primrose": {
+    "canonical": "Onagra",
+    "type": "herb"
+  },
+  "aceite de onagra": {
+    "canonical": "Onagra",
+    "type": "herb"
+  },
+  "romero": {
+    "canonical": "Romero",
+    "type": "herb"
+  },
+  "rosmarinus officinalis": {
+    "canonical": "Romero",
+    "type": "herb"
+  },
+  "rosemary": {
+    "canonical": "Romero",
+    "type": "herb"
+  },
+  "ácido rosmarínico": {
+    "canonical": "Romero",
+    "type": "herb"
+  },
+  "salvia": {
+    "canonical": "Salvia",
+    "type": "herb"
+  },
+  "salvia officinalis": {
+    "canonical": "Salvia",
+    "type": "herb"
+  },
+  "sage": {
+    "canonical": "Salvia",
+    "type": "herb"
+  },
+  "salvia común": {
+    "canonical": "Salvia",
+    "type": "herb"
+  },
+  "pasiflora": {
+    "canonical": "Pasiflora",
+    "type": "herb"
+  },
+  "passiflora incarnata": {
+    "canonical": "Pasiflora",
+    "type": "herb"
+  },
+  "passion flower": {
+    "canonical": "Pasiflora",
+    "type": "herb"
+  },
+  "maracuyá silvestre": {
+    "canonical": "Pasiflora",
+    "type": "herb"
+  },
+  "flor de la pasión": {
+    "canonical": "Pasiflora",
+    "type": "herb"
+  },
+  "regaliz": {
+    "canonical": "Regaliz",
+    "type": "herb"
+  },
+  "glycyrrhiza glabra": {
+    "canonical": "Regaliz",
+    "type": "herb"
+  },
+  "licorice": {
+    "canonical": "Regaliz",
+    "type": "herb"
+  },
+  "orozuz": {
+    "canonical": "Regaliz",
+    "type": "herb"
+  },
+  "palo dulce": {
+    "canonical": "Regaliz",
+    "type": "herb"
+  },
+  "diente_de_leon": {
+    "canonical": "Diente de León",
+    "type": "herb"
+  },
+  "diente de león": {
+    "canonical": "Diente de León",
+    "type": "herb"
+  },
+  "taraxacum officinale": {
+    "canonical": "Diente de León",
+    "type": "herb"
+  },
+  "dandelion": {
+    "canonical": "Diente de León",
+    "type": "herb"
+  },
+  "amargón": {
+    "canonical": "Diente de León",
+    "type": "herb"
+  },
+  "aloe_vera": {
+    "canonical": "Aloe Vera",
+    "type": "herb"
+  },
+  "aloe vera": {
+    "canonical": "Aloe Vera",
+    "type": "herb"
+  },
+  "aloe barbadensis miller": {
+    "canonical": "Aloe Vera",
+    "type": "herb"
+  },
+  "sábila": {
+    "canonical": "Aloe Vera",
+    "type": "herb"
+  },
+  "aloe": {
+    "canonical": "Aloe Vera",
+    "type": "herb"
+  },
+  "canela": {
+    "canonical": "Canela",
+    "type": "herb"
+  },
+  "cinnamomum verum": {
+    "canonical": "Canela",
+    "type": "herb"
+  },
+  "cinnamon": {
+    "canonical": "Canela",
+    "type": "herb"
+  },
+  "canela de ceilán": {
+    "canonical": "Canela",
+    "type": "herb"
+  },
+  "fenogreco": {
+    "canonical": "Fenogreco",
+    "type": "herb"
+  },
+  "trigonella foenum-graecum": {
+    "canonical": "Fenogreco",
+    "type": "herb"
+  },
+  "fenugreek": {
+    "canonical": "Fenogreco",
+    "type": "herb"
+  },
+  "alholva": {
+    "canonical": "Fenogreco",
+    "type": "herb"
+  },
+  "lino": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "linaza": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "linum usitatissimum": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "flax": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "linseed": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "semilla de lino": {
+    "canonical": "Linaza",
+    "type": "herb"
+  },
+  "ortiga": {
+    "canonical": "Ortiga",
+    "type": "herb"
+  },
+  "urtica dioica": {
+    "canonical": "Ortiga",
+    "type": "herb"
+  },
+  "nettle": {
+    "canonical": "Ortiga",
+    "type": "herb"
+  },
+  "stinging nettle": {
+    "canonical": "Ortiga",
+    "type": "herb"
+  },
+  "saw_palmetto_2": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "saúco": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "sambucus nigra": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "elderberry": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "elder": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "sauco": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "hiperico_andino": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "boldo": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "peumus boldus": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "boldo chileno": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "cascara_sagrada": {
+    "canonical": "Cáscara Sagrada",
+    "type": "herb"
+  },
+  "cáscara sagrada": {
+    "canonical": "Cáscara Sagrada",
+    "type": "herb"
+  },
+  "rhamnus purshiana": {
+    "canonical": "Cáscara Sagrada",
+    "type": "herb"
+  },
+  "cascara": {
+    "canonical": "Cáscara Sagrada",
+    "type": "herb"
+  },
+  "sacred bark": {
+    "canonical": "Cáscara Sagrada",
+    "type": "herb"
+  },
+  "senna": {
+    "canonical": "Sen",
+    "type": "herb"
+  },
+  "sen": {
+    "canonical": "Sen",
+    "type": "herb"
+  },
+  "senna alexandrina": {
+    "canonical": "Sen",
+    "type": "herb"
+  },
+  "casia": {
+    "canonical": "Sen",
+    "type": "herb"
+  },
+  "hoja de sen": {
+    "canonical": "Sen",
+    "type": "herb"
+  },
+  "pygeum": {
+    "canonical": "Pygeum",
+    "type": "herb"
+  },
+  "prunus africana": {
+    "canonical": "Pygeum",
+    "type": "herb"
+  },
+  "ciruelo africano": {
+    "canonical": "Pygeum",
+    "type": "herb"
+  },
+  "pygeum africanum": {
+    "canonical": "Pygeum",
+    "type": "herb"
+  },
+  "tribulus": {
+    "canonical": "Tribulus",
+    "type": "herb"
+  },
+  "tribulus terrestris": {
+    "canonical": "Tribulus",
+    "type": "herb"
+  },
+  "abrojo": {
+    "canonical": "Tribulus",
+    "type": "herb"
+  },
+  "puncture vine": {
+    "canonical": "Tribulus",
+    "type": "herb"
+  },
+  "astragalo": {
+    "canonical": "Astrágalo",
+    "type": "herb"
+  },
+  "astrágalo": {
+    "canonical": "Astrágalo",
+    "type": "herb"
+  },
+  "astragalus membranaceus": {
+    "canonical": "Astrágalo",
+    "type": "herb"
+  },
+  "astragalus": {
+    "canonical": "Astrágalo",
+    "type": "herb"
+  },
+  "huang qi": {
+    "canonical": "Astrágalo",
+    "type": "herb"
+  },
+  "schisandra": {
+    "canonical": "Schisandra",
+    "type": "herb"
+  },
+  "schisandra chinensis": {
+    "canonical": "Schisandra",
+    "type": "herb"
+  },
+  "baya de los cinco sabores": {
+    "canonical": "Schisandra",
+    "type": "herb"
+  },
+  "wu wei zi": {
+    "canonical": "Schisandra",
+    "type": "herb"
+  },
+  "cordyceps": {
+    "canonical": "Cordyceps",
+    "type": "herb"
+  },
+  "cordyceps sinensis": {
+    "canonical": "Cordyceps",
+    "type": "herb"
+  },
+  "hongo cordyceps": {
+    "canonical": "Cordyceps",
+    "type": "herb"
+  },
+  "yartsa gunbu": {
+    "canonical": "Cordyceps",
+    "type": "herb"
+  },
+  "reishi": {
+    "canonical": "Reishi",
+    "type": "herb"
+  },
+  "ganoderma lucidum": {
+    "canonical": "Reishi",
+    "type": "herb"
+  },
+  "lingzhi": {
+    "canonical": "Reishi",
+    "type": "herb"
+  },
+  "hongo reishi": {
+    "canonical": "Reishi",
+    "type": "herb"
+  },
+  "melisa": {
+    "canonical": "Melisa",
+    "type": "herb"
+  },
+  "melissa officinalis": {
+    "canonical": "Toronjil",
+    "type": "herb"
+  },
+  "lemon balm": {
+    "canonical": "Toronjil",
+    "type": "herb"
+  },
+  "toronjil": {
+    "canonical": "Toronjil",
+    "type": "herb"
+  },
+  "hierba luisa": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "gotu_kola": {
+    "canonical": "Gotu Kola",
+    "type": "herb"
+  },
+  "gotu kola": {
+    "canonical": "Gotu Kola",
+    "type": "herb"
+  },
+  "centella asiatica": {
+    "canonical": "Gotu Kola",
+    "type": "herb"
+  },
+  "centella asiática": {
+    "canonical": "Gotu Kola",
+    "type": "herb"
+  },
+  "hierba del tigre": {
+    "canonical": "Gotu Kola",
+    "type": "herb"
+  },
+  "noni": {
+    "canonical": "Noni",
+    "type": "herb"
+  },
+  "morinda citrifolia": {
+    "canonical": "Noni",
+    "type": "herb"
+  },
+  "mora de la india": {
+    "canonical": "Noni",
+    "type": "herb"
+  },
+  "indian mulberry": {
+    "canonical": "Noni",
+    "type": "herb"
+  },
+  "moringa": {
+    "canonical": "Moringa",
+    "type": "herb"
+  },
+  "moringa oleifera": {
+    "canonical": "Moringa",
+    "type": "herb"
+  },
+  "árbol milagroso": {
+    "canonical": "Moringa",
+    "type": "herb"
+  },
+  "drumstick tree": {
+    "canonical": "Moringa",
+    "type": "herb"
+  },
+  "chia": {
+    "canonical": "Chía",
+    "type": "herb"
+  },
+  "chía": {
+    "canonical": "Chía",
+    "type": "herb"
+  },
+  "salvia hispanica": {
+    "canonical": "Chía",
+    "type": "herb"
+  },
+  "chia seeds": {
+    "canonical": "Chía",
+    "type": "herb"
+  },
+  "semillas de chía": {
+    "canonical": "Chía",
+    "type": "herb"
+  },
+  "tilo": {
+    "canonical": "Tilo",
+    "type": "herb"
+  },
+  "tilia platyphyllos": {
+    "canonical": "Tilo",
+    "type": "herb"
+  },
+  "linden": {
+    "canonical": "Tilo",
+    "type": "herb"
+  },
+  "flor de tilo": {
+    "canonical": "Tilo",
+    "type": "herb"
+  },
+  "lime tree": {
+    "canonical": "Tilo",
+    "type": "herb"
+  },
+  "oregano": {
+    "canonical": "Orégano",
+    "type": "herb"
+  },
+  "orégano": {
+    "canonical": "Orégano",
+    "type": "herb"
+  },
+  "origanum vulgare": {
+    "canonical": "Orégano",
+    "type": "herb"
+  },
+  "oregano oil": {
+    "canonical": "Orégano",
+    "type": "herb"
+  },
+  "aceite de orégano": {
+    "canonical": "Orégano",
+    "type": "herb"
+  },
+  "tomillo": {
+    "canonical": "Tomillo",
+    "type": "herb"
+  },
+  "thymus vulgaris": {
+    "canonical": "Tomillo",
+    "type": "herb"
+  },
+  "thyme": {
+    "canonical": "Tomillo",
+    "type": "herb"
+  },
+  "timol": {
+    "canonical": "Tomillo",
+    "type": "herb"
+  },
+  "cola_de_caballo": {
+    "canonical": "Cola de Caballo",
+    "type": "herb"
+  },
+  "cola de caballo": {
+    "canonical": "Cola de Caballo",
+    "type": "herb"
+  },
+  "equisetum arvense": {
+    "canonical": "Cola de Caballo",
+    "type": "herb"
+  },
+  "horsetail": {
+    "canonical": "Cola de Caballo",
+    "type": "herb"
+  },
+  "equiseto": {
+    "canonical": "Cola de Caballo",
+    "type": "herb"
+  },
+  "hamamelis": {
+    "canonical": "Hamamelis",
+    "type": "herb"
+  },
+  "hamamelis virginiana": {
+    "canonical": "Hamamelis",
+    "type": "herb"
+  },
+  "witch hazel": {
+    "canonical": "Hamamelis",
+    "type": "herb"
+  },
+  "yacon": {
+    "canonical": "Yacón",
+    "type": "herb"
+  },
+  "yacón": {
+    "canonical": "Yacón",
+    "type": "herb"
+  },
+  "smallanthus sonchifolius": {
+    "canonical": "Yacón",
+    "type": "herb"
+  },
+  "yacón andino": {
+    "canonical": "Yacón",
+    "type": "herb"
+  },
+  "jícama del perú": {
+    "canonical": "Yacón",
+    "type": "herb"
+  },
+  "huamanpinta": {
+    "canonical": "Huamanpinta",
+    "type": "herb"
+  },
+  "chuquiraga spinosa": {
+    "canonical": "Huamanpinta",
+    "type": "herb"
+  },
+  "huamanpinta andina": {
+    "canonical": "Huamanpinta",
+    "type": "herb"
+  },
+  "matico": {
+    "canonical": "Matico",
+    "type": "herb"
+  },
+  "buddleja globosa": {
+    "canonical": "Matico",
+    "type": "herb"
+  },
+  "pañil": {
+    "canonical": "Matico",
+    "type": "herb"
+  },
+  "matico chileno": {
+    "canonical": "Matico",
+    "type": "herb"
+  },
+  "tara": {
+    "canonical": "Tara",
+    "type": "herb"
+  },
+  "caesalpinia spinosa": {
+    "canonical": "Tara",
+    "type": "herb"
+  },
+  "taya": {
+    "canonical": "Tara",
+    "type": "herb"
+  },
+  "guarango": {
+    "canonical": "Tara",
+    "type": "herb"
+  },
+  "stevia": {
+    "canonical": "Stevia",
+    "type": "herb"
+  },
+  "stevia rebaudiana": {
+    "canonical": "Stevia",
+    "type": "herb"
+  },
+  "estevia": {
+    "canonical": "Stevia",
+    "type": "herb"
+  },
+  "hierba dulce": {
+    "canonical": "Stevia",
+    "type": "herb"
+  },
+  "cat_de_vallesia": {
+    "canonical": "Verbena",
+    "type": "herb"
+  },
+  "verbena": {
+    "canonical": "Verbena",
+    "type": "herb"
+  },
+  "verbena officinalis": {
+    "canonical": "Verbena",
+    "type": "herb"
+  },
+  "hierba sagrada": {
+    "canonical": "Verbena",
+    "type": "herb"
+  },
+  "vervain": {
+    "canonical": "Verbena",
+    "type": "herb"
+  },
+  "chancapiedra_grande": {
+    "canonical": "Toronjil Cuyano",
+    "type": "herb"
+  },
+  "toronjil cuyano": {
+    "canonical": "Toronjil Cuyano",
+    "type": "herb"
+  },
+  "melissa": {
+    "canonical": "Toronjil Cuyano",
+    "type": "herb"
+  },
+  "acai": {
+    "canonical": "Açaí",
+    "type": "herb"
+  },
+  "açaí": {
+    "canonical": "Açaí",
+    "type": "herb"
+  },
+  "euterpe oleracea": {
+    "canonical": "Açaí",
+    "type": "herb"
+  },
+  "asaí": {
+    "canonical": "Açaí",
+    "type": "herb"
+  },
+  "acai berry": {
+    "canonical": "Açaí",
+    "type": "herb"
+  },
+  "llanten": {
+    "canonical": "Llantén",
+    "type": "herb"
+  },
+  "llantén": {
+    "canonical": "Llantén",
+    "type": "herb"
+  },
+  "plantago major": {
+    "canonical": "Llantén",
+    "type": "herb"
+  },
+  "plantain": {
+    "canonical": "Llantén",
+    "type": "herb"
+  },
+  "hierba del soldado": {
+    "canonical": "Llantén",
+    "type": "herb"
+  },
+  "hierba_buena": {
+    "canonical": "Hierbabuena",
+    "type": "herb"
+  },
+  "hierbabuena": {
+    "canonical": "Hierbabuena",
+    "type": "herb"
+  },
+  "mentha spicata": {
+    "canonical": "Hierbabuena",
+    "type": "herb"
+  },
+  "spearmint": {
+    "canonical": "Hierbabuena",
+    "type": "herb"
+  },
+  "menta verde": {
+    "canonical": "Hierbabuena",
+    "type": "herb"
+  },
+  "menta": {
+    "canonical": "Menta",
+    "type": "herb"
+  },
+  "mentha piperita": {
+    "canonical": "Menta",
+    "type": "herb"
+  },
+  "peppermint": {
+    "canonical": "Menta",
+    "type": "herb"
+  },
+  "menta piperita": {
+    "canonical": "Menta",
+    "type": "herb"
+  },
+  "calendula": {
+    "canonical": "Caléndula",
+    "type": "herb"
+  },
+  "caléndula": {
+    "canonical": "Caléndula",
+    "type": "herb"
+  },
+  "calendula officinalis": {
+    "canonical": "Caléndula",
+    "type": "herb"
+  },
+  "marigold": {
+    "canonical": "Caléndula",
+    "type": "herb"
+  },
+  "mercadela": {
+    "canonical": "Caléndula",
+    "type": "herb"
+  },
+  "damiana": {
+    "canonical": "Damiana",
+    "type": "herb"
+  },
+  "turnera diffusa": {
+    "canonical": "Damiana",
+    "type": "herb"
+  },
+  "hierba del pastor": {
+    "canonical": "Damiana",
+    "type": "herb"
+  },
+  "hierba de la pastora": {
+    "canonical": "Damiana",
+    "type": "herb"
+  },
+  "alcachofa": {
+    "canonical": "Alcachofa",
+    "type": "herb"
+  },
+  "cynara scolymus": {
+    "canonical": "Alcachofa",
+    "type": "herb"
+  },
+  "artichoke": {
+    "canonical": "Alcachofa",
+    "type": "herb"
+  },
+  "alcachofera": {
+    "canonical": "Alcachofa",
+    "type": "herb"
+  },
+  "valeriana_andina": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "neem": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "azadirachta indica": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "nimbo": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "nim": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "nopal": {
+    "canonical": "Nopal",
+    "type": "herb"
+  },
+  "opuntia ficus-indica": {
+    "canonical": "Nopal",
+    "type": "herb"
+  },
+  "tuna": {
+    "canonical": "Nopal",
+    "type": "herb"
+  },
+  "prickly pear": {
+    "canonical": "Nopal",
+    "type": "herb"
+  },
+  "cactus nopal": {
+    "canonical": "Nopal",
+    "type": "herb"
+  },
+  "omega_3": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "omega-3 (epa/dha)": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "aceite de pescado": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "fish oil": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "aceite de krill": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "epa": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "dha": {
+    "canonical": "Omega-3 (EPA/DHA)",
+    "type": "herb"
+  },
+  "coq10": {
+    "canonical": "Coenzima Q10",
+    "type": "herb"
+  },
+  "coenzima q10": {
+    "canonical": "Coenzima Q10",
+    "type": "herb"
+  },
+  "ubiquinona": {
+    "canonical": "Coenzima Q10",
+    "type": "herb"
+  },
+  "ubiquinol": {
+    "canonical": "Coenzima Q10",
+    "type": "herb"
+  },
+  "melatonina": {
+    "canonical": "melatonina_rx",
+    "type": "drug_class"
+  },
+  "n-acetil-5-metoxitriptamina": {
+    "canonical": "Melatonina",
+    "type": "herb"
+  },
+  "melatonin": {
+    "canonical": "melatonina_rx",
+    "type": "drug_class"
+  },
+  "vitamina_d": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "vitamina d": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "colecalciferol": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "vitamina d3": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "vitamin d": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "calciferol": {
+    "canonical": "Vitamina D",
+    "type": "herb"
+  },
+  "vitamina_k": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "vitamina k": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "filoquinona / menaquinona": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "vitamina k2": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "vitamin k": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "mk-7": {
+    "canonical": "Vitamina K",
+    "type": "herb"
+  },
+  "magnesio": {
+    "canonical": "Magnesio",
+    "type": "herb"
+  },
+  "mg": {
+    "canonical": "Magnesio",
+    "type": "herb"
+  },
+  "magnesium": {
+    "canonical": "Magnesio",
+    "type": "herb"
+  },
+  "citrato de magnesio": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "glicinato de magnesio": {
+    "canonical": "Magnesio",
+    "type": "herb"
+  },
+  "zinc_supl": {
+    "canonical": "Zinc (suplemento)",
+    "type": "herb"
+  },
+  "zinc (suplemento)": {
+    "canonical": "Zinc (suplemento)",
+    "type": "herb"
+  },
+  "zn": {
+    "canonical": "Zinc (suplemento)",
+    "type": "herb"
+  },
+  "zinc picolinato": {
+    "canonical": "Zinc (suplemento)",
+    "type": "herb"
+  },
+  "zinc bisglicinato": {
+    "canonical": "Zinc (suplemento)",
+    "type": "herb"
+  },
+  "hierro_supl": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "hierro (suplemento)": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "fe": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "iron supplement": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "sulfato ferroso": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "hierro bisglicinato": {
+    "canonical": "Hierro (suplemento)",
+    "type": "herb"
+  },
+  "probioticos": {
+    "canonical": "Probióticos",
+    "type": "herb"
+  },
+  "probióticos": {
+    "canonical": "Probióticos",
+    "type": "herb"
+  },
+  "lactobacillus / bifidobacterium": {
+    "canonical": "Probióticos",
+    "type": "herb"
+  },
+  "probiotics": {
+    "canonical": "Probióticos",
+    "type": "herb"
+  },
+  "flora intestinal": {
+    "canonical": "Probióticos",
+    "type": "herb"
+  },
+  "creatina": {
+    "canonical": "Creatina",
+    "type": "herb"
+  },
+  "monohidrato de creatina": {
+    "canonical": "Creatina",
+    "type": "herb"
+  },
+  "creatine": {
+    "canonical": "Creatina",
+    "type": "herb"
+  },
+  "creatine monohydrate": {
+    "canonical": "Creatina",
+    "type": "herb"
+  },
+  "5htp": {
+    "canonical": "5-HTP",
+    "type": "herb"
+  },
+  "5-htp": {
+    "canonical": "5-HTP",
+    "type": "herb"
+  },
+  "5-hidroxitriptófano": {
+    "canonical": "5-HTP",
+    "type": "herb"
+  },
+  "griffonia": {
+    "canonical": "5-HTP",
+    "type": "herb"
+  },
+  "griffonia simplicifolia": {
+    "canonical": "5-HTP",
+    "type": "herb"
+  },
+  "glutamina": {
+    "canonical": "Glutamina",
+    "type": "herb"
+  },
+  "l-glutamina": {
+    "canonical": "Glutamina",
+    "type": "herb"
+  },
+  "glutamine": {
+    "canonical": "Glutamina",
+    "type": "herb"
+  },
+  "boldea": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "boldu": {
+    "canonical": "Boldo",
+    "type": "herb"
+  },
+  "muicle": {
+    "canonical": "Muicle",
+    "type": "herb"
+  },
+  "justicia spicigera": {
+    "canonical": "Muicle",
+    "type": "herb"
+  },
+  "muitle": {
+    "canonical": "Muicle",
+    "type": "herb"
+  },
+  "hierba del añil": {
+    "canonical": "Muicle",
+    "type": "herb"
+  },
+  "epazote": {
+    "canonical": "Epazote",
+    "type": "herb"
+  },
+  "dysphania ambrosioides": {
+    "canonical": "Epazote",
+    "type": "herb"
+  },
+  "paico": {
+    "canonical": "Epazote",
+    "type": "herb"
+  },
+  "wormseed": {
+    "canonical": "Epazote",
+    "type": "herb"
+  },
+  "chenopodium": {
+    "canonical": "Epazote",
+    "type": "herb"
+  },
+  "hierba_luisa": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "cymbopogon citratus": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "lemongrass": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "cedrón": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "verbena de indias": {
+    "canonical": "Hierba Luisa",
+    "type": "herb"
+  },
+  "muña_negra": {
+    "canonical": "Muña negra",
+    "type": "herb"
+  },
+  "muña negra": {
+    "canonical": "Muña negra",
+    "type": "herb"
+  },
+  "minthostachys setosa": {
+    "canonical": "Muña negra",
+    "type": "herb"
+  },
+  "tipo andino": {
+    "canonical": "Muña negra",
+    "type": "herb"
+  },
+  "huacatay": {
+    "canonical": "Huacatay",
+    "type": "herb"
+  },
+  "tagetes minuta": {
+    "canonical": "Huacatay",
+    "type": "herb"
+  },
+  "black mint": {
+    "canonical": "Huacatay",
+    "type": "herb"
+  },
+  "chinchilla": {
+    "canonical": "Huacatay",
+    "type": "herb"
+  },
+  "mullaca": {
+    "canonical": "Mullaca",
+    "type": "herb"
+  },
+  "muehlenbeckia volcanica": {
+    "canonical": "Mullaca",
+    "type": "herb"
+  },
+  "complejo mullaca": {
+    "canonical": "Mullaca",
+    "type": "herb"
+  },
+  "sachaculantro": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "sacha culantro": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "eryngium foetidum": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "culantro cimarrón": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "cilantro de monte": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "recao": {
+    "canonical": "Sacha culantro",
+    "type": "herb"
+  },
+  "melisa andina": {
+    "canonical": "Toronjil",
+    "type": "herb"
+  },
+  "coca_mate": {
+    "canonical": "Coca (mate)",
+    "type": "herb"
+  },
+  "coca (mate)": {
+    "canonical": "Coca (mate)",
+    "type": "herb"
+  },
+  "coca tea": {
+    "canonical": "Coca (mate)",
+    "type": "herb"
+  },
+  "mate de coca": {
+    "canonical": "Coca (mate)",
+    "type": "herb"
+  },
+  "ajenjo": {
+    "canonical": "Ajenjo",
+    "type": "herb"
+  },
+  "artemisia absinthium": {
+    "canonical": "Ajenjo / Artemisa",
+    "type": "herb"
+  },
+  "wormwood": {
+    "canonical": "Ajenjo / Artemisa",
+    "type": "herb"
+  },
+  "artemisa": {
+    "canonical": "Ajenjo",
+    "type": "herb"
+  },
+  "ruda": {
+    "canonical": "Ruda",
+    "type": "herb"
+  },
+  "ruta graveolens": {
+    "canonical": "Ruda",
+    "type": "herb"
+  },
+  "rue": {
+    "canonical": "Ruda",
+    "type": "herb"
+  },
+  "ruda macho": {
+    "canonical": "Ruda",
+    "type": "herb"
+  },
+  "zarzaparrilla": {
+    "canonical": "Zarzaparrilla",
+    "type": "herb"
+  },
+  "smilax regelii": {
+    "canonical": "Zarzaparrilla",
+    "type": "herb"
+  },
+  "sarsaparilla": {
+    "canonical": "Zarzaparrilla",
+    "type": "herb"
+  },
+  "cuculmeca": {
+    "canonical": "Zarzaparrilla",
+    "type": "herb"
+  },
+  "ratania": {
+    "canonical": "Ratania",
+    "type": "herb"
+  },
+  "krameria lappacea": {
+    "canonical": "Ratania",
+    "type": "herb"
+  },
+  "rhatany": {
+    "canonical": "Ratania",
+    "type": "herb"
+  },
+  "mapato": {
+    "canonical": "Ratania",
+    "type": "herb"
+  },
+  "quina": {
+    "canonical": "Quina",
+    "type": "herb"
+  },
+  "cinchona officinalis": {
+    "canonical": "Quina",
+    "type": "herb"
+  },
+  "cinchona": {
+    "canonical": "Quina",
+    "type": "herb"
+  },
+  "cascarilla": {
+    "canonical": "Quina",
+    "type": "herb"
+  },
+  "quinaquina": {
+    "canonical": "Quina",
+    "type": "herb"
+  },
+  "barbasco": {
+    "canonical": "Barbasco",
+    "type": "herb"
+  },
+  "lonchocarpus urucu": {
+    "canonical": "Barbasco",
+    "type": "herb"
+  },
+  "cube root": {
+    "canonical": "Barbasco",
+    "type": "herb"
+  },
+  "rotenona natural": {
+    "canonical": "Barbasco",
+    "type": "herb"
+  },
+  "nigella": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "nigella / comino negro": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "nigella sativa": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "black seed": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "kalonji": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "ajenuz": {
+    "canonical": "Nigella / Comino negro",
+    "type": "herb"
+  },
+  "kratom": {
+    "canonical": "Kratom",
+    "type": "herb"
+  },
+  "mitragyna speciosa": {
+    "canonical": "Kratom",
+    "type": "herb"
+  },
+  "biak-biak": {
+    "canonical": "Kratom",
+    "type": "herb"
+  },
+  "kratón": {
+    "canonical": "Kratom",
+    "type": "herb"
+  },
+  "cannabis": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "cannabis / cbd": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "cannabis sativa": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "cbd": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "cannabidiol": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "marihuana medicinal": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "hemp": {
+    "canonical": "Cannabis / CBD",
+    "type": "herb"
+  },
+  "efedra": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "efedra / ma huang": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "ephedra sinica": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "ephedra": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "ma huang": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "efedrina natural": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "milenrama": {
+    "canonical": "Milenrama",
+    "type": "herb"
+  },
+  "achillea millefolium": {
+    "canonical": "Milenrama",
+    "type": "herb"
+  },
+  "yarrow": {
+    "canonical": "Milenrama",
+    "type": "herb"
+  },
+  "mil hojas": {
+    "canonical": "Milenrama",
+    "type": "herb"
+  },
+  "arnica": {
+    "canonical": "Árnica",
+    "type": "herb"
+  },
+  "árnica": {
+    "canonical": "Árnica",
+    "type": "herb"
+  },
+  "arnica montana": {
+    "canonical": "Árnica",
+    "type": "herb"
+  },
+  "tabaco de montaña": {
+    "canonical": "Árnica",
+    "type": "herb"
+  },
+  "uva_ursi": {
+    "canonical": "Gayuba / Uva ursi",
+    "type": "herb"
+  },
+  "gayuba / uva ursi": {
+    "canonical": "Gayuba / Uva ursi",
+    "type": "herb"
+  },
+  "arctostaphylos uva-ursi": {
+    "canonical": "Gayuba / Uva ursi",
+    "type": "herb"
+  },
+  "bearberry": {
+    "canonical": "Gayuba / Uva ursi",
+    "type": "herb"
+  },
+  "uva de oso": {
+    "canonical": "Gayuba / Uva ursi",
+    "type": "herb"
+  },
+  "hierba_de_dios": {
+    "canonical": "Salvia divinorum",
+    "type": "herb"
+  },
+  "salvia divinorum": {
+    "canonical": "Salvia divinorum",
+    "type": "herb"
+  },
+  "ska pastora": {
+    "canonical": "Salvia divinorum",
+    "type": "herb"
+  },
+  "hierba maría": {
+    "canonical": "Salvia divinorum",
+    "type": "herb"
+  },
+  "ginseng_americano": {
+    "canonical": "Ginseng americano",
+    "type": "herb"
+  },
+  "ginseng americano": {
+    "canonical": "Ginseng americano",
+    "type": "herb"
+  },
+  "panax quinquefolius": {
+    "canonical": "Ginseng americano",
+    "type": "herb"
+  },
+  "american ginseng": {
+    "canonical": "Ginseng americano",
+    "type": "herb"
+  },
+  "ginseng del norte": {
+    "canonical": "Ginseng americano",
+    "type": "herb"
+  },
+  "te_rojo": {
+    "canonical": "Té rojo / Rooibos",
+    "type": "herb"
+  },
+  "té rojo / rooibos": {
+    "canonical": "Té rojo / Rooibos",
+    "type": "herb"
+  },
+  "aspalathus linearis": {
+    "canonical": "Té rojo / Rooibos",
+    "type": "herb"
+  },
+  "rooibos": {
+    "canonical": "Té rojo / Rooibos",
+    "type": "herb"
+  },
+  "red bush tea": {
+    "canonical": "Té rojo / Rooibos",
+    "type": "herb"
+  },
+  "gymnema": {
+    "canonical": "Gymnema",
+    "type": "herb"
+  },
+  "gymnema sylvestre": {
+    "canonical": "Gymnema",
+    "type": "herb"
+  },
+  "gurmar": {
+    "canonical": "Gymnema",
+    "type": "herb"
+  },
+  "destroyer of sugar": {
+    "canonical": "Gymnema",
+    "type": "herb"
+  },
+  "psyllium": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "psyllium / ispágula": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "plantago ovata": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "psyllium husk": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "ispaghula": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "metamucil": {
+    "canonical": "Psyllium / Ispágula",
+    "type": "herb"
+  },
+  "cardo_santo": {
+    "canonical": "Cardo santo",
+    "type": "herb"
+  },
+  "cardo santo": {
+    "canonical": "Cardo santo",
+    "type": "herb"
+  },
+  "cnicus benedictus": {
+    "canonical": "Cardo santo",
+    "type": "herb"
+  },
+  "blessed thistle": {
+    "canonical": "Cardo santo",
+    "type": "herb"
+  },
+  "cardo bendito": {
+    "canonical": "Cardo santo",
+    "type": "herb"
+  },
+  "fumaria": {
+    "canonical": "Fumaria",
+    "type": "herb"
+  },
+  "fumaria officinalis": {
+    "canonical": "Fumaria",
+    "type": "herb"
+  },
+  "fumitory": {
+    "canonical": "Fumaria",
+    "type": "herb"
+  },
+  "palomilla": {
+    "canonical": "Fumaria",
+    "type": "herb"
+  },
+  "borraja": {
+    "canonical": "Borraja",
+    "type": "herb"
+  },
+  "borago officinalis": {
+    "canonical": "Borraja",
+    "type": "herb"
+  },
+  "borage": {
+    "canonical": "Borraja",
+    "type": "herb"
+  },
+  "aceite de borraja": {
+    "canonical": "Borraja",
+    "type": "herb"
+  },
+  "agnocasto": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "agnocasto / sauzgatillo": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "vitex agnus-castus": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "chasteberry": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "vitex": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "pimienta de monje": {
+    "canonical": "Agnocasto / Sauzgatillo",
+    "type": "herb"
+  },
+  "harpagofito": {
+    "canonical": "Harpagofito / Garra del diablo",
+    "type": "herb"
+  },
+  "harpagofito / garra del diablo": {
+    "canonical": "Harpagofito / Garra del diablo",
+    "type": "herb"
+  },
+  "harpagophytum procumbens": {
+    "canonical": "Harpagofito / Garra del diablo",
+    "type": "herb"
+  },
+  "devil's claw": {
+    "canonical": "Harpagofito / Garra del diablo",
+    "type": "herb"
+  },
+  "uña del diablo": {
+    "canonical": "Harpagofito / Garra del diablo",
+    "type": "herb"
+  },
+  "eucalipto": {
+    "canonical": "Eucalipto",
+    "type": "herb"
+  },
+  "eucalyptus globulus": {
+    "canonical": "Eucalipto",
+    "type": "herb"
+  },
+  "eucalyptus": {
+    "canonical": "Eucalipto",
+    "type": "herb"
+  },
+  "malva": {
+    "canonical": "Malva",
+    "type": "herb"
+  },
+  "malva sylvestris": {
+    "canonical": "Malva",
+    "type": "herb"
+  },
+  "mallow": {
+    "canonical": "Malva",
+    "type": "herb"
+  },
+  "malva silvestre": {
+    "canonical": "Malva",
+    "type": "herb"
+  },
+  "baya de saúco": {
+    "canonical": "Saúco",
+    "type": "herb"
+  },
+  "same": {
+    "canonical": "SAMe",
+    "type": "herb"
+  },
+  "s-adenosilmetionina": {
+    "canonical": "SAMe",
+    "type": "herb"
+  },
+  "sam-e": {
+    "canonical": "SAMe",
+    "type": "herb"
+  },
+  "ademetionina": {
+    "canonical": "SAMe",
+    "type": "herb"
+  },
+  "l_teanina": {
+    "canonical": "L-Teanina",
+    "type": "herb"
+  },
+  "l-teanina": {
+    "canonical": "L-Teanina",
+    "type": "herb"
+  },
+  "l-theanine": {
+    "canonical": "L-Teanina",
+    "type": "herb"
+  },
+  "theanine": {
+    "canonical": "L-Teanina",
+    "type": "herb"
+  },
+  "suntheanine": {
+    "canonical": "L-Teanina",
+    "type": "herb"
+  },
+  "triptofano": {
+    "canonical": "Triptófano",
+    "type": "herb"
+  },
+  "triptófano": {
+    "canonical": "Triptófano",
+    "type": "herb"
+  },
+  "l-tryptophan": {
+    "canonical": "Triptófano",
+    "type": "herb"
+  },
+  "biotina": {
+    "canonical": "Biotina",
+    "type": "herb"
+  },
+  "vitamina b7": {
+    "canonical": "Biotina",
+    "type": "herb"
+  },
+  "biotin": {
+    "canonical": "Biotina",
+    "type": "herb"
+  },
+  "vitamina h": {
+    "canonical": "Biotina",
+    "type": "herb"
+  },
+  "b7": {
+    "canonical": "Biotina",
+    "type": "herb"
+  },
+  "selenio": {
+    "canonical": "Selenio",
+    "type": "herb"
+  },
+  "se": {
+    "canonical": "Selenio",
+    "type": "herb"
+  },
+  "selenium": {
+    "canonical": "Selenio",
+    "type": "herb"
+  },
+  "selenometionina": {
+    "canonical": "Selenio",
+    "type": "herb"
+  },
+  "cromo": {
+    "canonical": "Cromo",
+    "type": "herb"
+  },
+  "cr": {
+    "canonical": "Cromo",
+    "type": "herb"
+  },
+  "chromium": {
+    "canonical": "Cromo",
+    "type": "herb"
+  },
+  "picolinato de cromo": {
+    "canonical": "Cromo",
+    "type": "herb"
+  },
+  "chromium picolinate": {
+    "canonical": "Cromo",
+    "type": "herb"
+  },
+  "glucosamina": {
+    "canonical": "Glucosamina",
+    "type": "herb"
+  },
+  "glucosamine": {
+    "canonical": "Glucosamina",
+    "type": "herb"
+  },
+  "glucosamine sulfate": {
+    "canonical": "Glucosamina",
+    "type": "herb"
+  },
+  "sulfato de glucosamina": {
+    "canonical": "Glucosamina",
+    "type": "herb"
+  },
+  "condroitina": {
+    "canonical": "Condroitina",
+    "type": "herb"
+  },
+  "chondroitin sulfate": {
+    "canonical": "Condroitina",
+    "type": "herb"
+  },
+  "chondroitin": {
+    "canonical": "Condroitina",
+    "type": "herb"
+  },
+  "sulfato de condroitina": {
+    "canonical": "Condroitina",
+    "type": "herb"
+  },
+  "acido_alfa_lipoico": {
+    "canonical": "Ácido alfa-lipoico",
+    "type": "herb"
+  },
+  "ácido alfa-lipoico": {
+    "canonical": "Ácido alfa-lipoico",
+    "type": "herb"
+  },
+  "alpha-lipoic acid": {
+    "canonical": "Ácido alfa-lipoico",
+    "type": "herb"
+  },
+  "ala": {
+    "canonical": "Ácido alfa-lipoico",
+    "type": "herb"
+  },
+  "ácido tióctico": {
+    "canonical": "Ácido alfa-lipoico",
+    "type": "herb"
+  },
+  "clorela": {
+    "canonical": "Clorela",
+    "type": "herb"
+  },
+  "chlorella vulgaris": {
+    "canonical": "Clorela",
+    "type": "herb"
+  },
+  "chlorella": {
+    "canonical": "Clorela",
+    "type": "herb"
+  },
+  "espirulina": {
+    "canonical": "Espirulina",
+    "type": "herb"
+  },
+  "arthrospira platensis": {
+    "canonical": "Espirulina",
+    "type": "herb"
+  },
+  "spirulina": {
+    "canonical": "Espirulina",
+    "type": "herb"
+  },
+  "colina": {
+    "canonical": "Colina / Fosfatidilcolina",
+    "type": "herb"
+  },
+  "colina / fosfatidilcolina": {
+    "canonical": "Colina / Fosfatidilcolina",
+    "type": "herb"
+  },
+  "choline": {
+    "canonical": "Colina / Fosfatidilcolina",
+    "type": "herb"
+  },
+  "lecithin": {
+    "canonical": "Colina / Fosfatidilcolina",
+    "type": "herb"
+  },
+  "lecitina": {
+    "canonical": "Colina / Fosfatidilcolina",
+    "type": "herb"
+  },
+  "nad": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "nad+ / nmn": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "nicotinamide mononucleotide": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "nmn": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "nicotinamida": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "nad precursor": {
+    "canonical": "NAD+ / NMN",
+    "type": "herb"
+  },
+  "boswellia": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "boswellia / incienso": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "boswellia serrata": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "indian frankincense": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "incienso indio": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "ácido boswélico": {
+    "canonical": "Boswellia / Incienso",
+    "type": "herb"
+  },
+  "ephedrine": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "efedrina": {
+    "canonical": "Efedra / Ma Huang",
+    "type": "herb"
+  },
+  "yohimbe": {
+    "canonical": "Yohimbe",
+    "type": "herb"
+  },
+  "pausinystalia yohimbe": {
+    "canonical": "Yohimbe",
+    "type": "herb"
+  },
+  "yohimbina": {
+    "canonical": "Yohimbe",
+    "type": "herb"
+  },
+  "yohimbine": {
+    "canonical": "Yohimbe",
+    "type": "herb"
+  },
+  "quebrachine": {
+    "canonical": "Yohimbe",
+    "type": "herb"
+  },
+  "belladonna": {
+    "canonical": "Belladona",
+    "type": "herb"
+  },
+  "belladona": {
+    "canonical": "Belladona",
+    "type": "herb"
+  },
+  "atropa belladonna": {
+    "canonical": "Belladona",
+    "type": "herb"
+  },
+  "deadly nightshade": {
+    "canonical": "Belladona",
+    "type": "herb"
+  },
+  "atropa": {
+    "canonical": "Belladona",
+    "type": "herb"
+  },
+  "areca": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "nuez de areca / betel": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "areca catechu": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "betel nut": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "nuez de betel": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "areca nut": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "supari": {
+    "canonical": "Nuez de Areca / Betel",
+    "type": "herb"
+  },
+  "pelargonium": {
+    "canonical": "Pelargonio / Umckaloabo",
+    "type": "herb"
+  },
+  "pelargonio / umckaloabo": {
+    "canonical": "Pelargonio / Umckaloabo",
+    "type": "herb"
+  },
+  "pelargonium sidoides": {
+    "canonical": "Pelargonio / Umckaloabo",
+    "type": "herb"
+  },
+  "umckaloabo": {
+    "canonical": "Pelargonio / Umckaloabo",
+    "type": "herb"
+  },
+  "rabano del cabo": {
+    "canonical": "Pelargonio / Umckaloabo",
+    "type": "herb"
+  },
+  "andrographis": {
+    "canonical": "Andrographis",
+    "type": "herb"
+  },
+  "andrographis paniculata": {
+    "canonical": "Andrographis",
+    "type": "herb"
+  },
+  "chiretta del rey": {
+    "canonical": "Andrographis",
+    "type": "herb"
+  },
+  "kalmegh": {
+    "canonical": "Andrographis",
+    "type": "herb"
+  },
+  "eleuterococo": {
+    "canonical": "Eleuterococo / Ginseng siberiano",
+    "type": "herb"
+  },
+  "eleuterococo / ginseng siberiano": {
+    "canonical": "Eleuterococo / Ginseng siberiano",
+    "type": "herb"
+  },
+  "eleutherococcus senticosus": {
+    "canonical": "Eleuterococo / Ginseng siberiano",
+    "type": "herb"
+  },
+  "siberian ginseng": {
+    "canonical": "Eleuterococo / Ginseng siberiano",
+    "type": "herb"
+  },
+  "eleuthero": {
+    "canonical": "Eleuterococo / Ginseng siberiano",
+    "type": "herb"
+  },
+  "cissus": {
+    "canonical": "Cissus",
+    "type": "herb"
+  },
+  "cissus quadrangularis": {
+    "canonical": "Cissus",
+    "type": "herb"
+  },
+  "veldt grape": {
+    "canonical": "Cissus",
+    "type": "herb"
+  },
+  "uva rupestre": {
+    "canonical": "Cissus",
+    "type": "herb"
+  },
+  "forskohlii": {
+    "canonical": "Forskohlii / Coleus",
+    "type": "herb"
+  },
+  "forskohlii / coleus": {
+    "canonical": "Forskohlii / Coleus",
+    "type": "herb"
+  },
+  "coleus forskohlii": {
+    "canonical": "Forskohlii / Coleus",
+    "type": "herb"
+  },
+  "forskolin": {
+    "canonical": "Forskohlii / Coleus",
+    "type": "herb"
+  },
+  "coleus": {
+    "canonical": "Forskohlii / Coleus",
+    "type": "herb"
+  },
+  "bacopa": {
+    "canonical": "Bacopa / Brahmi",
+    "type": "herb"
+  },
+  "bacopa / brahmi": {
+    "canonical": "Bacopa / Brahmi",
+    "type": "herb"
+  },
+  "bacopa monnieri": {
+    "canonical": "Bacopa / Brahmi",
+    "type": "herb"
+  },
+  "brahmi": {
+    "canonical": "Bacopa / Brahmi",
+    "type": "herb"
+  },
+  "water hyssop": {
+    "canonical": "Bacopa / Brahmi",
+    "type": "herb"
+  },
+  "mucuna": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "mucuna / ojo de buey": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "mucuna pruriens": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "velvet bean": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "cowhage": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "kapikacchu": {
+    "canonical": "Mucuna / Ojo de buey",
+    "type": "herb"
+  },
+  "triphala": {
+    "canonical": "Triphala",
+    "type": "herb"
+  },
+  "terminalia chebula + terminalia bellirica + phyllanthus emblica": {
+    "canonical": "Triphala",
+    "type": "herb"
+  },
+  "tres frutos": {
+    "canonical": "Triphala",
+    "type": "herb"
+  },
+  "haritaki": {
+    "canonical": "Triphala",
+    "type": "herb"
+  },
+  "shatavari": {
+    "canonical": "Shatavari",
+    "type": "herb"
+  },
+  "asparagus racemosus": {
+    "canonical": "Shatavari",
+    "type": "herb"
+  },
+  "esparrago indio": {
+    "canonical": "Shatavari",
+    "type": "herb"
+  },
+  "shatamull": {
+    "canonical": "Shatavari",
+    "type": "herb"
+  },
+  "amla": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "amla / grosella india": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "phyllanthus emblica": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "amalaki": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "indian gooseberry": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "emblica": {
+    "canonical": "Amla / Grosella india",
+    "type": "herb"
+  },
+  "guduchi": {
+    "canonical": "Guduchi / Giloy",
+    "type": "herb"
+  },
+  "guduchi / giloy": {
+    "canonical": "Guduchi / Giloy",
+    "type": "herb"
+  },
+  "tinospora cordifolia": {
+    "canonical": "Guduchi / Giloy",
+    "type": "herb"
+  },
+  "giloy": {
+    "canonical": "Guduchi / Giloy",
+    "type": "herb"
+  },
+  "heart-leaved moonseed": {
+    "canonical": "Guduchi / Giloy",
+    "type": "herb"
+  },
+  "margosa": {
+    "canonical": "Neem",
+    "type": "herb"
+  },
+  "tulsi": {
+    "canonical": "Tulsi / Albahaca sagrada",
+    "type": "herb"
+  },
+  "tulsi / albahaca sagrada": {
+    "canonical": "Tulsi / Albahaca sagrada",
+    "type": "herb"
+  },
+  "ocimum tenuiflorum": {
+    "canonical": "Tulsi / Albahaca sagrada",
+    "type": "herb"
+  },
+  "holy basil": {
+    "canonical": "Tulsi / Albahaca sagrada",
+    "type": "herb"
+  },
+  "albahaca santa": {
+    "canonical": "Tulsi / Albahaca sagrada",
+    "type": "herb"
+  },
+  "shankhpushpi": {
+    "canonical": "Shankhpushpi",
+    "type": "herb"
+  },
+  "convolvulus pluricaulis": {
+    "canonical": "Shankhpushpi",
+    "type": "herb"
+  },
+  "speedwheel": {
+    "canonical": "Shankhpushpi",
+    "type": "herb"
+  },
+  "bindweed azul": {
+    "canonical": "Shankhpushpi",
+    "type": "herb"
+  },
+  "trikatu": {
+    "canonical": "Trikatu",
+    "type": "herb"
+  },
+  "zingiber officinale + piper nigrum + piper longum": {
+    "canonical": "Trikatu",
+    "type": "herb"
+  },
+  "pimienta larga": {
+    "canonical": "Trikatu",
+    "type": "herb"
+  },
+  "tres picantes": {
+    "canonical": "Trikatu",
+    "type": "herb"
+  },
+  "punarnava": {
+    "canonical": "Punarnava",
+    "type": "herb"
+  },
+  "boerhavia diffusa": {
+    "canonical": "Punarnava",
+    "type": "herb"
+  },
+  "spreading hogweed": {
+    "canonical": "Punarnava",
+    "type": "herb"
+  },
+  "boerhavia": {
+    "canonical": "Punarnava",
+    "type": "herb"
+  },
+  "devil_claw": {
+    "canonical": "Garra del Diablo",
+    "type": "herb"
+  },
+  "garra del diablo": {
+    "canonical": "Garra del Diablo",
+    "type": "herb"
+  },
+  "harpagophytum zeyheri": {
+    "canonical": "Garra del Diablo",
+    "type": "herb"
+  },
+  "harpagophytum": {
+    "canonical": "Garra del Diablo",
+    "type": "herb"
+  },
+  "secondary devil's claw": {
+    "canonical": "Garra del Diablo",
+    "type": "herb"
+  },
+  "buchu": {
+    "canonical": "Buchu",
+    "type": "herb"
+  },
+  "agathosma betulina": {
+    "canonical": "Buchu",
+    "type": "herb"
+  },
+  "bookoo": {
+    "canonical": "Buchu",
+    "type": "herb"
+  },
+  "bucco": {
+    "canonical": "Buchu",
+    "type": "herb"
+  },
+  "diosma": {
+    "canonical": "Buchu",
+    "type": "herb"
+  },
+  "tea_tree": {
+    "canonical": "Arbol del te",
+    "type": "herb"
+  },
+  "arbol del te": {
+    "canonical": "Arbol del te",
+    "type": "herb"
+  },
+  "melaleuca alternifolia": {
+    "canonical": "Arbol del te",
+    "type": "herb"
+  },
+  "tea tree oil": {
+    "canonical": "Arbol del te",
+    "type": "herb"
+  },
+  "aceite de melaleuca": {
+    "canonical": "Arbol del te",
+    "type": "herb"
+  },
+  "wild_yam": {
+    "canonical": "Name silvestre",
+    "type": "herb"
+  },
+  "name silvestre": {
+    "canonical": "Name silvestre",
+    "type": "herb"
+  },
+  "dioscorea villosa": {
+    "canonical": "Name silvestre",
+    "type": "herb"
+  },
+  "wild yam": {
+    "canonical": "Name silvestre",
+    "type": "herb"
+  },
+  "colico root": {
+    "canonical": "Name silvestre",
+    "type": "herb"
+  },
+  "black_walnut": {
+    "canonical": "Nogal negro",
+    "type": "herb"
+  },
+  "nogal negro": {
+    "canonical": "Nogal negro",
+    "type": "herb"
+  },
+  "juglans nigra": {
+    "canonical": "Nogal negro",
+    "type": "herb"
+  },
+  "black walnut": {
+    "canonical": "Nogal negro",
+    "type": "herb"
+  },
+  "nogal americano": {
+    "canonical": "Nogal negro",
+    "type": "herb"
+  },
+  "pau_darco": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "lapacho / taheebo": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "tabebuia impetiginosa": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "pau d'arco": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "taheebo": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "ipe roxo": {
+    "canonical": "Lapacho / Taheebo",
+    "type": "herb"
+  },
+  "ratama": {
+    "canonical": "Retama / Cytisus",
+    "type": "herb"
+  },
+  "retama / cytisus": {
+    "canonical": "Retama / Cytisus",
+    "type": "herb"
+  },
+  "cytisus scoparius": {
+    "canonical": "Retama / Cytisus",
+    "type": "herb"
+  },
+  "scotch broom": {
+    "canonical": "Retama / Cytisus",
+    "type": "herb"
+  },
+  "retama de escobas": {
+    "canonical": "Retama / Cytisus",
+    "type": "herb"
+  },
+  "coltsfoot": {
+    "canonical": "Tusilago / Farfara",
+    "type": "herb"
+  },
+  "tusilago / farfara": {
+    "canonical": "Tusilago / Farfara",
+    "type": "herb"
+  },
+  "tussilago farfara": {
+    "canonical": "Tusilago / Farfara",
+    "type": "herb"
+  },
+  "una de caballo": {
+    "canonical": "Tusilago / Farfara",
+    "type": "herb"
+  },
+  "comfrey": {
+    "canonical": "Consuelda",
+    "type": "herb"
+  },
+  "consuelda": {
+    "canonical": "Consuelda",
+    "type": "herb"
+  },
+  "symphytum officinale": {
+    "canonical": "Consuelda",
+    "type": "herb"
+  },
+  "knitbone": {
+    "canonical": "Consuelda",
+    "type": "herb"
+  },
+  "soldacostilla": {
+    "canonical": "Consuelda",
+    "type": "herb"
+  },
+  "petasites": {
+    "canonical": "Petasites / Sombrero del diablo",
+    "type": "herb"
+  },
+  "petasites / sombrero del diablo": {
+    "canonical": "Petasites / Sombrero del diablo",
+    "type": "herb"
+  },
+  "petasites hybridus": {
+    "canonical": "Petasites / Sombrero del diablo",
+    "type": "herb"
+  },
+  "butterbur": {
+    "canonical": "Petasites / Sombrero del diablo",
+    "type": "herb"
+  },
+  "lobelia": {
+    "canonical": "Lobelia",
+    "type": "herb"
+  },
+  "lobelia inflata": {
+    "canonical": "Lobelia",
+    "type": "herb"
+  },
+  "indian tobacco": {
+    "canonical": "Lobelia",
+    "type": "herb"
+  },
+  "pukeweed": {
+    "canonical": "Lobelia",
+    "type": "herb"
+  },
+  "asthma weed": {
+    "canonical": "Lobelia",
+    "type": "herb"
+  },
+  "pennyroyal": {
+    "canonical": "Poleo",
+    "type": "herb"
+  },
+  "poleo": {
+    "canonical": "Poleo",
+    "type": "herb"
+  },
+  "mentha pulegium": {
+    "canonical": "Poleo",
+    "type": "herb"
+  },
+  "mosquito plant": {
+    "canonical": "Poleo",
+    "type": "herb"
+  },
+  "poleo menta": {
+    "canonical": "Poleo",
+    "type": "herb"
+  },
+  "blue_cohosh": {
+    "canonical": "Cohosh azul",
+    "type": "herb"
+  },
+  "cohosh azul": {
+    "canonical": "Cohosh azul",
+    "type": "herb"
+  },
+  "caulophyllum thalictroides": {
+    "canonical": "Cohosh azul",
+    "type": "herb"
+  },
+  "blue cohosh": {
+    "canonical": "Cohosh azul",
+    "type": "herb"
+  },
+  "papoose root": {
+    "canonical": "Cohosh azul",
+    "type": "herb"
+  },
+  "chaparral": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "chaparral / gobernadora": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "larrea tridentata": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "creosote bush": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "gobernadora": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "hediondilla": {
+    "canonical": "Chaparral / Gobernadora",
+    "type": "herb"
+  },
+  "germander": {
+    "canonical": "Germandro",
+    "type": "herb"
+  },
+  "germandro": {
+    "canonical": "Germandro",
+    "type": "herb"
+  },
+  "teucrium chamaedrys": {
+    "canonical": "Germandro",
+    "type": "herb"
+  },
+  "teucrio": {
+    "canonical": "Tomillo del gato",
+    "type": "herb"
+  },
+  "sassafras": {
+    "canonical": "Sasafras",
+    "type": "herb"
+  },
+  "sasafras": {
+    "canonical": "Sasafras",
+    "type": "herb"
+  },
+  "sassafras albidum": {
+    "canonical": "Sasafras",
+    "type": "herb"
+  },
+  "ague tree": {
+    "canonical": "Sasafras",
+    "type": "herb"
+  },
+  "ajenjo / artemisa": {
+    "canonical": "Ajenjo / Artemisa",
+    "type": "herb"
+  },
+  "absinthe wormwood": {
+    "canonical": "Ajenjo / Artemisa",
+    "type": "herb"
+  },
+  "grand wormwood": {
+    "canonical": "Ajenjo / Artemisa",
+    "type": "herb"
+  },
+  "periwinkle": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "vinca / bigaro menor": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "vinca minor": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "lesser periwinkle": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "vinca": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "hierba doncella": {
+    "canonical": "Vinca / Bigaro menor",
+    "type": "herb"
+  },
+  "sweet_annie": {
+    "canonical": "Artemisia anual",
+    "type": "herb"
+  },
+  "artemisia anual": {
+    "canonical": "Artemisia anual",
+    "type": "herb"
+  },
+  "artemisia annua": {
+    "canonical": "Artemisia anual",
+    "type": "herb"
+  },
+  "sweet wormwood": {
+    "canonical": "Artemisia anual",
+    "type": "herb"
+  },
+  "qinghao": {
+    "canonical": "Artemisia anual",
+    "type": "herb"
+  },
+  "spilanthes": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "spilanthes / paracress": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "acmella oleracea": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "toothache plant": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "paracress": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "jambu": {
+    "canonical": "Spilanthes / Paracress",
+    "type": "herb"
+  },
+  "mimosa": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "mimosa / dormilona": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "mimosa pudica": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "sensitive plant": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "dormilona": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "shameplant": {
+    "canonical": "Mimosa / Dormilona",
+    "type": "herb"
+  },
+  "perilla": {
+    "canonical": "Perilla",
+    "type": "herb"
+  },
+  "perilla frutescens": {
+    "canonical": "Perilla",
+    "type": "herb"
+  },
+  "shiso": {
+    "canonical": "Perilla",
+    "type": "herb"
+  },
+  "beefsteak plant": {
+    "canonical": "Perilla",
+    "type": "herb"
+  },
+  "jiaogulan": {
+    "canonical": "Jiaogulan",
+    "type": "herb"
+  },
+  "gynostemma pentaphyllum": {
+    "canonical": "Jiaogulan",
+    "type": "herb"
+  },
+  "southern ginseng": {
+    "canonical": "Jiaogulan",
+    "type": "herb"
+  },
+  "xiancao": {
+    "canonical": "Jiaogulan",
+    "type": "herb"
+  },
+  "herb of immortality": {
+    "canonical": "Jiaogulan",
+    "type": "herb"
+  },
+  "berberis_aquifolium": {
+    "canonical": "Mahonia / Uva de Oregon",
+    "type": "herb"
+  },
+  "mahonia / uva de oregon": {
+    "canonical": "Mahonia / Uva de Oregon",
+    "type": "herb"
+  },
+  "berberis aquifolium": {
+    "canonical": "Mahonia / Uva de Oregon",
+    "type": "herb"
+  },
+  "oregon grape": {
+    "canonical": "Mahonia / Uva de Oregon",
+    "type": "herb"
+  },
+  "mahonia": {
+    "canonical": "Mahonia / Uva de Oregon",
+    "type": "herb"
+  },
+  "picrorrhiza": {
+    "canonical": "Picrorrhiza / Kutki",
+    "type": "herb"
+  },
+  "picrorrhiza / kutki": {
+    "canonical": "Picrorrhiza / Kutki",
+    "type": "herb"
+  },
+  "picrorhiza kurroa": {
+    "canonical": "Picrorrhiza / Kutki",
+    "type": "herb"
+  },
+  "kutki": {
+    "canonical": "Picrorrhiza / Kutki",
+    "type": "herb"
+  },
+  "katuki": {
+    "canonical": "Picrorrhiza / Kutki",
+    "type": "herb"
+  },
+  "sutherlandia": {
+    "canonical": "Sutherlandia / Planta del cancer",
+    "type": "herb"
+  },
+  "sutherlandia / planta del cancer": {
+    "canonical": "Sutherlandia / Planta del cancer",
+    "type": "herb"
+  },
+  "sutherlandia frutescens": {
+    "canonical": "Sutherlandia / Planta del cancer",
+    "type": "herb"
+  },
+  "cancer bush": {
+    "canonical": "Sutherlandia / Planta del cancer",
+    "type": "herb"
+  },
+  "kankerbos": {
+    "canonical": "Sutherlandia / Planta del cancer",
+    "type": "herb"
+  },
+  "rauvolfia": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "rauvolfia / rauwolfia": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "rauvolfia serpentina": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "serpentwood": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "sarpagandha": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "indian snakeroot": {
+    "canonical": "Rauvolfia / Rauwolfia",
+    "type": "herb"
+  },
+  "datura": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "datura / toloache": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "datura stramonium": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "jimsonweed": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "thornapple": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "toloache": {
+    "canonical": "Datura / Toloache",
+    "type": "herb"
+  },
+  "henbane": {
+    "canonical": "Beleno negro",
+    "type": "herb"
+  },
+  "beleno negro": {
+    "canonical": "Beleno negro",
+    "type": "herb"
+  },
+  "hyoscyamus niger": {
+    "canonical": "Beleno negro",
+    "type": "herb"
+  },
+  "black henbane": {
+    "canonical": "Beleno negro",
+    "type": "herb"
+  },
+  "stinking nightshade": {
+    "canonical": "Beleno negro",
+    "type": "herb"
+  },
+  "raiz_angelica": {
+    "canonical": "Angelica europea",
+    "type": "herb"
+  },
+  "angelica europea": {
+    "canonical": "Angelica europea",
+    "type": "herb"
+  },
+  "angelica archangelica": {
+    "canonical": "Angelica europea",
+    "type": "herb"
+  },
+  "garden angelica": {
+    "canonical": "Angelica europea",
+    "type": "herb"
+  },
+  "norwegian angelica": {
+    "canonical": "Angelica europea",
+    "type": "herb"
+  },
+  "centaurea": {
+    "canonical": "Centaurea menor",
+    "type": "herb"
+  },
+  "centaurea menor": {
+    "canonical": "Centaurea menor",
+    "type": "herb"
+  },
+  "centaurium erythraea": {
+    "canonical": "Centaurea menor",
+    "type": "herb"
+  },
+  "centaury": {
+    "canonical": "Centaurea menor",
+    "type": "herb"
+  },
+  "bitterherb": {
+    "canonical": "Centaurea menor",
+    "type": "herb"
+  },
+  "rehmannia": {
+    "canonical": "Rehmannia",
+    "type": "herb"
+  },
+  "rehmannia glutinosa": {
+    "canonical": "Rehmannia",
+    "type": "herb"
+  },
+  "chinese foxglove": {
+    "canonical": "Rehmannia",
+    "type": "herb"
+  },
+  "di huang": {
+    "canonical": "Rehmannia",
+    "type": "herb"
+  },
+  "dang_shen": {
+    "canonical": "Dang Shen / Codonopsis",
+    "type": "herb"
+  },
+  "dang shen / codonopsis": {
+    "canonical": "Dang Shen / Codonopsis",
+    "type": "herb"
+  },
+  "codonopsis pilosula": {
+    "canonical": "Dang Shen / Codonopsis",
+    "type": "herb"
+  },
+  "poor man's ginseng": {
+    "canonical": "Dang Shen / Codonopsis",
+    "type": "herb"
+  },
+  "bonnet bellflower": {
+    "canonical": "Dang Shen / Codonopsis",
+    "type": "herb"
+  },
+  "fo_ti": {
+    "canonical": "Fo-ti / He Shou Wu",
+    "type": "herb"
+  },
+  "fo-ti / he shou wu": {
+    "canonical": "Fo-ti / He Shou Wu",
+    "type": "herb"
+  },
+  "polygonum multiflorum": {
+    "canonical": "Fo-ti / He Shou Wu",
+    "type": "herb"
+  },
+  "he shou wu": {
+    "canonical": "Fo-ti / He Shou Wu",
+    "type": "herb"
+  },
+  "fleeceflower root": {
+    "canonical": "Fo-ti / He Shou Wu",
+    "type": "herb"
+  },
+  "bai_shao": {
+    "canonical": "Bai Shao / Peonia blanca",
+    "type": "herb"
+  },
+  "bai shao / peonia blanca": {
+    "canonical": "Bai Shao / Peonia blanca",
+    "type": "herb"
+  },
+  "paeonia lactiflora": {
+    "canonical": "Bai Shao / Peonia blanca",
+    "type": "herb"
+  },
+  "white peony root": {
+    "canonical": "Bai Shao / Peonia blanca",
+    "type": "herb"
+  },
+  "bai shao yao": {
+    "canonical": "Bai Shao / Peonia blanca",
+    "type": "herb"
+  },
+  "huang_qi": {
+    "canonical": "Huang Qi / Astragalo chino",
+    "type": "herb"
+  },
+  "huang qi / astragalo chino": {
+    "canonical": "Huang Qi / Astragalo chino",
+    "type": "herb"
+  },
+  "astragalus propinquus": {
+    "canonical": "Huang Qi / Astragalo chino",
+    "type": "herb"
+  },
+  "milk vetch root": {
+    "canonical": "Huang Qi / Astragalo chino",
+    "type": "herb"
+  },
+  "huangqi": {
+    "canonical": "Huang Qi / Astragalo chino",
+    "type": "herb"
+  },
+  "wu_wei_zi": {
+    "canonical": "Wu Wei Zi / Schisandra roja",
+    "type": "herb"
+  },
+  "wu wei zi / schisandra roja": {
+    "canonical": "Wu Wei Zi / Schisandra roja",
+    "type": "herb"
+  },
+  "schisandra sphenanthera": {
+    "canonical": "Wu Wei Zi / Schisandra roja",
+    "type": "herb"
+  },
+  "southern schisandra": {
+    "canonical": "Wu Wei Zi / Schisandra roja",
+    "type": "herb"
+  },
+  "red schisandra berry": {
+    "canonical": "Wu Wei Zi / Schisandra roja",
+    "type": "herb"
+  },
+  "tian_ma": {
+    "canonical": "Tian Ma / Gastrodia",
+    "type": "herb"
+  },
+  "tian ma / gastrodia": {
+    "canonical": "Tian Ma / Gastrodia",
+    "type": "herb"
+  },
+  "gastrodia elata": {
+    "canonical": "Tian Ma / Gastrodia",
+    "type": "herb"
+  },
+  "gastrodia": {
+    "canonical": "Tian Ma / Gastrodia",
+    "type": "herb"
+  },
+  "heaven hemp": {
+    "canonical": "Tian Ma / Gastrodia",
+    "type": "herb"
+  },
+  "ku_shen": {
+    "canonical": "Ku Shen / Sophora amarilla",
+    "type": "herb"
+  },
+  "ku shen / sophora amarilla": {
+    "canonical": "Ku Shen / Sophora amarilla",
+    "type": "herb"
+  },
+  "sophora flavescens": {
+    "canonical": "Ku Shen / Sophora amarilla",
+    "type": "herb"
+  },
+  "ku shen": {
+    "canonical": "Ku Shen / Sophora amarilla",
+    "type": "herb"
+  },
+  "shrubby sophora": {
+    "canonical": "Ku Shen / Sophora amarilla",
+    "type": "herb"
+  },
+  "kudzu": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "kudzu / pueraria": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "pueraria montana var. lobata": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "kudzu vine": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "japanese arrowroot": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "gegen": {
+    "canonical": "Kudzu / Pueraria",
+    "type": "herb"
+  },
+  "magnolia_bark": {
+    "canonical": "Corteza de Magnolia",
+    "type": "herb"
+  },
+  "corteza de magnolia": {
+    "canonical": "Corteza de Magnolia",
+    "type": "herb"
+  },
+  "magnolia officinalis": {
+    "canonical": "Corteza de Magnolia",
+    "type": "herb"
+  },
+  "hou po": {
+    "canonical": "Corteza de Magnolia",
+    "type": "herb"
+  },
+  "chinese magnolia": {
+    "canonical": "Corteza de Magnolia",
+    "type": "herb"
+  },
+  "danshen": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "dan shen / salvia roja": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "salvia miltiorrhiza": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "red sage": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "chinese sage": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "tan shen": {
+    "canonical": "Dan Shen / Salvia roja",
+    "type": "herb"
+  },
+  "san_qi": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "san qi / ginseng notoginseng": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "panax notoginseng": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "notoginseng": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "tian qi": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "pseudoginseng": {
+    "canonical": "San Qi / Ginseng notoginseng",
+    "type": "herb"
+  },
+  "chai_hu": {
+    "canonical": "Chai Hu / Bupleurum",
+    "type": "herb"
+  },
+  "chai hu / bupleurum": {
+    "canonical": "Chai Hu / Bupleurum",
+    "type": "herb"
+  },
+  "bupleurum chinense": {
+    "canonical": "Chai Hu / Bupleurum",
+    "type": "herb"
+  },
+  "chinese thoroughwax": {
+    "canonical": "Chai Hu / Bupleurum",
+    "type": "herb"
+  },
+  "hare's ear root": {
+    "canonical": "Chai Hu / Bupleurum",
+    "type": "herb"
+  },
+  "ban_lan_gen": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "ban lan gen / isatis": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "isatis indigotica": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "chinese indigo": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "woad root": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "banlangen": {
+    "canonical": "Ban Lan Gen / Isatis",
+    "type": "herb"
+  },
+  "gou_qi_zi": {
+    "canonical": "Gou Qi Zi / Goji chino",
+    "type": "herb"
+  },
+  "gou qi zi / goji chino": {
+    "canonical": "Gou Qi Zi / Goji chino",
+    "type": "herb"
+  },
+  "lycium barbarum": {
+    "canonical": "Gou Qi Zi / Goji chino",
+    "type": "herb"
+  },
+  "wolfberry": {
+    "canonical": "Gou Qi Zi / Goji chino",
+    "type": "herb"
+  },
+  "chinese wolfberry": {
+    "canonical": "Gou Qi Zi / Goji chino",
+    "type": "herb"
+  },
+  "huang_lian": {
+    "canonical": "Huang Lian / Coptis",
+    "type": "herb"
+  },
+  "huang lian / coptis": {
+    "canonical": "Huang Lian / Coptis",
+    "type": "herb"
+  },
+  "coptis chinensis": {
+    "canonical": "Huang Lian / Coptis",
+    "type": "herb"
+  },
+  "chinese goldthread": {
+    "canonical": "Huang Lian / Coptis",
+    "type": "herb"
+  },
+  "coptis root": {
+    "canonical": "Huang Lian / Coptis",
+    "type": "herb"
+  },
+  "chuan_xiong": {
+    "canonical": "Chuan Xiong / Ligusticum",
+    "type": "herb"
+  },
+  "chuan xiong / ligusticum": {
+    "canonical": "Chuan Xiong / Ligusticum",
+    "type": "herb"
+  },
+  "ligusticum chuanxiong": {
+    "canonical": "Chuan Xiong / Ligusticum",
+    "type": "herb"
+  },
+  "szechuan lovage": {
+    "canonical": "Chuan Xiong / Ligusticum",
+    "type": "herb"
+  },
+  "ligusticum": {
+    "canonical": "Chuan Xiong / Ligusticum",
+    "type": "herb"
+  },
+  "yi_mu_cao": {
+    "canonical": "Yi Mu Cao / Leonuro",
+    "type": "herb"
+  },
+  "yi mu cao / leonuro": {
+    "canonical": "Yi Mu Cao / Leonuro",
+    "type": "herb"
+  },
+  "leonurus japonicus": {
+    "canonical": "Yi Mu Cao / Leonuro",
+    "type": "herb"
+  },
+  "chinese motherwort": {
+    "canonical": "Yi Mu Cao / Leonuro",
+    "type": "herb"
+  },
+  "leonurus": {
+    "canonical": "Yi Mu Cao / Leonuro",
+    "type": "herb"
+  },
+  "helichrysum": {
+    "canonical": "Siempreviva / Helicriso",
+    "type": "herb"
+  },
+  "siempreviva / helicriso": {
+    "canonical": "Siempreviva / Helicriso",
+    "type": "herb"
+  },
+  "helichrysum italicum": {
+    "canonical": "Siempreviva / Helicriso",
+    "type": "herb"
+  },
+  "immortelle": {
+    "canonical": "Siempreviva / Helicriso",
+    "type": "herb"
+  },
+  "curry plant": {
+    "canonical": "Siempreviva / Helicriso",
+    "type": "herb"
+  },
+  "patchouli": {
+    "canonical": "Pachuli",
+    "type": "herb"
+  },
+  "pachuli": {
+    "canonical": "Pachuli",
+    "type": "herb"
+  },
+  "pogostemon cablin": {
+    "canonical": "Pachuli",
+    "type": "herb"
+  },
+  "patchouly": {
+    "canonical": "Pachuli",
+    "type": "herb"
+  },
+  "vitex_negundo": {
+    "canonical": "Vitex negundo",
+    "type": "herb"
+  },
+  "vitex negundo": {
+    "canonical": "Vitex negundo",
+    "type": "herb"
+  },
+  "five-leaved chaste tree": {
+    "canonical": "Vitex negundo",
+    "type": "herb"
+  },
+  "nirgundi": {
+    "canonical": "Vitex negundo",
+    "type": "herb"
+  },
+  "cedron_arbol": {
+    "canonical": "Cedron arbol",
+    "type": "herb"
+  },
+  "cedron arbol": {
+    "canonical": "Cedron arbol",
+    "type": "herb"
+  },
+  "aloysia citrodora": {
+    "canonical": "Cedron arbol",
+    "type": "herb"
+  },
+  "lemon verbena": {
+    "canonical": "Cedron arbol",
+    "type": "herb"
+  },
+  "verbena limonera": {
+    "canonical": "Cedron arbol",
+    "type": "herb"
+  },
+  "cryptolepis": {
+    "canonical": "Cryptolepis",
+    "type": "herb"
+  },
+  "cryptolepis sanguinolenta": {
+    "canonical": "Cryptolepis",
+    "type": "herb"
+  },
+  "nibima": {
+    "canonical": "Cryptolepis",
+    "type": "herb"
+  },
+  "huangbai": {
+    "canonical": "Huang Bai / Phellodendron",
+    "type": "herb"
+  },
+  "huang bai / phellodendron": {
+    "canonical": "Huang Bai / Phellodendron",
+    "type": "herb"
+  },
+  "phellodendron amurense": {
+    "canonical": "Huang Bai / Phellodendron",
+    "type": "herb"
+  },
+  "amur cork tree": {
+    "canonical": "Huang Bai / Phellodendron",
+    "type": "herb"
+  },
+  "chinese corktree": {
+    "canonical": "Huang Bai / Phellodendron",
+    "type": "herb"
+  },
+  "ze_xie": {
+    "canonical": "Ze Xie / Alisma",
+    "type": "herb"
+  },
+  "ze xie / alisma": {
+    "canonical": "Ze Xie / Alisma",
+    "type": "herb"
+  },
+  "alisma orientale": {
+    "canonical": "Ze Xie / Alisma",
+    "type": "herb"
+  },
+  "asian water plantain": {
+    "canonical": "Ze Xie / Alisma",
+    "type": "herb"
+  },
+  "oriental alisma": {
+    "canonical": "Ze Xie / Alisma",
+    "type": "herb"
+  },
+  "yi_yi_ren": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "yi yi ren / coix": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "coix lacryma-jobi": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "job's tears": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "coixseed": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "adlay": {
+    "canonical": "Yi Yi Ren / Coix",
+    "type": "herb"
+  },
+  "long_dan_cao": {
+    "canonical": "Genciana china",
+    "type": "herb"
+  },
+  "genciana china": {
+    "canonical": "Genciana china",
+    "type": "herb"
+  },
+  "gentiana scabra": {
+    "canonical": "Genciana china",
+    "type": "herb"
+  },
+  "rough gentian": {
+    "canonical": "Genciana china",
+    "type": "herb"
+  },
+  "long dan cao": {
+    "canonical": "Genciana china",
+    "type": "herb"
+  },
+  "huang_jing": {
+    "canonical": "Huang Jing / Polygonatum",
+    "type": "herb"
+  },
+  "huang jing / polygonatum": {
+    "canonical": "Huang Jing / Polygonatum",
+    "type": "herb"
+  },
+  "polygonatum sibiricum": {
+    "canonical": "Huang Jing / Polygonatum",
+    "type": "herb"
+  },
+  "siberian solomon's seal": {
+    "canonical": "Huang Jing / Polygonatum",
+    "type": "herb"
+  },
+  "huang jing": {
+    "canonical": "Huang Jing / Polygonatum",
+    "type": "herb"
+  },
+  "nu_zhen_zi": {
+    "canonical": "Nu Zhen Zi / Ligustro",
+    "type": "herb"
+  },
+  "nu zhen zi / ligustro": {
+    "canonical": "Nu Zhen Zi / Ligustro",
+    "type": "herb"
+  },
+  "ligustrum lucidum": {
+    "canonical": "Nu Zhen Zi / Ligustro",
+    "type": "herb"
+  },
+  "glossy privet fruit": {
+    "canonical": "Nu Zhen Zi / Ligustro",
+    "type": "herb"
+  },
+  "privet berry": {
+    "canonical": "Nu Zhen Zi / Ligustro",
+    "type": "herb"
+  },
+  "tu_si_zi": {
+    "canonical": "Tu Si Zi / Cuscuta",
+    "type": "herb"
+  },
+  "tu si zi / cuscuta": {
+    "canonical": "Tu Si Zi / Cuscuta",
+    "type": "herb"
+  },
+  "cuscuta chinensis": {
+    "canonical": "Tu Si Zi / Cuscuta",
+    "type": "herb"
+  },
+  "chinese dodder": {
+    "canonical": "Tu Si Zi / Cuscuta",
+    "type": "herb"
+  },
+  "dodder seed": {
+    "canonical": "Tu Si Zi / Cuscuta",
+    "type": "herb"
+  },
+  "bai_zhi": {
+    "canonical": "Bai Zhi / Angelica china",
+    "type": "herb"
+  },
+  "bai zhi / angelica china": {
+    "canonical": "Bai Zhi / Angelica china",
+    "type": "herb"
+  },
+  "angelica dahurica": {
+    "canonical": "Bai Zhi / Angelica china",
+    "type": "herb"
+  },
+  "dahurian angelica root": {
+    "canonical": "Bai Zhi / Angelica china",
+    "type": "herb"
+  },
+  "bai zhi": {
+    "canonical": "Bai Zhi / Angelica china",
+    "type": "herb"
+  },
+  "pu_gong_ying": {
+    "canonical": "Pu Gong Ying / Diente de Leon chino",
+    "type": "herb"
+  },
+  "pu gong ying / diente de leon chino": {
+    "canonical": "Pu Gong Ying / Diente de Leon chino",
+    "type": "herb"
+  },
+  "taraxacum mongolicum": {
+    "canonical": "Pu Gong Ying / Diente de Leon chino",
+    "type": "herb"
+  },
+  "mongolian dandelion": {
+    "canonical": "Pu Gong Ying / Diente de Leon chino",
+    "type": "herb"
+  },
+  "pu gong ying": {
+    "canonical": "Pu Gong Ying / Diente de Leon chino",
+    "type": "herb"
+  },
+  "bai_hua_she": {
+    "canonical": "Hedyotis / Oldenlandia",
+    "type": "herb"
+  },
+  "hedyotis / oldenlandia": {
+    "canonical": "Hedyotis / Oldenlandia",
+    "type": "herb"
+  },
+  "hedyotis diffusa": {
+    "canonical": "Hedyotis / Oldenlandia",
+    "type": "herb"
+  },
+  "spreading hedyotis": {
+    "canonical": "Hedyotis / Oldenlandia",
+    "type": "herb"
+  },
+  "bai hua she she cao": {
+    "canonical": "Hedyotis / Oldenlandia",
+    "type": "herb"
+  },
+  "tansy": {
+    "canonical": "Tanaceto",
+    "type": "herb"
+  },
+  "tanaceto": {
+    "canonical": "Tanaceto",
+    "type": "herb"
+  },
+  "tanacetum vulgare": {
+    "canonical": "Tanaceto",
+    "type": "herb"
+  },
+  "hierba lombriguera": {
+    "canonical": "Tanaceto",
+    "type": "herb"
+  },
+  "boton de oro": {
+    "canonical": "Tanaceto",
+    "type": "herb"
+  },
+  "poke_root": {
+    "canonical": "Fitolaca / Uva de America",
+    "type": "herb"
+  },
+  "fitolaca / uva de america": {
+    "canonical": "Fitolaca / Uva de America",
+    "type": "herb"
+  },
+  "phytolacca americana": {
+    "canonical": "Fitolaca / Uva de America",
+    "type": "herb"
+  },
+  "pokeweed": {
+    "canonical": "Fitolaca / Uva de America",
+    "type": "herb"
+  },
+  "fitolaca": {
+    "canonical": "Fitolaca / Uva de America",
+    "type": "herb"
+  },
+  "uncaria_guianensis": {
+    "canonical": "Una de Gato roja",
+    "type": "herb"
+  },
+  "una de gato roja": {
+    "canonical": "Una de Gato roja",
+    "type": "herb"
+  },
+  "uncaria guianensis": {
+    "canonical": "Una de Gato roja",
+    "type": "herb"
+  },
+  "gambia cat's claw": {
+    "canonical": "Una de Gato roja",
+    "type": "herb"
+  },
+  "paraguayo": {
+    "canonical": "Una de Gato roja",
+    "type": "herb"
+  },
+  "espuela_caballero": {
+    "canonical": "Espuela de Caballero",
+    "type": "herb"
+  },
+  "espuela de caballero": {
+    "canonical": "Espuela de Caballero",
+    "type": "herb"
+  },
+  "delphinium consolida": {
+    "canonical": "Espuela de Caballero",
+    "type": "herb"
+  },
+  "larkspur": {
+    "canonical": "Espuela de Caballero",
+    "type": "herb"
+  },
+  "field larkspur": {
+    "canonical": "Espuela de Caballero",
+    "type": "herb"
+  },
+  "plumbago": {
+    "canonical": "Plumbago / Jazmin azul",
+    "type": "herb"
+  },
+  "plumbago / jazmin azul": {
+    "canonical": "Plumbago / Jazmin azul",
+    "type": "herb"
+  },
+  "plumbago zeylanica": {
+    "canonical": "Plumbago / Jazmin azul",
+    "type": "herb"
+  },
+  "white leadwort": {
+    "canonical": "Plumbago / Jazmin azul",
+    "type": "herb"
+  },
+  "chitrak": {
+    "canonical": "Plumbago / Jazmin azul",
+    "type": "herb"
+  },
+  "nauclea": {
+    "canonical": "Nauclea",
+    "type": "herb"
+  },
+  "nauclea latifolia": {
+    "canonical": "Nauclea",
+    "type": "herb"
+  },
+  "african peach": {
+    "canonical": "Nauclea",
+    "type": "herb"
+  },
+  "pin cushion tree": {
+    "canonical": "Nauclea",
+    "type": "herb"
+  },
+  "trema": {
+    "canonical": "Trema / Olmo africano",
+    "type": "herb"
+  },
+  "trema / olmo africano": {
+    "canonical": "Trema / Olmo africano",
+    "type": "herb"
+  },
+  "trema orientalis": {
+    "canonical": "Trema / Olmo africano",
+    "type": "herb"
+  },
+  "charcoal tree": {
+    "canonical": "Trema / Olmo africano",
+    "type": "herb"
+  },
+  "cat_thyme": {
+    "canonical": "Tomillo del gato",
+    "type": "herb"
+  },
+  "tomillo del gato": {
+    "canonical": "Tomillo del gato",
+    "type": "herb"
+  },
+  "teucrium marum": {
+    "canonical": "Tomillo del gato",
+    "type": "herb"
+  },
+  "cat thyme": {
+    "canonical": "Tomillo del gato",
+    "type": "herb"
+  },
+  "cat_valerian": {
+    "canonical": "Valeriana celtica",
+    "type": "herb"
+  },
+  "valeriana celtica": {
+    "canonical": "Valeriana celtica",
+    "type": "herb"
+  },
+  "celtic nard": {
+    "canonical": "Valeriana celtica",
+    "type": "herb"
+  },
+  "nardo celta": {
+    "canonical": "Valeriana celtica",
+    "type": "herb"
+  },
+  "lavanda": {
+    "canonical": "Lavanda",
+    "type": "herb"
+  },
+  "lavandula angustifolia": {
+    "canonical": "Lavanda",
+    "type": "herb"
+  },
+  "lavender": {
+    "canonical": "Lavanda",
+    "type": "herb"
+  },
+  "espliego": {
+    "canonical": "Lavanda",
+    "type": "herb"
+  },
+  "alhucema": {
+    "canonical": "Lavanda",
+    "type": "herb"
+  },
+  "cajuput": {
+    "canonical": "Cajeput / Melaleuca menor",
+    "type": "herb"
+  },
+  "cajeput / melaleuca menor": {
+    "canonical": "Cajeput / Melaleuca menor",
+    "type": "herb"
+  },
+  "melaleuca cajuputi": {
+    "canonical": "Cajeput / Melaleuca menor",
+    "type": "herb"
+  },
+  "cajeput oil": {
+    "canonical": "Cajeput / Melaleuca menor",
+    "type": "herb"
+  },
+  "paperbark tree": {
+    "canonical": "Cajeput / Melaleuca menor",
+    "type": "herb"
+  },
+  "yi_zhi_ren": {
+    "canonical": "Yi Zhi Ren / Alpinia",
+    "type": "herb"
+  },
+  "yi zhi ren / alpinia": {
+    "canonical": "Yi Zhi Ren / Alpinia",
+    "type": "herb"
+  },
+  "alpinia oxyphylla": {
+    "canonical": "Yi Zhi Ren / Alpinia",
+    "type": "herb"
+  },
+  "sharp leaf galangal": {
+    "canonical": "Yi Zhi Ren / Alpinia",
+    "type": "herb"
+  },
+  "oxyphylla seed": {
+    "canonical": "Yi Zhi Ren / Alpinia",
+    "type": "herb"
+  },
+  "zhi_mu": {
+    "canonical": "Zhi Mu / Anemarrhena",
+    "type": "herb"
+  },
+  "zhi mu / anemarrhena": {
+    "canonical": "Zhi Mu / Anemarrhena",
+    "type": "herb"
+  },
+  "anemarrhena asphodeloides": {
+    "canonical": "Zhi Mu / Anemarrhena",
+    "type": "herb"
+  },
+  "anemarrhena": {
+    "canonical": "Zhi Mu / Anemarrhena",
+    "type": "herb"
+  },
+  "zhi mu root": {
+    "canonical": "Zhi Mu / Anemarrhena",
+    "type": "herb"
+  },
+  "huai_hua": {
+    "canonical": "Huai Hua / Sophora japonica",
+    "type": "herb"
+  },
+  "huai hua / sophora japonica": {
+    "canonical": "Huai Hua / Sophora japonica",
+    "type": "herb"
+  },
+  "sophora japonica": {
+    "canonical": "Huai Hua / Sophora japonica",
+    "type": "herb"
+  },
+  "pagodatree": {
+    "canonical": "Huai Hua / Sophora japonica",
+    "type": "herb"
+  },
+  "japanese pagoda tree": {
+    "canonical": "Huai Hua / Sophora japonica",
+    "type": "herb"
+  },
+  "ge_gen": {
+    "canonical": "Ge Gen / Kudzu flor",
+    "type": "herb"
+  },
+  "ge gen / kudzu flor": {
+    "canonical": "Ge Gen / Kudzu flor",
+    "type": "herb"
+  },
+  "pueraria lobata": {
+    "canonical": "Ge Gen / Kudzu flor",
+    "type": "herb"
+  },
+  "kudzu flower": {
+    "canonical": "Ge Gen / Kudzu flor",
+    "type": "herb"
+  },
+  "arrowroot pueraria": {
+    "canonical": "Ge Gen / Kudzu flor",
+    "type": "herb"
+  },
+  "wuling_zhi": {
+    "canonical": "Wu Ling Zhi / Trogopterus",
+    "type": "herb"
+  },
+  "wu ling zhi / trogopterus": {
+    "canonical": "Wu Ling Zhi / Trogopterus",
+    "type": "herb"
+  },
+  "trogopterus xanthipes": {
+    "canonical": "Wu Ling Zhi / Trogopterus",
+    "type": "herb"
+  },
+  "flying squirrel feces": {
+    "canonical": "Wu Ling Zhi / Trogopterus",
+    "type": "herb"
+  },
+  "wu ling zhi": {
+    "canonical": "Wu Ling Zhi / Trogopterus",
+    "type": "herb"
+  },
+  "anticoagulantes": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "warfarina": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "acenocumarol": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "heparina": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "enoxaparina": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "blood thinners": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "coumadin": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "sintrom": {
+    "canonical": "anticoagulantes",
+    "type": "drug_class"
+  },
+  "antiplaquetarios": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "aspirina": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "clopidogrel": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "ticagrelor": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "prasugrel": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "antiagregantes": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "plavix": {
+    "canonical": "antiplaquetarios",
+    "type": "drug_class"
+  },
+  "antihipertensivos": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "losartán": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "enalapril": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "amlodipino": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "valsartán": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "lisinopril": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "ramipril": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "para la presión": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "ieca": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "ara-ii": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "calcioantagonistas": {
+    "canonical": "antihipertensivos",
+    "type": "drug_class"
+  },
+  "antidiabeticos": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "antidiabéticos": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "metformina": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "glibenclamida": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "sitagliptina": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "empagliflozina": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "insulina": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "hipoglucemiantes": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "glucophage": {
+    "canonical": "antidiabeticos",
+    "type": "drug_class"
+  },
+  "isrs": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "antidepresivos isrs": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "fluoxetina": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "sertralina": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "paroxetina": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "escitalopram": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "citalopram": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "ssri": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "prozac": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "zoloft": {
+    "canonical": "isrs",
+    "type": "drug_class"
+  },
+  "imao": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "inhibidores de mao": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "fenelzina": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "tranilcipromina": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "selegilina": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "moclobemida": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "maoi": {
+    "canonical": "imao",
+    "type": "drug_class"
+  },
+  "benzodiacepinas": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "diazepam": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "alprazolam": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "clonazepam": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "lorazepam": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "midazolam": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "ansiolíticos": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "valium": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "rivotril": {
+    "canonical": "benzodiacepinas",
+    "type": "drug_class"
+  },
+  "estatinas": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "atorvastatina": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "rosuvastatina": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "simvastatina": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "pravastatina": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "para el colesterol": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "lipitor": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "crestor": {
+    "canonical": "estatinas",
+    "type": "drug_class"
+  },
+  "inmunosupresores": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "ciclosporina": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "tacrolimus": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "sirolimus": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "micofenolato": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "para trasplantes": {
+    "canonical": "inmunosupresores",
+    "type": "drug_class"
+  },
+  "antirretrovirales": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "indinavir": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "ritonavir": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "nevirapina": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "efavirenz": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "arv": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "antivih": {
+    "canonical": "antirretrovirales",
+    "type": "drug_class"
+  },
+  "anticonceptivos": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "anticonceptivos orales": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "etinilestradiol": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "levonorgestrel": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "desogestrel": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "píldora anticonceptiva": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "aco": {
+    "canonical": "anticonceptivos",
+    "type": "drug_class"
+  },
+  "digoxina": {
+    "canonical": "digoxina",
+    "type": "drug_class"
+  },
+  "digitálicos": {
+    "canonical": "digoxina",
+    "type": "drug_class"
+  },
+  "lanoxin": {
+    "canonical": "digoxina",
+    "type": "drug_class"
+  },
+  "teofilina": {
+    "canonical": "teofilina",
+    "type": "drug_class"
+  },
+  "aminofilina": {
+    "canonical": "teofilina",
+    "type": "drug_class"
+  },
+  "broncodilatador": {
+    "canonical": "teofilina",
+    "type": "drug_class"
+  },
+  "omeprazol": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "inhibidores de bomba de protones": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "esomeprazol": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "pantoprazol": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "lansoprazol": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "ibp": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "antiácidos": {
+    "canonical": "omeprazol",
+    "type": "drug_class"
+  },
+  "aines": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "ibuprofeno": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "naproxeno": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "diclofenaco": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "celecoxib": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "antiinflamatorios no esteroideos": {
+    "canonical": "aines",
+    "type": "drug_class"
+  },
+  "litio": {
+    "canonical": "litio",
+    "type": "drug_class"
+  },
+  "carbonato de litio": {
+    "canonical": "litio",
+    "type": "drug_class"
+  },
+  "estabilizador del ánimo": {
+    "canonical": "litio",
+    "type": "drug_class"
+  },
+  "anticonvulsivantes": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "carbamazepina": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "fenitoína": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "ácido valproico": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "lamotrigina": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "antiepilépticos": {
+    "canonical": "anticonvulsivantes",
+    "type": "drug_class"
+  },
+  "quimioterapia": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "irinotecan": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "imatinib": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "ciclofosfamida": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "docetaxel": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "antineoplásicos": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "citostáticos": {
+    "canonical": "quimioterapia",
+    "type": "drug_class"
+  },
+  "tiroideos": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "hormonas tiroideas": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "levotiroxina": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "liotironina": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "synthroid": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "eutirox": {
+    "canonical": "tiroideos",
+    "type": "drug_class"
+  },
+  "corticosteroides": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "prednisona": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "prednisolona": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "dexametasona": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "hidrocortisona": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "corticoides": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "esteroides": {
+    "canonical": "corticosteroides",
+    "type": "drug_class"
+  },
+  "antifungicos": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "antifúngicos azólicos": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "ketoconazol": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "itraconazol": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "fluconazol": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "voriconazol": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "antimicóticos": {
+    "canonical": "antifungicos",
+    "type": "drug_class"
+  },
+  "antibioticos": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "antibióticos": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "amoxicilina": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "ciprofloxacino": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "metronidazol": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "claritromicina": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "doxiciclina": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "antibacterianos": {
+    "canonical": "antibioticos",
+    "type": "drug_class"
+  },
+  "diureticos": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "diuréticos": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "furosemida": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "hidroclorotiazida": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "espironolactona": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "torasemida": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "lasix": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "para retención de líquidos": {
+    "canonical": "diureticos",
+    "type": "drug_class"
+  },
+  "opioides": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "tramadol": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "codeína": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "morfina": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "oxicodona": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "fentanilo": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "analgésicos opiáceos": {
+    "canonical": "opioides",
+    "type": "drug_class"
+  },
+  "glp1": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "agonistas glp-1": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "semaglutida": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "liraglutida": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "dulaglutida": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "tirzepatida": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "ozempic": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "wegovy": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "mounjaro": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "para bajar de peso": {
+    "canonical": "glp1",
+    "type": "drug_class"
+  },
+  "antiarritmicos": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "antiarrítmicos": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "amiodarona": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "flecainida": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "propafenona": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "sotalol": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "para arritmias": {
+    "canonical": "antiarritmicos",
+    "type": "drug_class"
+  },
+  "betabloqueantes": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "atenolol": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "metoprolol": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "propranolol": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "bisoprolol": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "carvedilol": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "beta-blockers": {
+    "canonical": "betabloqueantes",
+    "type": "drug_class"
+  },
+  "anestesicos": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "anestésicos": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "propofol": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "sevoflurano": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "lidocaína": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "ketamina": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "anestesia": {
+    "canonical": "anestesicos",
+    "type": "drug_class"
+  },
+  "isrsn": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "antidepresivos irsn": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "venlafaxina": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "duloxetina": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "desvenlafaxina": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "snri": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "effexor": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "cymbalta": {
+    "canonical": "isrsn",
+    "type": "drug_class"
+  },
+  "antipsicoticos": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "antipsicóticos": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "haloperidol": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "quetiapina": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "risperidona": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "olanzapina": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "aripiprazol": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "neurolépticos": {
+    "canonical": "antipsicoticos",
+    "type": "drug_class"
+  },
+  "antihistaminicos": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "antihistamínicos": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "cetirizina": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "loratadina": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "fexofenadina": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "difenhidramina": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "desloratadina": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "antialérgicos": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "zyrtec": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "claritin": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "allegra": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "benadryl": {
+    "canonical": "antihistaminicos",
+    "type": "drug_class"
+  },
+  "bifosfonatos": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "alendronato": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "risedronato": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "ibandronato": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "ácido zoledrónico": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "para osteoporosis": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "fosamax": {
+    "canonical": "bifosfonatos",
+    "type": "drug_class"
+  },
+  "antigotosos": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "alopurinol": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "febuxostat": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "colchicina": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "probenecid": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "para la gota": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "zyloprim": {
+    "canonical": "antigotosos",
+    "type": "drug_class"
+  },
+  "antiemeticos": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "antieméticos": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "ondansetrón": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "metoclopramida": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "domperidona": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "granisetrón": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "para náuseas": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "zofran": {
+    "canonical": "antiemeticos",
+    "type": "drug_class"
+  },
+  "broncodilatadores": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "salbutamol": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "formoterol": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "salmeterol": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "ipratropio": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "tiotropio": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "para asma": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "inhaladores": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "ventolin": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "spiriva": {
+    "canonical": "broncodilatadores",
+    "type": "drug_class"
+  },
+  "antiacidos_h2": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "antagonistas h2": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "ranitidina": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "famotidina": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "cimetidina": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "nizatidina": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "antiácidos h2": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "zantac": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "pepcid": {
+    "canonical": "antiacidos_h2",
+    "type": "drug_class"
+  },
+  "hipnoticos": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "hipnóticos no benzodiacepínicos": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "zolpidem": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "zopiclona": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "eszopiclona": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "suvorexant": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "para dormir": {
+    "canonical": "melatonina_rx",
+    "type": "drug_class"
+  },
+  "ambien": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "z-drugs": {
+    "canonical": "hipnoticos",
+    "type": "drug_class"
+  },
+  "antimigrañosos": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "antimigrañosos (triptanes)": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "sumatriptán": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "rizatriptán": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "zolmitriptán": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "eletriptán": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "naratriptán": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "triptanes": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "imitrex": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "para migraña": {
+    "canonical": "antimigrañosos",
+    "type": "drug_class"
+  },
+  "antidiabeticos_sglt2": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "inhibidores sglt2": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "dapagliflozina": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "canagliflozina": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "gliflozinas": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "jardiance": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "farxiga": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "para diabetes tipo 2": {
+    "canonical": "antidiabeticos_sglt2",
+    "type": "drug_class"
+  },
+  "relajantes_musculares": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "relajantes musculares": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "ciclobenzaprina": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "tizanidina": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "baclofeno": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "metocarbamol": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "carisoprodol": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "miorrelajantes": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "flexeril": {
+    "canonical": "relajantes_musculares",
+    "type": "drug_class"
+  },
+  "antitusivos": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "dextrometorfano": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "benzonatato": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "levodropropizina": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "para la tos": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "robitussin": {
+    "canonical": "antitusivos",
+    "type": "drug_class"
+  },
+  "laxantes": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "laxantes osmóticos": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "polietilenglicol": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "lactulosa": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "bisacodilo": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "para estreñimiento": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "miralax": {
+    "canonical": "laxantes",
+    "type": "drug_class"
+  },
+  "antiparasitarios": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "albendazol": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "mebendazol": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "ivermectina": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "praziquantel": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "metronidazol antiparasitario": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "antihelminticos": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "desparasitantes": {
+    "canonical": "antiparasitarios",
+    "type": "drug_class"
+  },
+  "vasodilatadores": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "sildenafilo": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "tadalafilo": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "nitroglicerina": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "isosorbida": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "minoxidil": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "viagra": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "cialis": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "para disfunción eréctil": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "nitratos": {
+    "canonical": "vasodilatadores",
+    "type": "drug_class"
+  },
+  "anticolinergicos": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "anticolinérgicos": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "atropina": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "escopolamina": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "oxibutinina": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "tolterodina": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "solifenacina": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "antimuscarínicos": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "para vejiga hiperactiva": {
+    "canonical": "anticolinergicos",
+    "type": "drug_class"
+  },
+  "paracetamol": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "paracetamol / acetaminofén": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "acetaminofén": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "acetaminofen": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "tylenol": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "doliprane": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "tempra": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "analgésico": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "para el dolor": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "para la fiebre": {
+    "canonical": "paracetamol",
+    "type": "drug_class"
+  },
+  "triciclicos": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "antidepresivos tricíclicos": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "amitriptilina": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "nortriptilina": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "imipramina": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "clomipramina": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "desipramina": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "atc": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "tryptanol": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "tricíclicos": {
+    "canonical": "triciclicos",
+    "type": "drug_class"
+  },
+  "gabapentinoides": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "gabapentina": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "pregabalina": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "neurontin": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "lyrica": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "para dolor neuropático": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "para fibromialgia": {
+    "canonical": "gabapentinoides",
+    "type": "drug_class"
+  },
+  "melatonina_rx": {
+    "canonical": "melatonina_rx",
+    "type": "drug_class"
+  },
+  "regulador del sueño": {
+    "canonical": "melatonina_rx",
+    "type": "drug_class"
+  },
+  "macrolidos": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "macrólidos": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "azitromicina": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "eritromicina": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "zithromax": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "antibióticos macrólidos": {
+    "canonical": "macrolidos",
+    "type": "drug_class"
+  },
+  "antileucotrienos": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "montelukast": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "zafirlukast": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "singulair": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "para rinitis alérgica": {
+    "canonical": "antileucotrienos",
+    "type": "drug_class"
+  },
+  "alfa_bloqueantes": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "alfa-bloqueantes": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "tamsulosina": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "doxazosina": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "terazosina": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "alfuzosina": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "flomax": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "para próstata": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "para hiperplasia prostática": {
+    "canonical": "alfa_bloqueantes",
+    "type": "drug_class"
+  },
+  "metotrexato_rx": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "metotrexato": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "metotrexate": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "mtx": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "para artritis reumatoide": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "inmunosupresor": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  },
+  "para psoriasis": {
+    "canonical": "metotrexato_rx",
+    "type": "drug_class"
+  }
+}
