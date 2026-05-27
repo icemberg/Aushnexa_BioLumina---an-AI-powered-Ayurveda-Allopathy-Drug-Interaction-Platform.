@@ -129,6 +129,20 @@
     background: linear-gradient(135deg, rgba(24, 201, 106, 0.9) 0%, rgba(232, 150, 12, 0.9) 100%);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gradient-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer-sweep 3s infinite;
   }
 
   .gradient-btn:hover {
@@ -208,6 +222,18 @@
 
   100% {
     background-position: 200% 0;
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    left: -100%;
+  }
+  20% {
+    left: 200%;
+  }
+  100% {
+    left: 200%;
   }
 }
 
