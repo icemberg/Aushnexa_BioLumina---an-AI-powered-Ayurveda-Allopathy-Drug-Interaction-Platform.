@@ -1,151 +1,742 @@
-# Aushnexa
+# Aushnexa BioLumina
 
-**AI-powered multilingual clinical decision-support platform for detecting interactions between Ayurvedic herbs and allopathic medicines.**
+*Safe Interactions. Smarter Care.*
 
-<p align="center">
-  <img src="public/logo.jpg" alt="Aushnexa Logo" width="120" />
-</p>
+![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg?logo=fastapi)
+![React](https://img.shields.io/badge/React-18.2-61DAFB.svg?logo=react)
+![Neo4j](https://img.shields.io/badge/Neo4j-5.x-018bff.svg?logo=neo4j)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED.svg?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-## Overview
+Aushnexa detects dangerous interactions between Ayurvedic herbs and allopathic medicines using a biomedical Neo4j knowledge graph. It provides evidence-graded risk scores, multilingual explanations in 7 Indian languages (Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, Malayalam), AI-generated integrative protocols, clinical trial aggregation from multiple global registries, and a molecular knowledge explorer — helping patients, doctors, and pharmacists make safer, informed treatment decisions.
 
-Aushnexa uses a biomedical knowledge graph (Neo4j) to detect, explain, and grade the severity of potential interactions between:
+---
 
-- Prescription medications (allopathic drugs)
-- Ayurvedic herbs and formulations
-- Active phytochemicals
-- Supplements
+## Table of Contents
 
-The platform answers questions like:
-> *"Can I take Ashwagandha with Metformin and Amlodipine?"*
+1. [System Architecture](#system-architecture)
+2. [Features](#features)
+3. [Technology Stack](#technology-stack)
+4. [Knowledge Graph Schema](#knowledge-graph-schema)
+5. [How It Works](#how-it-works)
+6. [API Reference](#api-reference)
+7. [Project Structure](#project-structure)
+8. [Getting Started](#getting-started)
+9. [Docker Architecture](#docker-architecture)
+10. [Security](#security)
+11. [Data Pipeline](#data-pipeline)
+12. [Testing](#testing)
+13. [Deployment](#deployment)
+14. [Supported Languages](#supported-languages)
+15. [Clinical Safety and Disclaimers](#clinical-safety-and-disclaimers)
+16. [Contributing](#contributing)
+17. [License](#license)
+18. [Acknowledgements](#acknowledgements)
 
-## Tech Stack
+---
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18 + Vite + Tailwind CSS |
-| Backend | FastAPI (Python 3.11+) |
-| Knowledge Graph | Neo4j 5.x |
-| Relational DB | PostgreSQL 15 |
-| Cache | Redis 7 |
-| AI Explanations | Groq API (Llama 3.3 70B) |
-| Translation | Sarvam AI |
-| Deployment | Docker Compose + Nginx |
+## System Architecture
 
-## Quick Start
+Aushnexa operates on a decoupled architecture utilizing a React frontend, a FastAPI backend, and a multi-database persistence layer relying on PostgreSQL (relational), Neo4j (graph), and Redis (caching/rate limiting). It dynamically orchestrates external API calls to Anthropic's Claude and Sarvam AI to provide intelligent, localized interaction analysis.
 
-### Prerequisites
+```mermaid
+flowchart TD
+    subgraph Client
+        UI[React Frontend]
+    end
 
-- Docker & Docker Compose
-- Node.js 18+ (for frontend dev)
-- Python 3.11+ (for backend dev)
+    subgraph Reverse Proxy
+        NGINX[Nginx]
+    end
 
-### 1. Clone and configure
+    subgraph Backend Services
+        API[FastAPI Backend]
+    end
 
-```bash
-cp .env.example .env
-# Edit .env with your API keys:
-# - GROQ_API_KEY
-# - SARVAM_API_KEY
+    subgraph Databases
+        Neo4j[(Neo4j Knowledge Graph)]
+        PG[(PostgreSQL)]
+        Redis[(Redis Cache)]
+    end
+
+    subgraph External APIs
+        Claude[Anthropic Claude API]
+        Sarvam[Sarvam AI API]
+        PubMed[NCBI PubMed API]
+        CTgov[ClinicalTrials.gov API]
+        Semantic[Semantic Scholar Graph]
+        CTRI[CTRI India Scraper]
+    end
+
+    UI -->|HTTPS| NGINX
+    NGINX -->|Proxy / /v1/| API
+    API <--> Neo4j
+    API <--> PG
+    API <--> Redis
+
+    API <--> Claude
+    API <--> Sarvam
+    API <--> PubMed
+    API <--> CTgov
+    API <--> Semantic
+    API <--> CTRI
 ```
 
-### 2. Start Docker services
+---
 
-```bash
-docker-compose up -d neo4j postgres redis
+## Features
+
+### Patient Features
+* **Interaction Checker**: Enter up to 10 herbs/drugs, get pairwise risk scores with mechanism explanations and evidence citations.
+* **Multilingual Support**: Real-time translation into 7 Indian languages via Sarvam AI, ensuring medical accessibility.
+* **Voice Input**: Speech-to-text integration for submitting Indian language voice queries seamlessly.
+
+### Clinical Features
+* **Aushnexa AI Tab**: A natural language clinical query interface that dynamically synthesizes a molecular interaction matrix and AI-generated integrative protocols.
+* **Evidence Portal**: Aggregates real-world clinical trials and papers directly from ClinicalTrials.gov, PubMed, CTRI India, and Semantic Scholar.
+* **Heritage Mapping**: Detailed Ayurvedic property profiles for each herb including active compounds, *rasa*, *guna*, and *dosha* effects.
+
+### Research Features
+* **Knowledge Base**: Interactive molecular graph explorer featuring pathway tracing, compound comparison, and an evidence density heatmap.
+* **Risk Scoring Engine**: Sophisticated weighted formula combining Severity (0.4), Evidence (0.3), Mechanism (0.2), and Patient Factors (0.1).
+
+### Admin Features
+* **Admin Dashboard**: System vitality monitor, institutional access logs, and anomaly detection.
+* **Clinical Safety Protocols**: Total evidence transparency, strict confidence scoring, mandatory medical disclaimers, and banned words enforcement.
+
+---
+
+## Technology Stack
+
+| Category | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | React 18, Vite | UI library and fast build tooling |
+| **Frontend Styling** | Tailwind CSS, Framer Motion | Custom "Deep Biomedical Ink" theme and animations |
+| **Frontend State** | Zustand, TanStack Query v5 | Client state with `sessionStorage` and server state caching |
+| **Frontend Routing** | React Router v6 | Client-side SPA routing |
+| **Backend** | Python 3.11+, FastAPI | High-performance asynchronous API |
+| **Databases** | Neo4j 5.x, PostgreSQL 15, Redis | Graph relations, relational user data, and caching |
+| **Backend Tools** | SQLAlchemy 2.0, Alembic, Passlib | Async ORM, migrations, and bcrypt password hashing |
+| **AI / LLM** | Anthropic Claude API | Explanation generation and integrative protocol synthesis |
+| **Translation** | Sarvam AI | Indian language translation and TTS |
+| **External Integrations**| PubMed, CT.gov, Semantic Scholar, CTRI | Evidence aggregation and literature citation |
+| **DevOps** | Docker, Nginx, Certbot | Container orchestration, reverse proxy, and automated SSL |
+
+---
+
+## Knowledge Graph Schema
+
+Our biomedical graph explicitly models the complex biochemical interactions between synthetic compounds, botanical species, and human biology.
+
+```mermaid
+erDiagram
+    DRUG {
+        string id
+        string name
+        string class
+        string atc_code
+    }
+    HERB {
+        string id
+        string botanical_name
+        string common_name
+        string ayurvedic_name
+        string rasa
+        string guna
+        string dosha_effect
+    }
+    COMPOUND {
+        string id
+        string name
+        string pubchem_cid
+        string structure
+    }
+    MECHANISM {
+        string id
+        string target_protein
+        string action_type
+        string pathway
+    }
+    INTERACTION {
+        string id
+        string severity
+        string description
+        string evidence_level
+    }
+    DISEASE {
+        string id
+        string name
+        string icd10
+    }
+    EVIDENCE {
+        string id
+        string pmid
+        string title
+        string year
+    }
+
+    HERB ||--o{ COMPOUND : "CONTAINS"
+    DRUG ||--o{ MECHANISM : "MODULATES"
+    COMPOUND ||--o{ MECHANISM : "MODULATES"
+    DRUG ||--o{ INTERACTION : "INTERACTS_WITH"
+    HERB ||--o{ INTERACTION : "INTERACTS_WITH"
+    MECHANISM ||--o{ DISEASE : "AFFECTS"
+    INTERACTION ||--o{ EVIDENCE : "SUPPORTED_BY"
+    DRUG ||--o{ DISEASE : "CONTRAINDICATED_IN"
 ```
 
-### 3. Start backend
+### Graph Properties Details
 
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+* **Drug**: Represents allopathic medications (e.g., Metformin, Warfarin). Properties include standard classifications (ATC).
+* **Herb**: Botanical entities including deep Ayurvedic classification (Rasa/Taste, Guna/Quality, Dosha impact).
+* **Compound**: The active phytochemicals inside herbs.
+* **Mechanism**: Biological pathways, receptor bindings, and enzymatic inhibitions.
+* **Interaction**: The explicit cross-reactivity node mapping Severity (e.g., Minor, Moderate, Major, Critical) and linking to Evidence.
+
+---
+
+## How It Works
+
+### 1. Interaction Check Request Flow
+When a user submits a list of drugs and herbs, the backend normalizes the entities, queries the graph for physical interactions, computes a risk score, and generates localized explanations.
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant FastAPI
+    participant NormService as NormalizationService
+    participant Graph as Neo4jGraph
+    participant Risk as RiskService
+    participant Claude as ExplanationService
+    participant Sarvam as TranslationService
+
+    User->>Frontend: Enters entities (e.g. "Ashwagandha", "Thyroxine")
+    Frontend->>FastAPI: POST /api/v1/check-interactions
+    FastAPI->>NormService: Resolve synonyms to canonical IDs
+    NormService-->>FastAPI: Canonical IDs
+    FastAPI->>Graph: Query pairwise interactions
+    Graph-->>FastAPI: Raw interaction & mechanism data
+    FastAPI->>Risk: Calculate weighted risk scores
+    Risk-->>FastAPI: Risk metrics
+    FastAPI->>Claude: Generate clinical explanations based on mechanisms
+    Claude-->>FastAPI: Synthesized English explanation
+    FastAPI->>Sarvam: Translate to selected Indian language (optional)
+    Sarvam-->>FastAPI: Translated text
+    FastAPI-->>Frontend: InteractionResponse JSON
+    Frontend-->>User: Renders Matrix & Warnings
 ```
 
-### 4. Start frontend
+### 2. Risk Scoring Algorithm
+The proprietary risk score is calculated using four heavily weighted factors to ensure severe biochemical conflicts are never understated.
 
-```bash
-cd frontend  # (project root for Vite)
-npm install
-npm run dev
+```mermaid
+flowchart TD
+    S[Severity Score] -->|x 0.40| Total
+    E[Evidence Level] -->|x 0.30| Total
+    M[Mechanism Clarity] -->|x 0.20| Total
+    P[Patient Factors] -->|x 0.10| Total
+
+    Total[Calculate Composite Score 0-100]
+
+    Total --> Cond1{Score >= 80?}
+    Cond1 -- Yes --> C[Critical - Red Flag]
+    Cond1 -- No --> Cond2{Score >= 60?}
+    
+    Cond2 -- Yes --> Maj[Major - High Caution]
+    Cond2 -- No --> Cond3{Score >= 40?}
+    
+    Cond3 -- Yes --> Mod[Moderate - Monitor]
+    Cond3 -- No --> Min[Minor - Low Risk]
 ```
 
-### 5. Load seed data
+### 3. Evidence Aggregation Pipeline
+Clinical evidence is concurrently scraped, fetched, and aggregated in real-time from massive global registries.
 
-```bash
-python data_pipeline/loaders/neo4j_loader.py
-python data_pipeline/scripts/init_db.py
+```mermaid
+flowchart LR
+    Req[Evidence Request] --> Split
+    
+    Split --> CTG[ClinicalTrials.gov API]
+    Split --> PUB[PubMed E-utilities]
+    Split --> CTRI[CTRI India Scraper]
+    Split --> SEM[Semantic Scholar Graph]
+
+    CTG --> Agg
+    PUB --> Agg
+    CTRI --> Agg
+    SEM --> Agg
+
+    Agg[Deduplication Layer] --> Score[Relevance Scoring]
+    Score --> Unify[Unified Evidence Response]
 ```
 
-Open http://localhost:3000
+### 4. AI Query Pipeline (Aushnexa AI Tab)
+When clinicians ask open-ended questions about combinatorial regimens, Aushnexa leverages Claude for intent detection and structured extraction before querying the hard graph data.
 
-## Architecture
-
+```mermaid
+sequenceDiagram
+    participant User
+    participant NLP as Claude (Intent Detection)
+    participant Graph as Neo4j Graph
+    participant Synth as Claude (Generation)
+    
+    User->>NLP: "Is turmeric safe with blood thinners for a diabetic?"
+    NLP->>NLP: Extract entities (Turmeric, Blood Thinners)
+    NLP->>Graph: Lookup herb/drug pathways
+    Graph-->>NLP: Returns CYP450 inhibition data & interactions
+    NLP->>Synth: Pass graph facts for structured synthesis
+    Synth->>Synth: Validate against safety guardrails
+    Synth-->>User: Returns Interaction Matrix + Integrative Protocol
 ```
-React Frontend (Vite + Tailwind)
-        ↓ REST API
-FastAPI Backend
-        ↓
-  ┌─────┼─────────┐
-  ↓     ↓         ↓
-Neo4j  PostgreSQL  Redis
-(Graph) (Users)   (Cache)
-  ↓
-Groq API → Explanation
-Sarvam AI → Translation
+
+---
+
+## API Reference
+
+| Method | Endpoint | Auth Required | Description |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/api/v1/check-interactions` | Yes | Analyzes pairwise interactions between provided herbs and drugs. |
+| `GET` | `/api/v1/normalize` | Yes | Normalizes unstructured medical text into canonical entity IDs. |
+| `GET` | `/api/v1/history` | Yes | Retrieves user's past interaction queries. |
+| `POST` | `/api/v1/auth/register` | No | Registers a new user and assigns a role. |
+| `POST` | `/api/v1/auth/login` | No | Authenticates a user and returns a JWT. |
+| `GET` | `/api/v1/auth/profile` | Yes | Fetches the current authenticated user's profile. |
+| `POST` | `/api/v1/translate` | Yes | Translates medical text into one of 7 Indian languages via Sarvam AI. |
+| `GET` | `/api/v1/evidence/search` | Yes | Aggregates clinical trials and PubMed articles for a specific interaction. |
+| `GET` | `/api/v1/trials/search` | Yes | Direct query interface for ClinicalTrials.gov and CTRI. |
+| `GET` | `/api/v1/herb/{name}/profile` | Yes | Returns complete Ayurvedic and molecular profile for a specific herb. |
+| `POST` | `/api/v1/ai/query` | Yes | Natural language query for AI integrative protocols. |
+| `GET` | `/api/v1/admin/system-status` | Admin | Checks database connections, Neo4j latency, and API quotas. |
+| `GET` | `/api/v1/admin/metrics` | Admin | Aggregated usage metrics for the dashboard. |
+| `GET` | `/api/v1/admin/access-logs` | Admin | Fetches audit logs for institutional compliance. |
+| `GET` | `/health` | No | Basic heartbeat check for load balancers. |
+
+### Example Interaction Check Request
+
+**POST** `/api/v1/check-interactions`
+
+```json
+{
+  "items": ["Ashwagandha", "Escitalopram"],
+  "language": "hi-IN",
+  "patient_context": {
+    "age": 45,
+    "conditions": ["Hypertension"]
+  }
+}
 ```
 
-## API Endpoints
+**Response:**
+```json
+{
+  "risk_score": 68,
+  "severity": "Moderate",
+  "summary": "Ashwagandha may increase serotonin levels and interact mildly with Escitalopram.",
+  "translation": {
+    "language": "hi-IN",
+    "text": "अश्वगंधा सेरोटोनिन के स्तर को बढ़ा सकता है और एस्सिटालोप्राम के साथ हल्का प्रभाव डाल सकता है।"
+  },
+  "mechanisms": [
+    {
+      "type": "Pharmacodynamic",
+      "description": "Synergistic CNS depression and potential mild serotonin modulation."
+    }
+  ],
+  "evidence": [
+    {
+      "source": "PubMed",
+      "pmid": "12345678",
+      "title": "Effects of Withania somnifera on SSRI pharmacokinetics",
+      "evidence_level": 3
+    }
+  ],
+  "disclaimer": "This information is for educational purposes only and does not constitute medical advice."
+}
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/v1/check-interactions` | Check drug-herb interactions |
-| GET | `/api/v1/normalize?q=` | Normalize entity name |
-| POST | `/api/v1/auth/register` | Register user |
-| POST | `/api/v1/auth/login` | Login (returns JWT) |
-| GET | `/api/v1/auth/profile` | User profile |
-| GET | `/api/v1/history` | Query history (auth required) |
-| POST | `/api/v1/translate` | Translate text (Sarvam AI) |
-| GET | `/health` | Health check |
+---
 
 ## Project Structure
 
-```
+```text
 aushnexa/
-├── src/                    # React frontend
-│   ├── pages/              # Page components
-│   ├── components/         # Reusable UI components
-│   ├── hooks/              # Custom React hooks
-│   ├── services/           # API service layer
-│   ├── store/              # Zustand state management
-│   ├── utils/              # Helpers and formatters
-│   └── constants/          # App constants
-├── backend/
+├── frontend/                     # React 18 SPA
+│   ├── src/
+│   │   ├── pages/                # All core routing views
+│   │   │   ├── Landing.jsx
+│   │   │   ├── Checker.jsx
+│   │   │   ├── Results.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── History.jsx
+│   │   │   ├── ClinicalTrials.jsx
+│   │   │   ├── EvidencePortal.jsx
+│   │   │   ├── AushnexaAI.jsx
+│   │   │   ├── KnowledgeBase.jsx
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── AdminLogs.jsx
+│   │   │   └── NotFound.jsx
+│   │   ├── components/           # Reusable UI elements
+│   │   ├── hooks/                # React Query data fetching hooks
+│   │   ├── services/             # Axios API instances
+│   │   ├── store/                # Zustand state management
+│   │   ├── utils/                # Utility and formatting functions
+│   │   └── constants/            # Theme, config, and mapping constants
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/                      # FastAPI Python Application
 │   ├── app/
-│   │   ├── api/v1/         # FastAPI route handlers
-│   │   ├── core/           # Security, exceptions
-│   │   ├── services/       # Business logic
-│   │   ├── graph/          # Neo4j queries
-│   │   ├── db/             # PostgreSQL models
-│   │   ├── schemas/        # Pydantic models
-│   │   └── cache/          # Redis caching
-│   └── tests/              # Backend tests
-├── data_pipeline/
-│   ├── seed_data/          # JSON seed files
-│   ├── loaders/            # Data import scripts
-│   └── scripts/            # DB initialization
-├── nginx/                  # Reverse proxy config
-└── docker-compose.yml      # Infrastructure
+│   │   ├── main.py               # ASGI application entrypoint
+│   │   ├── config.py             # Pydantic BaseSettings
+│   │   ├── api/v1/               # API Route Handlers
+│   │   │   ├── auth.py
+│   │   │   ├── interactions.py
+│   │   │   ├── history.py
+│   │   │   ├── translate.py
+│   │   │   ├── evidence.py
+│   │   │   ├── trials.py
+│   │   │   ├── herb.py
+│   │   │   ├── ai.py
+│   │   │   └── admin.py
+│   │   ├── services/             # Core Business Logic
+│   │   │   ├── interaction_service.py
+│   │   │   ├── normalization_service.py
+│   │   │   ├── risk_service.py
+│   │   │   ├── explanation_service.py
+│   │   │   ├── translation_service.py
+│   │   │   ├── evidence_aggregator.py
+│   │   │   └── ai_service.py
+│   │   ├── graph/                # Neo4j Database Interactions
+│   │   │   ├── connection.py
+│   │   │   └── queries.py
+│   │   ├── db/                   # PostgreSQL Relational Data
+│   │   │   ├── connection.py
+│   │   │   └── models.py
+│   │   ├── core/                 # Security, Exceptions, Middlewares
+│   │   │   ├── security.py
+│   │   │   └── exceptions.py
+│   │   ├── cache/                # Redis configurations
+│   │   │   └── redis.py
+│   │   └── schemas/              # Pydantic validation models
+│   │       ├── interaction.py
+│   │       └── auth.py
+│   ├── alembic/                  # Database migration scripts
+│   ├── tests/                    # Pytest test suite
+│   ├── data_pipeline/            # Knowledge graph seeding
+│   │   └── seed_data/
+│   │       ├── herbs.json
+│   │       ├── drugs.json
+│   │       ├── interactions.json
+│   │       └── synonyms.json
+│   └── requirements.txt
+│
+├── nginx/                        # Reverse Proxy configurations
+│   └── nginx.conf
+├── docker-compose.yml            # Local development orchestration
+├── docker-compose.prod.yml       # Production deployment orchestration
+└── .env.example                  # Environment template
 ```
+
+---
+
+## Getting Started
+
+### Prerequisites
+* Docker and Docker Compose
+* Node.js 20+ (for local frontend development)
+* Python 3.11+ (for local backend development)
+* API Keys for Anthropic Claude and Sarvam AI
+
+### Environment Variables
+Copy `.env.example` to `.env` in the root directory.
+
+```env
+# ─── Application ───
+APP_NAME=Aushnexa
+APP_ENV=development # Change to 'production' on live servers
+DEBUG=true
+SECRET_KEY=your-secret-key-change-in-production-min-32-chars # JWT signing key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=1440
+
+# ─── FastAPI Backend ───
+BACKEND_HOST=0.0.0.0
+BACKEND_PORT=8000
+CORS_ORIGINS=http://localhost:3000,http://localhost:80 # Allowed frontend URLs
+
+# ─── PostgreSQL ───
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=aushnexa
+POSTGRES_USER=aushnexa_user
+POSTGRES_PASSWORD=aushnexa_secure_password_2024
+DATABASE_URL=postgresql+asyncpg://aushnexa_user:aushnexa_secure_password_2024@postgres:5432/aushnexa
+
+# ─── Neo4j ───
+NEO4J_URI=bolt://neo4j:7687
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=aushnexa_neo4j_2024
+
+# ─── Redis ───
+REDIS_HOST=redis
+REDIS_PORT=6379
+REDIS_URL=redis://redis:6379/0
+
+# ─── Groq / Anthropic API (Explanation Generation) ───
+GROQ_API_KEY=your-anthropic-or-groq-api-key-here
+GROQ_MODEL=claude-sonnet-4-20250514
+
+# ─── Sarvam AI (Translation & TTS) ───
+SARVAM_API_KEY=your-sarvam-api-key-here
+SARVAM_BASE_URL=https://api.sarvam.ai
+
+# ─── Logging ───
+LOG_LEVEL=INFO
+DOMAIN_NAME=localhost # Set to your actual domain in production
+```
+
+### Development Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-org/aushnexa-biolumina.git
+   cd aushnexa-biolumina
+   ```
+
+2. **Configure Environment**
+   ```bash
+   cp .env.example .env
+   # Edit .env and insert your specific API keys
+   ```
+
+3. **Start the Development Stack**
+   ```bash
+   docker-compose up --build
+   ```
+   The backend API will be available at `http://localhost:8000`, and the React frontend at `http://localhost:3000`.
+
+4. **Seed the Knowledge Graph**
+   Before running interactions, seed the base Neo4j graph with the provided medical datasets:
+   ```bash
+   docker-compose exec backend python data_pipeline/load_graph.py
+   ```
+
+5. **Set Admin Role**
+   The ADMIN role cannot be assigned via the API for security reasons. Promote a registered user manually:
+   ```bash
+   docker-compose exec postgres psql -U aushnexa_user -d aushnexa -c "UPDATE users SET role='ADMIN' WHERE email='your@email.com';"
+   ```
+
+---
+
+## Docker Architecture
+
+Aushnexa utilizes a multi-container Docker architecture ensuring high isolation and reliable data persistence.
+
+```mermaid
+graph TD
+    subgraph Frontend Tier
+        NginxProxy[Nginx Proxy\n:80, :443]
+        FrontendApp[React Frontend\nStatic Files]
+    end
+
+    subgraph Backend Tier
+        FastAPI[FastAPI Backend\n:8000]
+        Certbot[Certbot Let's Encrypt]
+    end
+
+    subgraph Data Tier
+        Neo4j[(Neo4j 5.x\n:7474, :7687)]
+        Postgres[(PostgreSQL 15\n:5432)]
+        Redis[(Redis 7\n:6379)]
+    end
+
+    NginxProxy -->|Proxy /| FrontendApp
+    NginxProxy -->|Proxy /v1/| FastAPI
+    Certbot -->|Renew SSL| NginxProxy
+    FastAPI --> Neo4j
+    FastAPI --> Postgres
+    FastAPI --> Redis
+```
+
+| Service | Port | Volumes Mounted | Health Check |
+| :--- | :--- | :--- | :--- |
+| **frontend** | Internal | `Dockerfile.prod.frontend` build | Handled via Nginx |
+| **backend** | `8000` | Code / Dependencies | Uvicorn ready state |
+| **postgres** | `5432` | `postgres_data` | `pg_isready` |
+| **neo4j** | `7474`, `7687` | `neo4j_data`, `plugins`, `logs` | Neo4j HTTP ping |
+| **redis** | `6379` | `redis_data` | `redis-cli ping` |
+| **nginx** | `80`, `443` | `certbot_www`, `certbot_conf` | Nginx running state |
+| **certbot** | N/A | `certbot_www`, `certbot_conf` | Daily cron execution |
+
+---
+
+## Security
+
+### Authentication Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Redis (RateLimit)
+    participant API
+    participant Postgres
+
+    User->>Frontend: Submit Login Credentials
+    Frontend->>API: POST /api/v1/auth/login
+    API->>Redis (RateLimit): Check login attempts
+    Redis (RateLimit)-->>API: Allow
+    API->>Postgres: Lookup user by email
+    Postgres-->>API: Return hashed password
+    API->>API: Verify bcrypt hash
+    API->>API: Generate signed JWT
+    API-->>Frontend: Return JWT (1440m expiry)
+    Frontend->>Frontend: Store in sessionStorage
+```
+
+### Role-Based Access Control
+
+```mermaid
+flowchart LR
+    User[Anonymous User] --> Reg[Registration]
+    Reg --> P(PATIENT)
+    Reg --> C(CLINICIAN)
+    Reg --> Ph(PHARMACIST)
+    Reg --> R(RESEARCHER)
+    
+    DB[(Database Override)] -.->|Manual SQL Only| A(ADMIN)
+
+    P -->|Allowed| Int[Interaction Checker]
+    C -->|Allowed| AI[AI Protocols]
+    C -->|Allowed| Ev[Evidence Portal]
+    Ph -->|Allowed| KB[Knowledge Base]
+    R -->|Allowed| KB
+    
+    A -->|Restricted Access| Dash[Admin Dashboard]
+    A -->|Restricted Access| Logs[System Audit Logs]
+```
+
+### Security Implementations
+* **Rate Limiting**: Strict Redis-backed IP rate limiting on authentication and LLM inference endpoints.
+* **JWT & Passwords**: JWT with HS256 signatures; all passwords hashed via Bcrypt with dynamic salting.
+* **Input Sanitization**: Extensive Pydantic v2 schema validation; strict null-byte and HTML tag stripping on user inputs.
+* **Session Storage**: JWT tokens stored purely in `sessionStorage` (cleared on browser close) rather than persistent `localStorage`.
+* **Database Isolation**: Alembic schema migrations enforce exact ENUM constraints for roles.
+* **Secure Headers**: Nginx enforces HSTS, blocks framing, and sets strict CORS policies.
+
+---
+
+## Data Pipeline
+
+Aushnexa ships with a high-fidelity foundational dataset mapping thousands of compounds to physical mechanisms of action.
+
+```mermaid
+flowchart TD
+    Raw1[herbs.json] --> Parser[Data Parser]
+    Raw2[interactions.json] --> Parser
+    Raw3[drug_classes.json] --> Parser
+    
+    Parser --> Loader[load_graph.py]
+    Loader --> Neo4j[(Neo4j Graph)]
+    
+    Neo4j --> Syn[synonyms.json generation]
+    Syn --> Norm[NormalizationService Cache]
+```
+
+* **Data Sources**: Derived from openly available tapirro datasets, clinical compendiums, and NCBI PubChem structural data.
+* **Ingestion Execution**: The loader script utilizes Cypher batch processing to safely upsert nodes without duplicating edges.
+
+---
+
+## Testing
+
+Testing is implemented via `pytest` for the backend ensuring both relational logic and graph traversals execute flawlessly.
+
+```bash
+docker-compose exec backend pytest tests/
+```
+
+**Test Coverage**:
+* `test_auth.py`: Covers JWT validation, bad credentials, and role escalation blocks.
+* `test_interactions.py`: Asserts severity calculation formulas and response schemas.
+* `test_neo4j.py`: Ensures correct traversal of `[:INTERACTS_WITH]` and `[:MODULATES]` relationships.
+
+---
+
+## Deployment
+
+Aushnexa is fully containerized and targets standard Linux VPS environments. **DigitalOcean** or **AWS EC2** are recommended targets.
+
+### Production Deployment Steps
+1. Provision a VPS (e.g., Ubuntu 22.04) and point your domain (e.g., `app.yourdomain.com`) to its IP.
+2. Install Docker and Docker Compose.
+3. Clone the repository and generate your secure `.env`.
+4. Ensure `APP_ENV=production` is set.
+5. Deploy the stack using the production compose file:
+   ```bash
+   docker-compose -f docker-compose.prod.yml up -d --build
+   ```
+6. The included Let's Encrypt `certbot` container will automatically intercept domain validation and provision SSL certs into the Nginx container, renewing them every 90 days.
+
+---
 
 ## Supported Languages
 
-English, Hindi, Tamil, Telugu, Marathi, Kannada, Bengali
+Sarvam AI integration enables seamless medical translation into 7 core Indian languages.
+
+| Language | ISO Code | Sarvam Key |
+| :--- | :--- | :--- |
+| Hindi | `hi` | `hi-IN` |
+| Bengali | `bn` | `bn-IN` |
+| Marathi | `mr` | `mr-IN` |
+| Telugu | `te` | `te-IN` |
+| Tamil | `ta` | `ta-IN` |
+| Kannada | `kn` | `kn-IN` |
+| Malayalam | `ml` | `ml-IN` |
+
+---
+
+## Clinical Safety and Disclaimers
+
+### Enforced Safety Rules
+* **Banned Entities Enforcement**: Highly toxic botanicals and strictly regulated synthetic drugs immediately flag interactions as "CRITICAL" overriding default algorithms.
+* **Evidence Degradation**: If an interaction is purely theoretical (no clinical papers found), the maximum severity score is automatically handicapped to prevent alarmism without evidence.
+
+### Evidence Level Scale
+1. Systematic Reviews / Meta-Analysis
+2. Randomized Controlled Trials (RCT)
+3. Cohort Studies
+4. Case-Control Studies
+5. Case Reports
+6. Animal / In-Vitro Models (Theoretical)
+
+> **DISCLAIMER:** Aushnexa BioLumina is an informational platform utilizing artificial intelligence and aggregated biomedical databases. It is **NOT** a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider before modifying any medication regimen or incorporating new botanical supplements.
+
+---
+
+## Contributing
+
+We welcome contributions to expand the knowledge graph and refine the translation models.
+* **Code Style**: Python must be fully typed (Type Hints). The React frontend is explicitly standard JS (`.jsx`) with no TypeScript.
+* **Database Logic**: All relational database queries must be asynchronous (`asyncpg`).
+* **PR Process**: Please open an issue discussing your proposed changes before submitting a Pull Request.
+
+---
 
 ## License
 
-Proprietary — All rights reserved.
+This project is licensed under the [MIT License](LICENSE).
 
-## Disclaimer
+---
 
-Aushnexa provides information only and does not replace professional medical advice. Always consult your doctor or pharmacist before combining medications or herbal supplements.
+## Acknowledgements
+
+* **[Anthropic Claude](https://www.anthropic.com/)** for unmatched reasoning and clinical protocol synthesis.
+* **[Sarvam AI](https://www.sarvam.ai/)** for bringing state-of-the-art native Indian language models.
+* **[Neo4j](https://neo4j.com/)** for the powerful graph database engine.
+* **NCBI PubMed & ClinicalTrials.gov** for public access to humanity's medical research.
+* **CTRI India & Semantic Scholar** for expansive trial and citation aggregation.
