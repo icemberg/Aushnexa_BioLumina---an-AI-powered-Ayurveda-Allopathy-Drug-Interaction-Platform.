@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y gcc libpq-dev && rm -rf /var/lib/apt/lists/*
+
+COPY backend/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy backend app and data pipeline
+COPY backend/app ./app
+COPY backend/alembic ./alembic
+COPY backend/alembic.ini ./alembic.ini
+COPY backend/entrypoint.sh ./entrypoint.sh
+COPY data_pipeline ./data_pipeline
+
+# Ensure entrypoint is executable
+RUN chmod +x ./entrypoint.sh
+
+EXPOSE 8000
+
+ENV PYTHONPATH=/app
+
+ENTRYPOINT ["./entrypoint.sh"]
