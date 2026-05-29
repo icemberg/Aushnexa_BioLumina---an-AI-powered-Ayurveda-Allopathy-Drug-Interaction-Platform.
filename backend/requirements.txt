@@ -1,12 +1,13 @@
-# ─── Aushnexa Backend Dependencies ───
-
 # Web Framework
 fastapi==0.115.6
 uvicorn[standard]==0.34.0
 pydantic==2.10.4
 pydantic-settings==2.7.1
 python-multipart==0.0.20
+
+# Web scraping
 bs4
+
 # PostgreSQL
 asyncpg==0.30.0
 sqlalchemy[asyncio]==2.0.36
@@ -25,7 +26,10 @@ passlib[bcrypt]==1.7.4
 # Entity Normalization
 rapidfuzz==3.11.0
 
-# HTTP Client (for Groq, Sarvam APIs)
+# Translation
+deep-translator==1.11.4
+
+# HTTP Client (for APIs)
 httpx==0.28.1
 
 # Data Processing
@@ -34,11 +38,12 @@ pandas==2.2.3
 # Utilities
 python-dotenv==1.0.1
 
+# Logging
+loguru==0.7.3
+
+# Email Validation
+pydantic[email]
+
 # Testing
 pytest==8.3.4
 pytest-asyncio==0.25.0
-httpx==0.28.1
-
-# Logging
-loguru==0.7.3
-pydantic[email]
