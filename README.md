@@ -624,8 +624,14 @@ flowchart TD
     Syn --> Norm[NormalizationService Cache]
 ```
 
-* **Data Sources**: Derived from openly available tapirro datasets, clinical compendiums, and NCBI PubChem structural data.
-* **Ingestion Execution**: The loader script utilizes Cypher batch processing to safely upsert nodes without duplicating edges.
+### Datasets Used
+The knowledge graph is seeded using several curated biomedical datasets included in `backend/data_pipeline/seed_data/`:
+* **Ayurvedic Herb & Phytochemical Data**: Extracted from clinical compendiums and matched with structural data from **NCBI PubChem**. (`herbs.json`)
+* **Allopathic Drug Classes**: Standardized classifications based on the ATC (Anatomical Therapeutic Chemical) system. (`drugs.json`)
+* **Herb-Drug Interactions (HDI)**: Interaction matrices and severity ratings derived from the **Tapirro Dataset** and open-access clinical literature. (`interactions.json`)
+* **Entity Normalization Maps**: Custom-built synonym dictionaries for NLP mapping between regional herb names, botanical names, and commercial drug names. (`synonyms.json`)
+
+* **Ingestion Execution**: The `load_graph.py` script utilizes Neo4j Cypher batch processing to safely upsert nodes and edges without duplication.
 
 ---
 
