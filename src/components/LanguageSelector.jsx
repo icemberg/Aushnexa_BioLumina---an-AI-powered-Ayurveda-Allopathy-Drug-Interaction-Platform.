@@ -1,29 +1,28 @@
 import { useAppStore } from '../store/appStore'
 import { SUPPORTED_LANGUAGES } from '../constants'
-import { Globe } from 'lucide-react'
 
 export default function LanguageSelector() {
   const { selectedLanguage, setSelectedLanguage } = useAppStore()
 
   return (
-    <div className="relative flex items-center bg-white/50 backdrop-blur-sm rounded-lg border border-gray-200/50 shadow-sm px-3 py-1.5 hover:bg-white/80 transition-colors">
-      <Globe className="h-4 w-4 text-gray-500 mr-2" />
+    <div className="relative group/lang">
+      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+        <span className="material-symbols-outlined text-primary text-[20px]">translate</span>
+      </div>
       <select
         value={selectedLanguage}
         onChange={(e) => setSelectedLanguage(e.target.value)}
-        className="bg-transparent text-sm font-medium text-gray-700 outline-none cursor-pointer appearance-none pr-4"
+        className="w-full bg-surface-container hover:bg-surface-container-high focus:bg-surface-container-high border border-outline-variant/30 focus:border-primary text-on-surface font-technical-sm text-sm rounded-xl pl-12 pr-10 py-3 transition-all outline-none shadow-inner cursor-pointer appearance-none"
         aria-label="Select language"
       >
         {SUPPORTED_LANGUAGES.map((lang) => (
-          <option key={lang.code} value={lang.code}>
+          <option key={lang.code} value={lang.code} className="bg-[#0f0e11] text-on-surface py-2">
             {lang.nativeLabel} ({lang.label})
           </option>
         ))}
       </select>
-      <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
-        <svg className="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-        </svg>
+      <div className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-outline">
+        <span className="material-symbols-outlined text-[20px] group-hover/lang:translate-y-0.5 transition-transform">arrow_drop_down</span>
       </div>
     </div>
   )

@@ -18,8 +18,8 @@ export default function Login() {
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <img 
           alt="Bioluminescent background" 
-          className="w-full h-full object-cover ken-burns-bg opacity-70" 
-          src="https://lh3.googleusercontent.com/aida/ADBb0uiVQr7k6ow_bN8RgSCgEBVX6TMl1q2eeTQxU2A6NWk5dVTwayxe3-ln9kDWC0rIHeych49pvxXAV1brJH-hFM9xLsH0Xk2wFySKvzY9J0X53Y6coedeYPpsv8g_Io-m1Ra33FbJLGeGHiHngsJDbt03sqR4f_FM-F90XTcS26nZC8QNOXwAx68CvmnOgszcuICrZj2rs4Y21ncsYq0o0_RJm2doVRU3AJOEQwwVDD_bJBf7l13lXFDdHA"
+          className="w-full h-full object-cover ken-burns-bg opacity-70 mix-blend-screen" 
+          src="/bio-fusion.jpg"
         />
       </div>
       <div className="fixed inset-0 z-0 bg-gradient-to-t from-[#03070F] via-transparent to-[#03070F]/50 pointer-events-none"></div>

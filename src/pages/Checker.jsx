@@ -3,6 +3,7 @@ import { useInteractionCheck } from '../hooks/useInteractionCheck';
 import { useAppStore } from '../store/appStore';
 import { useHistory } from '../hooks/useHistory';
 import { formatDate } from '../utils/formatters';
+import LanguageSelector from '../components/LanguageSelector';
 
 export default function Checker() {
   const [herb, setHerb] = useState('');
@@ -91,17 +92,22 @@ export default function Checker() {
       {/* Main Canvas */}
       <main className="relative z-10 pt-[104px] pb-24 px-gutter max-w-container-max mx-auto flex flex-col gap-12">
         {/* Header Area */}
-        <header className="flex flex-col gap-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-max mb-2">
-            <span className="material-symbols-outlined text-primary text-sm">analytics</span>
-            <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">Real-Time Diagnostic</span>
+        <header className="flex flex-col md:flex-row md:justify-between md:items-end gap-6">
+          <div className="flex flex-col gap-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-max mb-2">
+              <span className="material-symbols-outlined text-primary text-sm">analytics</span>
+              <span className="font-label-caps text-label-caps text-primary tracking-widest uppercase">Real-Time Diagnostic</span>
+            </div>
+            <h1 className="font-display-lg text-display-lg text-on-surface">
+              Interaction <span className="text-primary-fixed-dim">Checker</span>
+            </h1>
+            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              Analyze complex polypharmacy interactions bridging traditional Ayurvedic compounds and modern Allopathic interventions.
+            </p>
           </div>
-          <h1 className="font-display-lg text-display-lg text-on-surface">
-            Interaction <span className="text-primary-fixed-dim">Checker</span>
-          </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-            Analyze complex polypharmacy interactions bridging traditional Ayurvedic compounds and modern Allopathic interventions.
-          </p>
+          <div className="shrink-0 mb-2">
+            <LanguageSelector />
+          </div>
         </header>
 
         {/* Central Diagnostic Input Card (Hero Feature) */}
