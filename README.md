@@ -11,6 +11,8 @@
 
 Aushnexa detects dangerous interactions between Ayurvedic herbs and allopathic medicines using a biomedical Neo4j knowledge graph. It provides evidence-graded risk scores, multilingual explanations in 7 Indian languages (Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, Malayalam), AI-generated integrative protocols, clinical trial aggregation from multiple global registries, and a molecular knowledge explorer — helping patients, doctors, and pharmacists make safer, informed treatment decisions.
 
+🚀 **Live Deployment:** [https://aushnexa.onrender.com/](https://aushnexa.onrender.com/)
+
 ---
 
 ## Table of Contents
