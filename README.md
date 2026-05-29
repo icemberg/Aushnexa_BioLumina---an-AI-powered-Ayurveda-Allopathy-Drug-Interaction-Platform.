@@ -534,43 +534,18 @@ DOMAIN_NAME=localhost # Set to your actual domain in production
 
 ## Docker Architecture
 
-Aushnexa utilizes a multi-container Docker architecture ensuring high isolation and reliable data persistence.
+Aushnexa utilizes a multi-container Docker architecture for local development, and a highly efficient all-in-one container for cloud PaaS deployments.
 
-```mermaid
-graph TD
-    subgraph Frontend Tier
-        NginxProxy[Nginx Proxy\n:80, :443]
-        FrontendApp[React Frontend\nStatic Files]
-    end
+### Local Development (`docker-compose.yml`)
+* Isolated containers for Frontend, Backend, PostgreSQL, Neo4j, and Redis.
 
-    subgraph Backend Tier
-        FastAPI[FastAPI Backend\n:8000]
-        Certbot[Certbot Let's Encrypt]
-    end
+### Production Deployment (All-in-One `Dockerfile`)
+To simplify PaaS deployment (like Render, Heroku, or AWS App Runner), the root `Dockerfile` utilizes a multi-stage build:
+1. **Node Stage**: Compiles the React SPA.
+2. **Python Stage**: Installs FastAPI dependencies, Nginx, and copies the compiled React files.
+3. **Runtime**: The `start-all.sh` entrypoint runs Alembic migrations, boots Uvicorn in the background, and runs Nginx in the foreground to serve the frontend and proxy `/v1/` API requests.
 
-    subgraph Data Tier
-        Neo4j[(Neo4j 5.x\n:7474, :7687)]
-        Postgres[(PostgreSQL 15\n:5432)]
-        Redis[(Redis 7\n:6379)]
-    end
-
-    NginxProxy -->|Proxy /| FrontendApp
-    NginxProxy -->|Proxy /v1/| FastAPI
-    Certbot -->|Renew SSL| NginxProxy
-    FastAPI --> Neo4j
-    FastAPI --> Postgres
-    FastAPI --> Redis
-```
-
-| Service | Port | Volumes Mounted | Health Check |
-| :--- | :--- | :--- | :--- |
-| **frontend** | Internal | `Dockerfile.prod.frontend` build | Handled via Nginx |
-| **backend** | `8000` | Code / Dependencies | Uvicorn ready state |
-| **postgres** | `5432` | `postgres_data` | `pg_isready` |
-| **neo4j** | `7474`, `7687` | `neo4j_data`, `plugins`, `logs` | Neo4j HTTP ping |
-| **redis** | `6379` | `redis_data` | `redis-cli ping` |
-| **nginx** | `80`, `443` | `certbot_www`, `certbot_conf` | Nginx running state |
-| **certbot** | N/A | `certbot_www`, `certbot_conf` | Daily cron execution |
+This allows the entire application to be deployed as a single Web Service, connecting to external managed databases.
 
 ---
 
@@ -669,18 +644,29 @@ docker-compose exec backend pytest tests/
 
 ## Deployment
 
-Aushnexa is fully containerized and targets standard Linux VPS environments. **DigitalOcean** or **AWS EC2** are recommended targets.
+Aushnexa is fully containerized and designed to be deployed seamlessly across modern Platform-as-a-Service (PaaS) providers. The recommended production architecture splits the stateless application container from the managed databases.
+
+### Recommended Managed Architecture
+*   **Web Application (Frontend + Backend)**: Hosted as a single Docker Web Service on **Render**.
+*   **Relational Database & Cache**: PostgreSQL and Redis hosted on **Railway** (or Aiven).
+*   **Knowledge Graph**: Hosted on **Neo4j AuraDB** (Fully managed cloud graph).
 
 ### Production Deployment Steps
-1. Provision a VPS (e.g., Ubuntu 22.04) and point your domain (e.g., `app.yourdomain.com`) to its IP.
-2. Install Docker and Docker Compose.
-3. Clone the repository and generate your secure `.env`.
-4. Ensure `APP_ENV=production` is set.
-5. Deploy the stack using the production compose file:
-   ```bash
-   docker-compose -f docker-compose.prod.yml up -d --build
-   ```
-6. The included Let's Encrypt `certbot` container will automatically intercept domain validation and provision SSL certs into the Nginx container, renewing them every 90 days.
+1. **Provision Databases**:
+   *   Create a Neo4j AuraDB instance and save the `NEO4J_URI`, `NEO4J_USER`, and `NEO4J_PASSWORD`.
+   *   Create a new project on Railway and provision a PostgreSQL database and a Redis instance. Save their connection URLs.
+2. **Deploy to Render**:
+   *   Create a new **Web Service** on Render connected to your GitHub repository.
+   *   Select **Docker** as the runtime environment. Render will automatically detect the root `Dockerfile` (which builds both the React frontend and the Python backend into an all-in-one Nginx container).
+3. **Configure Environment Variables**:
+   In the Render dashboard, navigate to the Environment tab and add the following keys:
+   *   `DATABASE_URL` (Your Railway PostgreSQL connection string)
+   *   `NEO4J_URI` (Your AuraDB `neo4j+s://` URI)
+   *   `NEO4J_USER` & `NEO4J_PASSWORD`
+   *   `REDIS_URL` (Your Railway Redis connection string)
+   *   `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, & `SARVAM_API_KEY`
+4. **Launch**:
+   Render will build the image, automatically expose port `10000`, and run the `start-all.sh` entrypoint script which handles database migrations and starts both FastAPI and Nginx simultaneously.
 
 ---
 
