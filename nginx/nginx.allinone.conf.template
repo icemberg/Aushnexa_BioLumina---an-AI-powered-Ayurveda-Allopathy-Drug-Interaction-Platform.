@@ -3,11 +3,13 @@ server {
     server_name _;
 
     client_max_body_size 10M;
+    
+    # Define root globally for the server
+    root /usr/share/nginx/html;
+    index index.html index.htm;
 
     # Serve React Frontend
     location / {
-        root   /usr/share/nginx/html;
-        index  index.html index.htm;
         try_files $uri $uri/ /index.html;
     }
 
