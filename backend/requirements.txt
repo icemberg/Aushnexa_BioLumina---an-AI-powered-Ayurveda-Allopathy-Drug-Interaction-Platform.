@@ -22,6 +22,7 @@ redis[hiredis]==5.2.1
 # Authentication
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
 
 # Entity Normalization
 rapidfuzz==3.11.0
