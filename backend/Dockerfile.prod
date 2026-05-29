@@ -17,7 +17,9 @@ COPY data_pipeline ./data_pipeline
 # Ensure entrypoint is executable
 RUN chmod +x ./entrypoint.sh
 
-EXPOSE 8000
+# Render dynamically sets the PORT environment variable (default 10000)
+ENV PORT=10000
+EXPOSE 10000
 
 ENV PYTHONPATH=/app
 

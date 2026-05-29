@@ -1,0 +1,4 @@
+-- This is a placeholder for your PostgreSQL dump file.
+-- To generate the actual dump containing your data, run the `postgres_backup.sh` script.
+--
+-- Example: ./postgres_backup.sh

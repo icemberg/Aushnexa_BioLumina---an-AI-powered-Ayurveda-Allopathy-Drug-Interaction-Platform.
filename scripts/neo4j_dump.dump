@@ -1,0 +1,4 @@
+This is a placeholder for your Neo4j dump file.
+To generate the actual dump containing your data, run the `neo4j_backup.sh` script.
+
+Example: ./neo4j_backup.sh
