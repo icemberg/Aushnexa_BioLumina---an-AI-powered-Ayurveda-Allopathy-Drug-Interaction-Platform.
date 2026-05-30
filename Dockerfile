@@ -41,6 +41,7 @@ RUN chmod +x ./start-all.sh
 
 # Render uses the PORT environment variable. We expose 10000 by default.
 ENV PYTHONPATH=/app
+ENV SYNONYMS_FILE_PATH=/app/data_pipeline/seed_data/synonyms.json
 EXPOSE 10000
 
 CMD ["./start-all.sh"]
