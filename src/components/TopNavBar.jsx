@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAppStore } from '../store/appStore';
+import { logoutUser } from '../services/api';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function TopNavBar() {
@@ -9,7 +10,12 @@ export default function TopNavBar() {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
     clearAuth();
     setIsMobileMenuOpen(false);
     navigate('/');

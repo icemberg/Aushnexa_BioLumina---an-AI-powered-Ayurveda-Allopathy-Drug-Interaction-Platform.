@@ -4,33 +4,11 @@ import { useAppStore } from '../store/appStore'
 
 const api = axios.create({
   baseURL: '/v1',
-  timeout: 15000,
+  timeout: 60000,
+  withCredentials: true,
   headers: { 'Content-Type': 'application/json' }
 })
 
-// Attach JWT token to every request
-api.interceptors.request.use((config) => {
-  const store = useAppStore.getState()
-  const token = store.token
-  
-  if (token) {
-    try {
-      const decoded = jwtDecode(token)
-      if (decoded.exp * 1000 < Date.now()) {
-        store.clearAuth()
-        if (window.location.pathname !== '/login') {
-          window.location.href = '/login'
-        }
-        return Promise.reject(new Error("Token expired"))
-      }
-      config.headers.Authorization = `Bearer ${token}`
-    } catch (e) {
-      // Invalid token format
-      store.clearAuth()
-    }
-  }
-  return config
-})
 
 // Handle 401 by clearing auth and redirecting to login
 api.interceptors.response.use(
@@ -109,5 +87,11 @@ export const tracePathway = (from, to) =>
 
 export const searchKnowledge = (q) =>
   api.get('/knowledge/search', { params: { q } }).then(r => r.data)
+
+export const logoutUser = () =>
+  api.post('/auth/logout').then(r => r.data)
+
+export const generateAudio = (text, language) =>
+  api.post('/ai/tts', { text, language }).then(r => r.data)
 
 export default api

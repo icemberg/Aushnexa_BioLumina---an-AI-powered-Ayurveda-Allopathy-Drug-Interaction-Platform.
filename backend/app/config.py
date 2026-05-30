@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     # ─── Backend Server ───
     backend_host: str = "0.0.0.0"
     backend_port: int = 8000
-    cors_origins: str = "http://localhost:3000,http://localhost:3001,http://localhost:5173,http://localhost:80"
+    cors_origins: str = "https://aushnexa.onrender.com,http://localhost:5173"
 
     # ─── PostgreSQL ───
     postgres_host: str = "localhost"

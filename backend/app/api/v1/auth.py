@@ -6,7 +6,7 @@ POST /auth/login    — Authenticate and receive JWT
 GET  /auth/profile  — Get current user profile
 """
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
 
@@ -68,7 +68,7 @@ async def register(
         email=payload.email,
         password_hash=hash_password(payload.password),
         full_name=payload.full_name or None,
-        role=payload.role,
+        role="PATIENT",
     )
     db.add(user)
     await db.flush()
@@ -87,9 +87,10 @@ async def register(
 async def login(
     payload: LoginRequest,
     request: Request,
+    response: Response,
     db: AsyncSession = Depends(get_db),
 ):
-    """Authenticate and return a JWT access token."""
+    """Authenticate and return a JWT access token in an HttpOnly cookie."""
     await check_rate_limit(request, "login")
     
     result = await db.execute(
@@ -111,8 +112,17 @@ async def login(
 
     access_token = create_access_token(data={"sub": str(user.id)})
 
+    response.set_cookie(
+        key="access_token",
+        value=access_token,
+        httponly=True,
+        secure=True,
+        samesite="strict",
+        max_age=86400  # 1 day
+    )
+
     return TokenResponse(
-        access_token=access_token,
+        message="Login successful",
         user=UserInfo(
             id=str(user.id),
             email=user.email,
@@ -120,6 +130,18 @@ async def login(
             role=user.role,
         ),
     )
+
+
+@router.post("/logout")
+async def logout(response: Response):
+    """Clear the HttpOnly access token cookie."""
+    response.delete_cookie(
+        key="access_token",
+        httponly=True,
+        secure=True,
+        samesite="strict"
+    )
+    return {"message": "Logged out successfully"}
 
 
 @router.get("/profile", response_model=ProfileResponse)

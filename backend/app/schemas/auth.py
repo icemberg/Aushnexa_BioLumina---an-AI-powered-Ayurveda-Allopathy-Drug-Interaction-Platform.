@@ -11,7 +11,6 @@ class RegisterRequest(BaseModel):
     email: EmailStr
     password: str = Field(min_length=8, max_length=128)
     full_name: str = Field(default="", max_length=255)
-    role: str = Field(default="PATIENT", pattern="^(PATIENT|CLINICIAN|PHARMACIST|RESEARCHER)$")
 
     @field_validator('password')
     def validate_password(cls, v):
@@ -39,9 +38,8 @@ class UserInfo(BaseModel):
 
 
 class TokenResponse(BaseModel):
-    """JWT token response after successful login."""
-    access_token: str
-    token_type: str = "bearer"
+    """JWT token response after successful login (Token stored in HttpOnly cookie)."""
+    message: str = "Login successful"
     user: UserInfo
 
 

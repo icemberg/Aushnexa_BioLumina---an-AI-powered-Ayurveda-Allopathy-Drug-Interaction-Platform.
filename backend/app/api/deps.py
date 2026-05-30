@@ -4,7 +4,7 @@ FastAPI Dependencies
 Shared dependency injection functions for API endpoints.
 """
 
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, status, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
@@ -19,15 +19,23 @@ security = HTTPBearer()
 
 
 async def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(security),
+    request: Request,
     db: AsyncSession = Depends(get_db),
 ) -> User:
     """
-    Extract and validate the current user from the JWT bearer token.
+    Extract and validate the current user from the JWT HttpOnly cookie.
 
     Used as a dependency in protected endpoints.
     """
-    payload = decode_access_token(credentials.credentials)
+    token = request.cookies.get("access_token")
+    
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+        )
+
+    payload = decode_access_token(token)
     user_id = payload.get("sub")
 
     if not user_id:
@@ -51,9 +59,7 @@ async def get_current_user(
 
 
 async def get_optional_user(
-    credentials: HTTPAuthorizationCredentials | None = Depends(
-        HTTPBearer(auto_error=False)
-    ),
+    request: Request,
     db: AsyncSession = Depends(get_db),
 ) -> User | None:
     """
@@ -61,11 +67,12 @@ async def get_optional_user(
     Returns None if no token is provided (for public endpoints
     that have enhanced behavior for authenticated users).
     """
-    if not credentials:
+    token = request.cookies.get("access_token")
+    if not token:
         return None
 
     try:
-        payload = decode_access_token(credentials.credentials)
+        payload = decode_access_token(token)
         user_id = payload.get("sub")
         if not user_id:
             return None

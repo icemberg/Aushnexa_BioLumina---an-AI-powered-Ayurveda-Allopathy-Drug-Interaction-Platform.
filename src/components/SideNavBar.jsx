@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAppStore } from '../store/appStore';
+import { logoutUser } from '../services/api';
 
 export default function SideNavBar() {
   const { isAuthenticated, user, clearAuth } = useAppStore();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
     clearAuth();
     navigate('/');
   };

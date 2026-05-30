@@ -1,10 +1,11 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useNavigate, Navigate } from 'react-router-dom'
 import { useAppStore } from '../store/appStore'
 import RiskBadge from '../components/RiskBadge'
 import InteractionCard from '../components/InteractionCard'
 import { sortBySeverity } from '../utils/riskHelpers'
 import { formatProcessingTime } from '../utils/formatters'
+import { generateAudio } from '../services/api'
 
 export default function Results() {
   const navigate = useNavigate()
@@ -27,6 +28,88 @@ export default function Results() {
   } = currentResults
 
   const sortedInteractions = sortBySeverity(interactions)
+
+  // Voice Over State
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [isLoadingAudio, setIsLoadingAudio] = useState(false)
+  const audioRef = useRef(null)
+
+  // Cleanup audio on unmount
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
+    }
+  }, [])
+
+  const handlePlayAudio = async () => {
+    if (isPlaying) {
+      if (audioRef.current) {
+        audioRef.current.pause()
+        setIsPlaying(false)
+      }
+      return
+    }
+
+    // Play if already loaded
+    if (audioRef.current && audioRef.current.src) {
+      audioRef.current.play()
+      setIsPlaying(true)
+      return
+    }
+
+    // Otherwise, fetch and load audio
+    setIsLoadingAudio(true)
+    const textToRead = selectedLanguage !== 'en' && translated_explanation ? translated_explanation : explanation
+    
+    try {
+      const response = await generateAudio(textToRead, selectedLanguage)
+      
+      // We expect response.audios to be an array of base64 strings
+      if (response && response.audios && response.audios.length > 0) {
+        let currentAudioIndex = 0;
+        
+        const playNextAudio = () => {
+          if (currentAudioIndex < response.audios.length) {
+            const audioSrc = `data:audio/wav;base64,${response.audios[currentAudioIndex]}`;
+            audioRef.current = new Audio(audioSrc);
+            
+            audioRef.current.onended = () => {
+              currentAudioIndex++;
+              playNextAudio();
+            };
+            
+            audioRef.current.play();
+          } else {
+            // Finished playing all chunks
+            setIsPlaying(false);
+            audioRef.current = null; // Clear to allow replay from beginning
+          }
+        };
+        
+        setIsPlaying(true);
+        playNextAudio();
+      } else if (response && response.audio) {
+        // Fallback for older format if ever cached
+        const audioSrc = `data:audio/wav;base64,${response.audio}`
+        audioRef.current = new Audio(audioSrc)
+        
+        audioRef.current.onended = () => {
+          setIsPlaying(false)
+        }
+        
+        audioRef.current.play()
+        setIsPlaying(true)
+      }
+    } catch (error) {
+      console.error("Failed to generate audio", error)
+      setIsPlaying(false)
+    } finally {
+      setIsLoadingAudio(false)
+    }
+  }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8 relative z-10 font-body-md text-on-surface">
@@ -82,6 +165,27 @@ export default function Results() {
             <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>psychology</span>
           </div>
           <h2 className="font-headline-md text-headline-md text-on-surface">Clinical Intelligence Summary</h2>
+          
+          <button 
+            onClick={handlePlayAudio}
+            disabled={isLoadingAudio}
+            className={`ml-auto flex items-center gap-2 px-3 py-1.5 rounded-full border transition-all ${
+              isPlaying 
+                ? 'bg-primary/20 border-primary/50 text-primary' 
+                : 'bg-surface-container border-outline-variant/30 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high'
+            }`}
+          >
+            {isLoadingAudio ? (
+              <span className="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+            ) : isPlaying ? (
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>stop</span>
+            ) : (
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>volume_up</span>
+            )}
+            <span className="font-label-md text-sm">
+              {isLoadingAudio ? 'Loading...' : isPlaying ? 'Stop' : 'Listen'}
+            </span>
+          </button>
         </div>
         
         <div className="space-y-4 relative z-10">

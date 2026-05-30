@@ -45,13 +45,13 @@ export const EVIDENCE_LABELS = {
 /** Supported UI languages with native script labels */
 export const SUPPORTED_LANGUAGES = [
   { code: 'en', label: 'English',           nativeLabel: 'English' },
-  { code: 'hi-IN', label: 'Hindi',             nativeLabel: 'हिंदी' },
-  { code: 'ta-IN', label: 'Tamil',             nativeLabel: 'தமிழ்' },
-  { code: 'te-IN', label: 'Telugu',            nativeLabel: 'తెలుగు' },
-  { code: 'mr-IN', label: 'Marathi',           nativeLabel: 'मराठी' },
-  { code: 'kn-IN', label: 'Kannada',           nativeLabel: 'ಕನ್ನಡ' },
-  { code: 'bn-IN', label: 'Bengali',           nativeLabel: 'বাংলা' },
-  { code: 'ml-IN', label: 'Malayalam',         nativeLabel: 'മലയാളం' },
+  { code: 'hi', label: 'Hindi',             nativeLabel: 'हिंदी' },
+  { code: 'ta', label: 'Tamil',             nativeLabel: 'தமிழ்' },
+  { code: 'te', label: 'Telugu',            nativeLabel: 'తెలుగు' },
+  { code: 'mr', label: 'Marathi',           nativeLabel: 'मराठी' },
+  { code: 'kn', label: 'Kannada',           nativeLabel: 'ಕನ್ನಡ' },
+  { code: 'bn', label: 'Bengali',           nativeLabel: 'বাংলা' },
+  { code: 'ml', label: 'Malayalam',         nativeLabel: 'മലയാളం' },
 ]
 
 /** Pre-built example queries for the landing page */

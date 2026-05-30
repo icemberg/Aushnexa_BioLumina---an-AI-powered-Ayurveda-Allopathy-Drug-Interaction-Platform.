@@ -7,7 +7,6 @@ import { persist, createJSONStorage } from 'zustand/middleware'
  * @property {string}   selectedLanguage   - ISO 639-1 language code
  * @property {Object|null} currentResults  - last interaction check response
  * @property {Object|null} user            - authenticated user info
- * @property {string|null} token           - JWT access token
  * @property {boolean} isAuthenticated
  */
 
@@ -36,13 +35,12 @@ export const useAppStore = create(
 
       // Auth state
       user: null,
-      token: null,
       isAuthenticated: false,
 
-      setAuth: (user, token) =>
-        set({ user, token, isAuthenticated: true }),
+      setAuth: (user) =>
+        set({ user, isAuthenticated: true }),
       clearAuth: () =>
-        set({ user: null, token: null, isAuthenticated: false }),
+        set({ user: null, isAuthenticated: false }),
         
       // AI History
       aiHistory: [],
@@ -58,7 +56,6 @@ export const useAppStore = create(
       // Only persist auth and language — do not persist results or currentItems
       partialize: (state) => ({
         user: state.user,
-        token: state.token,
         isAuthenticated: state.isAuthenticated,
         selectedLanguage: state.selectedLanguage
       }),

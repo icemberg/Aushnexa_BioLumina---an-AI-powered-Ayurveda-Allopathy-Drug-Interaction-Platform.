@@ -7,12 +7,11 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [affiliation, setAffiliation] = useState('');
-  const [role, setRole] = useState('PATIENT');
   const registerMutation = useRegister();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    registerMutation.mutate({ email, password, fullName, role });
+    registerMutation.mutate({ email, password, fullName });
   };
 
   return (
@@ -108,34 +107,6 @@ export default function Register() {
                 value={affiliation}
                 onChange={(e) => setAffiliation(e.target.value)}
               />
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label className="font-technical-sm text-xs text-on-surface-variant uppercase tracking-wider">Classification Role</label>
-            <div className="grid grid-cols-2 gap-2 mt-1">
-              {[
-                { id: 'PATIENT', label: 'Patient', icon: 'person' },
-                { id: 'CLINICIAN', label: 'Clinician', icon: 'stethoscope' },
-                { id: 'PHARMACIST', label: 'Pharmacist', icon: 'local_pharmacy' },
-                { id: 'RESEARCHER', label: 'Researcher', icon: 'science' },
-              ].map((r) => (
-                <label
-                  key={r.id}
-                  className={`flex items-center gap-2 p-2 rounded-lg border cursor-pointer transition-colors ${role === r.id ? 'border-primary bg-primary/10 text-primary' : 'border-outline-variant/50 bg-surface-container hover:bg-surface-container-high text-on-surface-variant'}`}
-                >
-                  <input
-                    type="radio"
-                    name="role"
-                    value={r.id}
-                    checked={role === r.id}
-                    onChange={() => setRole(r.id)}
-                    className="hidden"
-                  />
-                  <span className="material-symbols-outlined text-sm">{r.icon}</span>
-                  <span className="font-technical-sm text-sm">{r.label}</span>
-                </label>
-              ))}
             </div>
           </div>
 

@@ -95,7 +95,7 @@ class TranslationService:
                         "input": text,
                         "source_language_code": source_code,
                         "target_language_code": target_code,
-                        "speaker_gender": "neutral",
+                        "speaker_gender": "Female",
                         "mode": "formal",
                         "model": "mayura:v1",
                         "enable_preprocessing": True,
