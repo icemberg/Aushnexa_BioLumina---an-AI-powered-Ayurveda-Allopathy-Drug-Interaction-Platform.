@@ -251,7 +251,7 @@ async def fetch_ctri(herb: str, drug: str) -> List[TrialResult]:
             return trials
     except Exception as e:
         logger.warning(f"CTRI fetch failed: {e}")
-        return []
+    return []
 
 
 # ──────────────────────────────────────────────

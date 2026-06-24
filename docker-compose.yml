@@ -45,8 +45,8 @@ services:
   neo4j:
     image: neo4j:5.26-community
     ports:
-      - "7474:7474"   # Browser UI
-      - "7687:7687"   # Bolt protocol
+      - "7474:7474" # Browser UI
+      - "7687:7687" # Bolt protocol
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
@@ -57,7 +57,7 @@ services:
       - NEO4J_server_memory_heap_initial__size=256m
       - NEO4J_server_memory_heap_max__size=512m
     healthcheck:
-      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -77,7 +77,7 @@ services:
       - POSTGRES_USER=aushnexa_user
       - POSTGRES_PASSWORD=aushnexa_secure_password_2024
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U aushnexa_user -d aushnexa"]
+      test: [ "CMD-SHELL", "pg_isready -U aushnexa_user -d aushnexa" ]
       interval: 5s
       timeout: 3s
       retries: 5
@@ -93,7 +93,7 @@ services:
       - redis_data:/data
     command: redis-server --appendonly yes --maxmemory 128mb --maxmemory-policy allkeys-lru
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: [ "CMD", "redis-cli", "ping" ]
       interval: 5s
       timeout: 3s
       retries: 5

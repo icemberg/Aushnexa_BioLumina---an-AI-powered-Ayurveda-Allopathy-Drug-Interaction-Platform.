@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useAppStore } from '../store/appStore';
 import { AlertTriangle, CheckCircle, Info, Download, Edit3, Loader2 } from 'lucide-react';
 import axios from 'axios';
+import { useEvidenceData } from '../hooks/useEvidenceData';
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { ProtocolPDFDocument } from '../components/ProtocolPDFDocument';
 
 const AushnexaAI = () => {
   const [query, setQuery] = useState('');
@@ -19,7 +22,8 @@ const AushnexaAI = () => {
     constraints: ''
   });
 
-  const { aiHistory, addAiHistory } = useAppStore();
+  const { aiHistory, addAiHistory, currentResults } = useAppStore();
+  const { evidenceData } = useEvidenceData();
 
   const handleQuerySubmit = async (textToSubmit = query, additionalModifiers = null) => {
     if (!textToSubmit.trim()) return;
@@ -217,9 +221,16 @@ const AushnexaAI = () => {
                       <h3 className="font-headline-md text-headline-md text-primary mt-2">{aiData.protocol.title || 'Integrative Protocol'}</h3>
                       <p className="font-technical-sm text-technical-sm text-on-surface-variant mt-1 font-mono opacity-80">Focus: {aiData.protocol.focus}</p>
                     </div>
-                    <button className="p-2 bg-surface-variant rounded-full text-on-surface-variant hover:text-primary transition-colors" title="Export Protocol">
-                      <Download size={20} />
-                    </button>
+                    <PDFDownloadLink
+                      document={<ProtocolPDFDocument aiData={aiData} evidenceData={evidenceData} currentResults={currentResults} />}
+                      fileName="Integrative_Protocol_Report.pdf"
+                      className="p-2 bg-surface-variant rounded-full text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"
+                      title="Export Protocol"
+                    >
+                      {({ loading }) => (
+                        loading ? <Loader2 size={20} className="animate-spin" /> : <Download size={20} />
+                      )}
+                    </PDFDownloadLink>
                   </div>
                   
                   <div className="space-y-4">

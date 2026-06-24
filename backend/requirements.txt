@@ -48,3 +48,10 @@ pydantic[email]
 # Testing
 pytest==8.3.4
 pytest-asyncio==0.25.0
+
+
+# Scraping and crawling
+scrapy
+playwright
+chromium
+webkit
