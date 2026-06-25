@@ -33,7 +33,7 @@ export function useEvidenceData() {
     queryFn: () => searchEvidence({
       herb: searchHerb,
       drug: searchDrug,
-      sources: 'clinicaltrials,pubmed,ctri,semantic'
+      sources: 'clinicaltrials,pubmed,ctri,semantic,openalex,ictrp'
     }),
     enabled: !!(searchHerb || searchDrug)
   })

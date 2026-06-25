@@ -450,7 +450,7 @@ aushnexa/
 * Docker and Docker Compose
 * Node.js 20+ (for local frontend development)
 * Python 3.11+ (for local backend development)
-* API Keys for Anthropic Claude and Sarvam AI
+* API Keys for GROQ API and Sarvam AI
 
 ### Environment Variables
 Copy `.env.example` to `.env` in the root directory.
@@ -630,6 +630,7 @@ The knowledge graph is seeded using several curated biomedical datasets included
 * **Allopathic Drug Classes**: Standardized classifications based on the ATC (Anatomical Therapeutic Chemical) system. (`drugs.json`)
 * **Herb-Drug Interactions (HDI)**: Interaction matrices and severity ratings derived from the **Tapirro Dataset** and open-access clinical literature. (`interactions.json`)
 * **Entity Normalization Maps**: Custom-built synonym dictionaries for NLP mapping between regional herb names, botanical names, and commercial drug names. (`synonyms.json`)
+* **Live Evidence Datasets**: Real-time scholarly and clinical data aggregated from **OpenAlex** (open bibliographic database of 250M works) and **WHO ICTRP** (international clinical trials registry platform).
 
 * **Ingestion Execution**: The `load_graph.py` script utilizes Neo4j Cypher batch processing to safely upsert nodes and edges without duplication.
 
@@ -658,6 +659,8 @@ Aushnexa is fully containerized and designed to be deployed seamlessly across mo
 *   **Web Application (Frontend + Backend)**: Hosted as a single Docker Web Service on **Render**.
 *   **Relational Database & Cache**: PostgreSQL and Redis hosted on **Railway** (or Aiven).
 *   **Knowledge Graph**: Hosted on **Neo4j AuraDB** (Fully managed cloud graph).
+
+🚀 **Live Deployment:** [https://aushnexa.onrender.com/](https://aushnexa.onrender.com/)
 
 ### Production Deployment Steps
 1. **Provision Databases**:
@@ -733,4 +736,6 @@ This project is licensed under the [MIT License](LICENSE).
 * **[Sarvam AI](https://www.sarvam.ai/)** for bringing state-of-the-art native Indian language models.
 * **[Neo4j](https://neo4j.com/)** for the powerful graph database engine.
 * **NCBI PubMed & ClinicalTrials.gov** for public access to humanity's medical research.
+* **OpenAlex** for providing a fully open bibliographic database containing 250 million scholarly works without paywalls.
+* **WHO ICTRP** for aggregating national clinical trials across 20+ international registries.
 * **CTRI India & Semantic Scholar** for expansive trial and citation aggregation.

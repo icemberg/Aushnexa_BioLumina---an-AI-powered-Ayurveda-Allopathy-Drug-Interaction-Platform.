@@ -50,6 +50,8 @@ class PaperResult:
         self.source_registry = source
         self.relevance_score = 0
         self.url = ""
+        self.doi = ""
+        self.is_oa = False
 
 
 # ──────────────────────────────────────────────
@@ -253,6 +255,199 @@ async def fetch_ctri(herb: str, drug: str) -> List[TrialResult]:
         logger.warning(f"CTRI fetch failed: {e}")
     return []
 
+# ──────────────────────────────────────────────
+#  OpenAlex (Graph API)
+# ──────────────────────────────────────────────
+
+def reconstruct_abstract(inverted_index: dict) -> str:
+    if not inverted_index:
+        return ""
+    word_positions = []
+    for word, positions in inverted_index.items():
+        for pos in positions:
+            word_positions.append((pos, word))
+    word_positions.sort(key=lambda x: x[0])
+    return " ".join(word for _, word in word_positions)
+
+async def fetch_openalex(herb: str, drug: str) -> List[PaperResult]:
+    try:
+        search_term = f"{herb} {drug} interaction"
+        settings = get_settings()
+        
+        params = {
+            "search": search_term,
+            "filter": "type:article",
+            "sort": "cited_by_count:desc",
+            "per-page": 10,
+            "select": "id,title,abstract_inverted_index,authorships,publication_year,cited_by_count,open_access,primary_location,doi",
+        }
+        
+        # OpenAlex prefers mailto for polite pool
+        mailto = getattr(settings, "CONTACT_EMAIL", "contact@aushnexa.com")
+        if mailto:
+            params["mailto"] = mailto
+            
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.get("https://api.openalex.org/works", params=params)
+            if resp.status_code != 200:
+                return []
+            
+            results = resp.json().get("results", [])
+            papers = []
+            
+            for work in results:
+                authors_list = work.get("authorships", [])
+                authors = ", ".join([a.get("author", {}).get("display_name", "") for a in authors_list[:3]])
+                if len(authors_list) > 3:
+                    authors += " et al."
+                
+                primary = work.get("primary_location", {}) or {}
+                source = primary.get("source", {}) or {}
+                journal = source.get("display_name", "")
+                
+                doi = work.get("doi", "")
+                url = f"https://doi.org/{doi}" if doi else ""
+                if not url:
+                    url = work.get("id", "")
+                
+                inverted = work.get("abstract_inverted_index", {})
+                abstract = reconstruct_abstract(inverted)
+                
+                is_oa = work.get("open_access", {}).get("is_oa", False)
+                oa_url = work.get("open_access", {}).get("oa_url", "")
+                if is_oa and oa_url:
+                    url = oa_url
+                
+                pr = PaperResult(
+                    id=work.get("id", ""),
+                    title=work.get("title", ""),
+                    authors=authors,
+                    journal=journal,
+                    year=str(work.get("publication_year", "")),
+                    abstract=abstract[:300] + ("..." if len(abstract) > 300 else ""),
+                    citations=work.get("cited_by_count", 0),
+                    source="OpenAlex"
+                )
+                pr.url = url
+                pr.doi = doi
+                pr.is_oa = is_oa
+                papers.append(pr)
+            
+            logger.info(f"OpenAlex returned {len(papers)} papers for '{search_term}'")
+            return papers
+    except Exception as e:
+        logger.warning(f"OpenAlex fetch failed: {e}")
+        return []
+
+# ──────────────────────────────────────────────
+#  WHO ICTRP (Portal Scrape)
+# ──────────────────────────────────────────────
+
+def determine_registry_from_id(trial_id: str) -> str:
+    prefixes = {
+        "NCT": "ClinicalTrials.gov",
+        "CTRI": "India",
+        "ISRCTN": "UK",
+        "ACTRN": "Australia/NZ",
+        "IRCT": "Iran",
+        "ChiCTR": "China",
+        "DRKS": "Germany",
+        "NTR": "Netherlands",
+        "JPRN": "Japan",
+        "PACTR": "Africa",
+        "SLCTR": "Sri Lanka",
+        "TCTR": "Thailand",
+        "LBCTR": "Lebanon"
+    }
+    for prefix, registry in prefixes.items():
+        if trial_id.upper().startswith(prefix):
+            return registry
+    return "Unknown Registry"
+
+async def fetch_who_ictrp(herb: str, drug: str) -> List[TrialResult]:
+    try:
+        search_term = f"{herb} {drug}"
+        url = "https://trialsearch.who.int/Trial2.aspx"
+        
+        params = {
+            "SearchTerms": search_term,
+            "Register": "All",
+            "Recruitment": "All",
+            "Gender": "All",
+            "Phase": "All",
+            "action": "Search"
+        }
+        
+        headers = {
+            "User-Agent": "Mozilla/5.0 (compatible; AushnexaResearch/1.0; +https://aushnexa.com; contact@aushnexa.com)",
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-US,en;q=0.9"
+        }
+        
+        await asyncio.sleep(2)
+        
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            resp = await client.get(url, params=params, headers=headers)
+            if resp.status_code != 200:
+                logger.warning(f"WHO ICTRP returned {resp.status_code}")
+                return []
+            
+            soup = BeautifulSoup(resp.text, "lxml")
+            trials = []
+            
+            result_rows = soup.find_all("tr", class_=lambda c: c and "trial" in c.lower())
+            
+            if not result_rows:
+                tables = soup.find_all("table")
+                result_table = max(tables, key=lambda t: len(t.find_all("tr")), default=None)
+                if result_table:
+                    result_rows = result_table.find_all("tr")[1:]
+            
+            for row in result_rows[:10]:
+                cols = row.find_all("td")
+                if len(cols) < 3:
+                    continue
+                    
+                trial_id_cell = cols[0]
+                trial_link = trial_id_cell.find("a")
+                trial_id = trial_link.text.strip() if trial_link else cols[0].text.strip()
+                trial_url = ""
+                if trial_link and trial_link.get("href"):
+                    href = trial_link["href"]
+                    if href.startswith("http"):
+                        trial_url = href
+                    else:
+                        trial_url = f"https://trialsearch.who.int/{href}"
+                
+                title = cols[1].text.strip() if len(cols) > 1 else ""
+                condition = cols[2].text.strip() if len(cols) > 2 else ""
+                intervention = cols[3].text.strip() if len(cols) > 3 else ""
+                status = cols[4].text.strip() if len(cols) > 4 else ""
+                phase = cols[5].text.strip() if len(cols) > 5 else ""
+                sponsor = cols[6].text.strip() if len(cols) > 6 else ""
+                
+                source = determine_registry_from_id(trial_id)
+                
+                tr = TrialResult(
+                    id=trial_id,
+                    title=title,
+                    status=status,
+                    phase=phase,
+                    condition=condition,
+                    intervention=intervention,
+                    summary="",
+                    sponsor=sponsor,
+                    source=f"WHO ICTRP ({source})"
+                )
+                tr.url = trial_url
+                trials.append(tr)
+            
+            logger.info(f"WHO ICTRP returned {len(trials)} trials for '{search_term}'")
+            return trials
+            
+    except Exception as e:
+        logger.warning(f"WHO ICTRP fetch failed: {e}")
+        return []
 
 # ──────────────────────────────────────────────
 #  Semantic Scholar  (Graph API v1)
@@ -308,23 +503,54 @@ async def fetch_semantic_scholar(herb: str, drug: str) -> List[PaperResult]:
 # ──────────────────────────────────────────────
 
 def deduplicate_trials(trials: List[TrialResult]) -> List[TrialResult]:
-    seen = set()
+    seen_ids = set()
+    seen_titles = set()
     deduped = []
-    for t in trials:
-        tid = t.id.upper() if t.id else t.title[:20].lower()
-        if tid not in seen:
-            seen.add(tid)
-            deduped.append(t)
+    
+    # Process ClinicalTrials.gov results first so they take priority
+    ct_trials = [t for t in trials if t.source_registry == "ClinicalTrials.gov"]
+    other_trials = [t for t in trials if t.source_registry != "ClinicalTrials.gov"]
+    
+    for t in ct_trials + other_trials:
+        tid = t.id.upper().strip() if t.id else ""
+        if tid and tid in seen_ids:
+            continue
+        title_key = t.title[:40].lower().strip() if t.title else ""
+        if title_key and title_key in seen_titles:
+            continue
+        
+        if tid:
+            seen_ids.add(tid)
+        if title_key:
+            seen_titles.add(title_key)
+        deduped.append(t)
     return deduped
 
 def deduplicate_papers(papers: List[PaperResult]) -> List[PaperResult]:
-    seen = set()
+    seen_dois = set()
+    seen_ids = set()
+    seen_titles = set()
     deduped = []
     for p in papers:
-        pid = p.title[:30].lower().strip() if p.title else p.id
-        if pid not in seen:
-            seen.add(pid)
-            deduped.append(p)
+        doi = p.doi.lower().strip() if getattr(p, "doi", "") else ""
+        pid = p.id.lower().strip() if p.id else ""
+        title_hash = p.title.lower().replace(" ", "").strip() if p.title else ""
+        
+        if doi and doi in seen_dois:
+            continue
+        if pid and pid in seen_ids:
+            continue
+        if title_hash and title_hash in seen_titles:
+            continue
+            
+        if doi:
+            seen_dois.add(doi)
+        if pid:
+            seen_ids.add(pid)
+        if title_hash:
+            seen_titles.add(title_hash)
+            
+        deduped.append(p)
     return deduped
 
 def score_relevance(item: Any, herb: str, drug: str) -> int:
@@ -365,6 +591,16 @@ async def aggregate_evidence(herb: str, drug: str, compounds: str, sources: List
 
     if "semantic" in sources or not sources:
         tasks.append(fetch_semantic_scholar(herb, drug))
+    else:
+        tasks.append(asyncio.sleep(0, result=[]))
+
+    if "openalex" in sources or not sources:
+        tasks.append(fetch_openalex(herb, drug))
+    else:
+        tasks.append(asyncio.sleep(0, result=[]))
+
+    if "ictrp" in sources or not sources:
+        tasks.append(fetch_who_ictrp(herb, drug))
     else:
         tasks.append(asyncio.sleep(0, result=[]))
 

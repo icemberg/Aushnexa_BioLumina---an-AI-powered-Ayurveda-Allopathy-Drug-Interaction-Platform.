@@ -8,7 +8,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2, 
     borderBottomColor: '#0ECFB8', 
     paddingBottom: 15, 
-    marginBottom: 20 
+    marginBottom: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start'
   },
   companyName: { fontSize: 24, fontWeight: 'bold', color: '#03070F', marginBottom: 5 },
   subHeader: { fontSize: 12, color: '#6b7280' },
@@ -51,14 +54,18 @@ export const ProtocolPDFDocument = ({ aiData, evidenceData, currentResults }) =>
     <Document>
       <Page size="A4" style={styles.page}>
         <View style={styles.header}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
-            <Image src={logo} style={{ width: 40, height: 40, marginRight: 10, borderRadius: 20 }} />
-            <Text style={styles.companyName}>Aushnexa Biolumina</Text>
+          <View>
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 5 }}>
+              <Image src={logo} style={{ width: 40, height: 40, marginRight: 10, borderRadius: 20 }} />
+              <Text style={styles.companyName}>Aushnexa Biolumina</Text>
+            </View>
+            <Text style={styles.subHeader}>Integrative Protocol & Clinical Evidence Report</Text>
           </View>
-          <Text style={styles.subHeader}>Integrative Protocol & Clinical Evidence Report</Text>
-          <Text style={{ fontSize: 9, color: '#9ca3af', marginTop: 5 }}>
-            Generated on: {new Date().toLocaleDateString()}
-          </Text>
+          <View>
+            <Text style={{ fontSize: 9, color: '#9ca3af', marginTop: 5 }}>
+              Date: {new Date().toLocaleDateString()}
+            </Text>
+          </View>
         </View>
 
         {/* RESULTS SECTION */}
@@ -165,7 +172,7 @@ export const ProtocolPDFDocument = ({ aiData, evidenceData, currentResults }) =>
                 {matrix.edges.map((edge, idx) => (
                   <View key={idx} style={styles.card}>
                     <Text style={{ fontSize: 11, fontWeight: 'bold', color: '#111827', marginBottom: 2 }}>
-                      {edge.from} &lt;-&gt; {edge.to}
+                      {edge.from} {"<->"} {edge.to}
                     </Text>
                     <Text style={{ fontSize: 10, color: edge.risk?.toLowerCase() === 'critical' ? '#E03E3E' : (edge.risk?.toLowerCase() === 'high' ? '#F06A25' : '#E8960C') }}>
                       Risk Level: {edge.risk?.toUpperCase()}

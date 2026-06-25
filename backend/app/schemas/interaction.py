@@ -13,9 +13,12 @@ class InteractionRequest(BaseModel):
     language: str = "en"
     patient_context: Optional[PatientContext] = None
 
-    @field_validator("items")
+    @field_validator("items", mode="before")
     @classmethod
     def clean_items(cls, v: list[str]) -> list[str]:
+        # Handle cases where frontend incorrectly sends ["ItemA ItemB"]
+        if isinstance(v, list) and len(v) == 1 and " " in v[0]:
+            v = v[0].split()
         cleaned = [item.strip() for item in v if item.strip()]
         if len(cleaned) < 2:
             raise ValueError("At least 2 non-empty items are required")

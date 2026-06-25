@@ -37,7 +37,16 @@ export default function EvidencePortal() {
         return <span className="px-2 py-1 text-xs font-semibold rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">📚 PubMed</span>
       case 'Semantic Scholar':
         return <span className="px-2 py-1 text-xs font-semibold rounded bg-purple-500/20 text-purple-400 border border-purple-500/30">🧠 Semantic Scholar</span>
+      case 'OpenAlex':
+        return <span className="px-2 py-1 text-xs font-semibold rounded bg-teal-500/20 text-teal-400 border border-teal-500/30">🌐 OpenAlex</span>
+      case 'WHO ICTRP (India)':
+        return <span className="px-2 py-1 text-xs font-semibold rounded bg-orange-500/20 text-orange-400 border border-orange-500/30">🇮🇳 ICTRP India</span>
+      case 'WHO ICTRP (China)':
+        return <span className="px-2 py-1 text-xs font-semibold rounded bg-red-500/20 text-red-400 border border-red-500/30">🇨🇳 ICTRP China</span>
       default:
+        if (source && source.startsWith('WHO ICTRP')) {
+          return <span className="px-2 py-1 text-xs font-semibold rounded bg-blue-400/20 text-blue-300 border border-blue-400/30">🏥 {source}</span>
+        }
         return <span className="px-2 py-1 text-xs font-semibold rounded bg-gray-500/20 text-gray-400 border border-gray-500/30">{source}</span>
     }
   }
@@ -183,7 +192,15 @@ export default function EvidencePortal() {
                       evidenceData.trials.map((trial, idx) => (
                         <div key={idx} className="bg-dark/40 border border-white/10 rounded-xl p-5 hover:bg-dark/60 transition-colors">
                           <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-lg font-medium text-white pr-4">{trial.title}</h3>
+                            <h3 className="text-lg font-medium text-white pr-4">
+                              {trial.url ? (
+                                <a href={trial.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4">
+                                  {trial.title}
+                                </a>
+                              ) : (
+                                trial.title
+                              )}
+                            </h3>
                             <div className="flex-shrink-0">
                               {formatSourceBadge(trial.source_registry)}
                             </div>
@@ -227,7 +244,15 @@ export default function EvidencePortal() {
                       evidenceData.papers.map((paper, idx) => (
                         <div key={idx} className="bg-dark/40 border border-white/10 rounded-xl p-5 hover:bg-dark/60 transition-colors">
                           <div className="flex justify-between items-start mb-2">
-                            <h3 className="text-lg font-medium text-white pr-4">{paper.title}</h3>
+                            <h3 className="text-lg font-medium text-white pr-4">
+                              {paper.url ? (
+                                <a href={paper.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30 underline-offset-4">
+                                  {paper.title}
+                                </a>
+                              ) : (
+                                paper.title
+                              )}
+                            </h3>
                             <div className="flex-shrink-0 flex flex-col items-end gap-2">
                               {formatSourceBadge(paper.source_registry)}
                               {paper.citation_count > 0 && (
@@ -235,6 +260,11 @@ export default function EvidencePortal() {
                                   <ChartBarIcon className="w-3 h-3 mr-1" />
                                   {paper.citation_count} Citations
                                 </span>
+                              )}
+                              {paper.is_oa && paper.url && (
+                                <a href={paper.url} target="_blank" rel="noopener noreferrer" className="px-2 py-1 text-xs font-semibold rounded bg-green-500/20 text-green-400 border border-green-500/30 flex items-center hover:bg-green-500/30 transition-colors">
+                                  Free PDF (OA)
+                                </a>
                               )}
                             </div>
                           </div>
