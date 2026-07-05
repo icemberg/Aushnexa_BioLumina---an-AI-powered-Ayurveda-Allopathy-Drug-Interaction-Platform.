@@ -10,8 +10,31 @@ import { ProtocolPDFDocument } from '../components/ProtocolPDFDocument';
 const AushnexaAI = () => {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState('');
   const [aiData, setAiData] = useState(null);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    let interval;
+    if (loading) {
+      const messages = [
+        "Searching PubMed & OpenAlex...",
+        "Analyzing clinical data...",
+        "Extracting protocol with AI...",
+        "Cross-validating sources...",
+        "Generating final protocol..."
+      ];
+      let i = 0;
+      setLoadingMessage(messages[0]);
+      interval = setInterval(() => {
+        i = Math.min(i + 1, messages.length - 1);
+        setLoadingMessage(messages[i]);
+      }, 3500);
+    } else {
+      setLoadingMessage('');
+    }
+    return () => clearInterval(interval);
+  }, [loading]);
   const [selectedEdge, setSelectedEdge] = useState(null);
   const [showModifyModal, setShowModifyModal] = useState(false);
   const [modifiers, setModifiers] = useState({
@@ -66,7 +89,10 @@ const AushnexaAI = () => {
       case 'low': return '#18C96A'; // emerald
       case 'moderate': return '#E8960C'; // amber
       case 'high': return '#F06A25'; // orange
-      case 'critical': return '#E03E3E'; // red
+      case 'critical':
+      case 'severe':
+      case 'contraindicated': return '#E03E3E'; // red
+      case 'unknown': return '#9ca3af'; // gray
       default: return '#0ECFB8'; // teal
     }
   };
@@ -118,6 +144,11 @@ const AushnexaAI = () => {
           </form>
 
           {error && <p className="text-center text-error-red mt-4">{error}</p>}
+          {loading && loadingMessage && (
+            <p className="text-center text-matrix-teal mt-4 font-technical-sm animate-pulse">
+              {loadingMessage}
+            </p>
+          )}
           
           <div className="flex flex-wrap justify-center items-center gap-4 mt-4">
             <span className="font-label-caps text-label-caps text-on-surface-variant/60">SUGGESTED:</span>
@@ -217,7 +248,9 @@ const AushnexaAI = () => {
                 <div className="glass-panel rounded-xl p-6 border-t-2 border-t-primary glow-effect">
                   <div className="flex justify-between items-start mb-4">
                     <div>
-                      <span className="font-label-caps text-label-caps text-primary/70 bg-primary/10 px-2 py-1 rounded">AI GENERATED</span>
+                      <span className={`font-label-caps text-label-caps px-2 py-1 rounded ${aiData._source === 'generated' ? 'text-matrix-teal bg-matrix-teal/10 border border-matrix-teal/20' : 'text-primary/70 bg-primary/10'}`}>
+                        {aiData._source === 'generated' ? '⚡ NEWLY GENERATED' : '📚 FROM PROTOCOL LIBRARY'}
+                      </span>
                       <h3 className="font-headline-md text-headline-md text-primary mt-2">{aiData.protocol.title || 'Integrative Protocol'}</h3>
                       <p className="font-technical-sm text-technical-sm text-on-surface-variant mt-1 font-mono opacity-80">Focus: {aiData.protocol.focus}</p>
                     </div>
@@ -364,7 +397,10 @@ const MatrixVisualizer = ({ matrix, onEdgeClick }) => {
       case 'low': return '#18C96A'; 
       case 'moderate': return '#E8960C'; 
       case 'high': return '#F06A25'; 
-      case 'critical': return '#E03E3E'; 
+      case 'critical':
+      case 'severe':
+      case 'contraindicated': return '#E03E3E'; 
+      case 'unknown': return '#9ca3af';
       default: return '#0ECFB8'; 
     }
   };

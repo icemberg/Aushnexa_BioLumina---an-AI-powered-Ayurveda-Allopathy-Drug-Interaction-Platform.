@@ -119,25 +119,8 @@ def create_app() -> FastAPI:
 
     app.add_middleware(SecurityHeadersMiddleware)
 
-    # ─── Sanitization Middleware ───
-    # Registered last so it runs first (before route handlers)
-    class SanitizationMiddleware(BaseHTTPMiddleware):
-        async def dispatch(self, request: Request, call_next) -> Response:
-            if request.method in ("POST", "PUT", "PATCH") and request.headers.get("content-type") == "application/json":
-                try:
-                    body = await request.body()
-                    if body:
-                        # Strip null bytes
-                        body_str = body.decode("utf-8").replace("\x00", "")
-                        # For now we recreate the request body
-                        request._body = body_str.encode("utf-8")
-                except Exception as e:
-                    logger.warning(f"Error in sanitization middleware: {e}")
-            
-            response = await call_next(request)
-            return response
-            
-    app.add_middleware(SanitizationMiddleware)
+    # ─── Sanitization Middleware Removed ───
+    # (BaseHTTPMiddleware hanging fix)
 
     # ─── Request ID Tracing Middleware ───
     class RequestIDMiddleware(BaseHTTPMiddleware):

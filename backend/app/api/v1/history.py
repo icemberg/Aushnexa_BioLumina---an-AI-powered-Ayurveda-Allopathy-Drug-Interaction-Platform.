@@ -7,6 +7,9 @@ GET /history — Retrieve paginated query history for the authenticated user
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, desc
+from sqlalchemy.exc import SQLAlchemyError
+from loguru import logger
+from fastapi import HTTPException
 
 from app.db.connection import get_db
 from app.db.models import User, QueryHistory
@@ -28,23 +31,27 @@ async def get_history(
     """
     offset = (page - 1) * limit
 
-    # Get total count
-    count_result = await db.execute(
-        select(func.count(QueryHistory.id)).where(
-            QueryHistory.user_id == current_user.id
+    try:
+        # Get total count
+        count_result = await db.execute(
+            select(func.count(QueryHistory.id)).where(
+                QueryHistory.user_id == current_user.id
+            )
         )
-    )
-    total = count_result.scalar() or 0
+        total = count_result.scalar() or 0
 
-    # Get paginated results
-    result = await db.execute(
-        select(QueryHistory)
-        .where(QueryHistory.user_id == current_user.id)
-        .order_by(desc(QueryHistory.created_at))
-        .offset(offset)
-        .limit(limit)
-    )
-    queries = result.scalars().all()
+        # Get paginated results
+        result = await db.execute(
+            select(QueryHistory)
+            .where(QueryHistory.user_id == current_user.id)
+            .order_by(desc(QueryHistory.created_at))
+            .offset(offset)
+            .limit(limit)
+        )
+        queries = result.scalars().all()
+    except SQLAlchemyError as e:
+        logger.error(f"Database error fetching query history: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
     return {
         "items": [

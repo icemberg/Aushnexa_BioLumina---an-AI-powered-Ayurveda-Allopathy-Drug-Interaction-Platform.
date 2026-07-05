@@ -1,0 +1,1459 @@
+[
+  {
+    "herb_canonical": "Withania somnifera",
+    "herb_common": "Ashwagandha",
+    "drug_canonical": "Metformin",
+    "condition": "type II diabetes mellitus",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "The antidiabetic activity of the extract may be attributed to its phenolic and flavonoid compounds. Withaferin-A protects Langerhans cells from cytokine-induced damage.",
+    "active_compound": "phenolic and flavonoid compounds",
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": "W. somnifera root powder 1,000 mg three times a day for 30 days",
+      "quote": "1,000 mg three times a day for 30 days",
+      "source": "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.ih.gov/articles/PMC12867099",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "fasting blood glucose",
+        "quote": "fasting blood glucose",
+        "source": "PubMed | Year: 2026 | URL: https://pubmed.ncbi.nlm.nih.gov/42104950/",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "HbA1c",
+        "quote": "HbA1c",
+        "source": "PubMed | Year: 2026 | URL: https://pubmed.ncbi.nlm.nih.gov/42104950/",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "serum insulin",
+        "quote": "serum insulin",
+        "source": "PubMed | Year: 2026 | URL: https://pubmed.ncbi.nlm.nih.gov/42104950/",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "HOMA-IR",
+        "quote": "HOMA-IR",
+        "source": "PubMed | Year: 2026 | URL: https://pubmed.ncbi.nlm.nih.gov/42104950/",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "SGPT",
+        "quote": "serum glutamic pyruvic transaminase (SGPT)",
+        "source": "PubMed | Year: 2025 | URL: https://pubmed.ncbi.nlm.nih.gov/40065870/",
+        "confidence": 0.6
+      },
+      {
+        "parameter": "bilirubin levels",
+        "quote": "bilirubin levels",
+        "source": "PubMed | Year: 2025 | URL: https://pubmed.ncbi.nlm.nih.gov/40065870/",
+        "confidence": 0.6
+      }
+    ],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed | Year: 2025 | URL: https://pubmed.ncbi.nlm.nih.gov/40065870/",
+      "PubMed | Year: 2026 | URL: https://pubmed.ncbi.nlm.nih.gov/42104950/",
+      "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.ih.gov/articles/PMC12867099",
+      "Tavily Search | Year: 2024 | URL: https://www.rxlist.com/supplements/ashwagandha.htm"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/40065870/",
+      "https://pubmed.ncbi.nlm.nih.gov/42104950/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12867099",
+      "https://www.rxlist.com/supplements/ashwagandha.htm"
+    ],
+    "pmids": [
+      "40065870",
+      "42104950"
+    ],
+    "source_count": 4,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.625,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 6,
+    "openalex_paper_count": 12,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Withania somnifera",
+    "herb_common": "Ashwagandha",
+    "drug_canonical": "Levothyroxine",
+    "condition": "thyroid disorders",
+    "interaction_found": true,
+    "severity": "moderate",
+    "interaction_type": "both",
+    "mechanism": "Ashwagandha may increase thyroid hormone levels (T3, T4) and lower TSH, potentially boosting thyroid activity. It might also reduce levothyroxine absorption by altering stomach pH or motility, and influence liver enzymes affecting T4 to T3 conversion.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": "Ashwagandha extract 300 mg twice daily",
+      "quote": "ashwagandha, at 300 mg twice daily for eight weeks",
+      "source": "Tavily Search (2024) Drug Interaction Report: ashwaganda, levothyroxine",
+      "confidence": 0.7
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "Thyroid stimulating hormone (TSH)",
+        "quote": "lowered serum thyroid stimulating hormone (TSH)",
+        "source": "Tavily Search (2024) Drug Interaction Report: ashwaganda, levothyroxine",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Thyroxine (T4) levels",
+        "quote": "small increases in blood thyroxine (T4) levels",
+        "source": "Tavily Search (2024) Drug Interaction Report: ashwaganda, levothyroxine",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Triiodothyronine (T3) levels",
+        "quote": "increased triiodothyronine (T3) and T4 levels",
+        "source": "Tavily Search (2024) Drug Interaction Report: ashwaganda, levothyroxine",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Hyperthyroid symptoms",
+        "quote": "developed elevated thyroid levels (hyperthyroid symptoms)",
+        "source": "Tavily Search (2024) Warning: Stop Mixing Synthroid and Ashwagandha Immediately",
+        "confidence": 0.7
+      }
+    ],
+    "contraindications": [],
+    "recommendation": "Monitor thyroid function tests (TSH, T3, T4) and clinical symptoms closely when combining ashwagandha with levothyroxine, as ashwagandha may alter thyroid hormone levels and levothyroxine absorption.",
+    "evidence_level": 3,
+    "key_sources": [
+      "OpenAlex (2022) Thyroid, Diet, and Alternative Approaches",
+      "OpenAlex (2022) Ashwagandha Roots Extract Attenuate Some Anatomical and Behavioral Outcomes in Rat’ Pups After Early Postnatal Induction of Hypothyroidism",
+      "Tavily Search (2024) Drug Interaction Report: ashwaganda, levothyroxine",
+      "Tavily Search (2024) Ashwaganda and Levothyroxine Interactions",
+      "Tavily Search (2024) Warning: Stop Mixing Synthroid and Ashwagandha Immediately",
+      "Tavily Search (2024) 5 Ashwagandha Interactions to Watch for"
+    ],
+    "source_urls": [
+      "https://doi.org/10.21608/ejvs.2022.148653.1361",
+      "https://doi.org/10.1210/clinem/dgac473",
+      "https://www.drugs.com/interactions-check.php?drug_list=2706-0%2C1463-0&professional=1",
+      "https://www.drugs.com/drug-interactions/ashwaganda-with-levothyroxine-2706-0-1463-0.html?professional=1",
+      "https://ubiehealth.com/doctors-note/ashwagandha-thyroid-medication-synthroid-no-mix-7451q6"
+    ],
+    "pmids": [],
+    "source_count": 6,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.805,
+    "groq_validation_score": 0.6666666666666666,
+    "pubmed_paper_count": 1,
+    "openalex_paper_count": 12,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Withania somnifera",
+    "herb_common": "Ashwagandha",
+    "drug_canonical": "Tacrolimus",
+    "condition": "organ transplant",
+    "interaction_found": true,
+    "severity": "Severe",
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Ashwagandha may reduce the immunosuppressant activity of immunosuppressant medications. Ashwgandha can change the activity of your immune system.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": "tacrolimus",
+      "quote": "tacrolimus (Prograf)",
+      "source": "Tavily Search | Year: 2024 | URL: https://www.goodrx.com/well-being/supplements-herbs/ashwagandha-drug-interactions",
+      "confidence": 0.8
+    },
+    "ayurvedic_base": {
+      "value": "Ashwagandha",
+      "quote": "Ashwagandha (Withania somnifera)",
+      "source": "Tavily Search | Year: 2024 | URL: https://examine.com/supplements/ashwagandha",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 1,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | URL: https://examine.com/supplements/ashwagandha",
+      "Tavily Search | Year: 2024 | URL: https://www.goodrx.com/well-being/supplements-herbs/ashwagandha-drug-interactions"
+    ],
+    "source_urls": [
+      "https://examine.com/supplements/ashwagandha",
+      "https://www.goodrx.com/well-being/supplements-herbs/ashwagandha-drug-interactions"
+    ],
+    "pmids": [],
+    "source_count": 2,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.475,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 1,
+    "openalex_paper_count": 9,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Curcuma longa",
+    "herb_common": "Turmeric",
+    "drug_canonical": "Warfarin",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "high",
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Curcumin, an active component of turmeric, exerts anti-inflammatory, NSAID-like effects and antiplatelet effects. This may affect platelet function and clotting, increasing bleeding risk with warfarin.",
+    "active_compound": "curcumin",
+    "allopathic_base": null,
+    "ayurvedic_base": null,
+    "timing_guidance": null,
+    "monitoring_parameters": [
+      {
+        "parameter": "Doctor monitoring",
+        "quote": "more frequent monitoring by your doctor",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/drug-interactions/turmeric-with-warfarin-2682-0-2311-0.html",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Bleeding/Bruising",
+        "quote": "unusual bleeding or bruising, or have other signs and symptoms of bleeding",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/drug-interactions/turmeric-with-warfarin-2682-0-2311-0.html",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "INR",
+        "quote": "raised INR when NSAIDs are taken with warfarin",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://medsafe.govt.nz/safety/ews/2018/Turmeric.asp",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "Bleeding symptoms",
+        "quote": "dizziness; lightheadedness; red or black, tarry stools; coughing up or vomiting fresh or dried blood",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/drug-interactions/turmeric-with-warfarin-2682-0-2311-0.html",
+        "confidence": 0.8
+      }
+    ],
+    "contraindications": [
+      {
+        "condition": "Concurrent use with medicines affecting bleeding",
+        "quote": "Concurrent use... may result in prolonged bleeding times and should be avoided",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://medsafe.govt.nz/safety/ews/2018/Turmeric.asp",
+        "confidence": 0.9
+      }
+    ],
+    "recommendation": "Talk to your doctor before using turmeric with warfarin, as concurrent use may result in prolonged bleeding times.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://medsafe.govt.nz/safety/ews/2018/Turmeric.asp",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.webmd.com/vitamins/ai/ingredientmono-662/turmeric",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/drug-interactions/turmeric-with-warfarin-2682-0-2311-0.html",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/npp/turmeric.html"
+    ],
+    "source_urls": [
+      "https://medsafe.govt.nz/safety/ews/2018/Turmeric.asp",
+      "https://www.webmd.com/vitamins/ai/ingredientmono-662/turmeric",
+      "https://www.drugs.com/drug-interactions/turmeric-with-warfarin-2682-0-2311-0.html",
+      "https://www.drugs.com/npp/turmeric.html"
+    ],
+    "pmids": [],
+    "source_count": 4,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.815,
+    "groq_validation_score": 1.0,
+    "pubmed_paper_count": 6,
+    "openalex_paper_count": 7,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Curcuma longa",
+    "herb_common": "Turmeric",
+    "drug_canonical": "Aspirin",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "high",
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Laboratory studies show curcumin inhibits platelet cyclooxygenase and reduces thromboxane B₂ production. Curcumin also inhibits several platelet-activating factors and can reduce platelet aggregation.",
+    "active_compound": "curcumin",
+    "allopathic_base": {
+      "value": "Aspirin",
+      "quote": "aspirin",
+      "source": "PubMed",
+      "confidence": 0.9
+    },
+    "ayurvedic_base": {
+      "value": "Turmeric",
+      "quote": "Curcuma longa",
+      "source": "PubMed",
+      "confidence": 0.9
+    },
+    "timing_guidance": {
+      "value": "Take curcumin and aspirin at different times of the day.",
+      "quote": "take curcumin and aspirin at different times of the day",
+      "source": "Tavily Search",
+      "confidence": 1.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "Bleeding manifestations",
+        "quote": "Information on adverse reaction including bleeding manifestations",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "Platelet function",
+        "quote": "platelet function by light transmission aggregometry",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "PT/APTT",
+        "quote": "PT/APTT",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "Thrombin generation assay",
+        "quote": "thrombin generation assay by calibrated automated thrombogram",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "Unusual bruising, bleeding, or GI discomfort",
+        "quote": "Keep a log of any unusual bruising, bleeding, or GI discomfort.",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "Signs and symptoms of bleeding",
+        "quote": "seek immediate medical attention if you experience any unusual bleeding or bruising",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      }
+    ],
+    "contraindications": [
+      {
+        "condition": "Taking aspirin",
+        "quote": "Don’t take turmeric supplements if: You’re taking aspirin",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      }
+    ],
+    "recommendation": "Talk to your doctor before using turmeric together with aspirin, as monitoring may be needed due to concerns about increased bleeding risk.",
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search",
+      "Tavily Search",
+      "Tavily Search",
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/28732813/",
+      "https://www.mskcc.org/cancer-care/integrative-medicine/herbs/turmeric",
+      "https://ubiehealth.com/doctors-note/curcumin-blood-thinners-aspirin-clotting-doctor-4751q4",
+      "https://www.drugs.com/drug-interactions/aspirin-low-strength-with-turmeric-243-3197-2682-0.html",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7522354"
+    ],
+    "pmids": [
+      "28732813"
+    ],
+    "source_count": 5,
+    "contradiction_flags": [],
+    "evidence_score": 0.845,
+    "groq_validation_score": 0.6666666666666666,
+    "pubmed_paper_count": 4,
+    "openalex_paper_count": 8,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Validated"
+  },
+  {
+    "herb_canonical": "Curcuma longa",
+    "herb_common": "Turmeric",
+    "drug_canonical": "Omeprazole",
+    "condition": "functional dyspepsia",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Turmeric increases stomach acid levels. When associated with omeprazole, it can inhibit its effectiveness.",
+    "active_compound": "curcumin",
+    "allopathic_base": {
+      "value": "20 mg of omeprazole, twice a day",
+      "quote": "20 mg of omeprazole... given orally twice a day",
+      "source": "Tavily Search",
+      "confidence": 0.8
+    },
+    "ayurvedic_base": {
+      "value": "700 mg turmeric tablets (40 mg curcumin), three times a day",
+      "quote": "turmeric tablets (700 mg containing 40 mg of curcumin, three times a day)",
+      "source": "Tavily Search",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": "Consider that turmeric may inhibit omeprazole's effectiveness due to increased stomach acid levels.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search",
+      "PubMed"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/20438867/",
+      "https://pubmed.ncbi.nlm.nih.gov/34652861/",
+      "https://doi.org/10.1074/jbc.m413398200",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3535097",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7522354"
+    ],
+    "pmids": [
+      "20438867",
+      "34652861"
+    ],
+    "source_count": 5,
+    "contradiction_flags": [],
+    "evidence_score": 0.705,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 4,
+    "openalex_paper_count": 8,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Experimental"
+  },
+  {
+    "herb_canonical": "Tinospora cordifolia",
+    "herb_common": "Giloy",
+    "drug_canonical": "Metformin",
+    "condition": "diabetes mellitus type II (T2DM)",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": null,
+    "active_compound": "Magnoflorine",
+    "allopathic_base": {
+      "value": "metformin",
+      "quote": "intervention with TC, metformin, and magnoflorine for three weeks.",
+      "source": "PubMed",
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": "Tinospora cordifolia",
+      "quote": "intervention with TC, metformin, and magnoflorine for three weeks.",
+      "source": "PubMed",
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "fasting blood glucose (FBG) levels",
+        "quote": "decreased the fasting blood glucose (FBG) levels in T2DM rats.",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "serum creatine kinase (CK) levels",
+        "quote": "decreased serum creatine kinase (CK) levels",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "myosin heavy chain-β (MyHC-β) levels",
+        "quote": "increased myosin heavy chain-β (MyHC-β) levels in muscles.",
+        "source": "PubMed",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "urea",
+        "quote": "urea, uric acid and creatinine are not restored effectively.",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "uric acid level",
+        "quote": "Uric acid level in control group of mice was 4.34 ± 0.20 mg/dl.",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "creatinine level",
+        "quote": "Creatinine in control group of mice was 0.74 ± 0.06 mg/dl.",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "glucose level",
+        "quote": "restoration in glucose level after 8 weeks metformin administration",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      }
+    ],
+    "contraindications": [
+      {
+        "condition": "cardiovascular, pulmonary, renal and liver failure",
+        "quote": "conjoined tissue perfusion such as cardiovascular, pulmonary, renal and liver failure",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      }
+    ],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/33141056/",
+      "https://www.remedypublications.com/open-access/nephroprotective-effect-of-tinospora-cordifolia-and-metformin-on-alloxan-induced-7372.pdf",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10828662"
+    ],
+    "pmids": [
+      "33141056"
+    ],
+    "source_count": 3,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.7,
+    "groq_validation_score": 0.5,
+    "pubmed_paper_count": 2,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Tinospora cordifolia",
+    "herb_common": "Giloy",
+    "drug_canonical": "Insulin",
+    "condition": "Type 2 diabetes mellitus",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "An antagonist effect was observed between Tinospora cordifolia and insulin, indicating a possible plant-drug interaction. Higher concentrations of Tinospora cordifolia inhibited glucose uptake when combined with insulin.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed | Year: 2013"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/41382285/",
+      "https://pubmed.ncbi.nlm.nih.gov/30661947/",
+      "https://pubmed.ncbi.nlm.nih.gov/23543787/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC2924974",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC10882059"
+    ],
+    "pmids": [
+      "41382285",
+      "30661947",
+      "23543787"
+    ],
+    "source_count": 6,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.585,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 9,
+    "openalex_paper_count": 14,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Zingiber officinale",
+    "herb_common": "Ginger",
+    "drug_canonical": "Warfarin",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "moderate",
+    "interaction_type": "both",
+    "mechanism": "inhibitory effect of ginger extract on the activity of CYP2C9 and 3A4. Interfering with the ability of blood platelets to clump together.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": "25 mg dose of warfarin",
+      "quote": "single 25 mg dose of warfarin",
+      "source": "OpenAlex",
+      "confidence": 1.0
+    },
+    "ayurvedic_base": {
+      "value": "400 mg of Ginger rhizome powder three times daily",
+      "quote": "400 mg of Ginger rhizome powder taken three times daily",
+      "source": "Tavily Search",
+      "confidence": 1.0
+    },
+    "timing_guidance": null,
+    "monitoring_parameters": [
+      {
+        "parameter": "INR",
+        "quote": "international normalized ratio (INR) of prothrombin time",
+        "source": "OpenAlex",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "Platelet aggregation",
+        "quote": "Platelet aggregation",
+        "source": "OpenAlex",
+        "confidence": 1.0
+      },
+      {
+        "parameter": "bleeding events",
+        "quote": "increased risk of bleeding events",
+        "source": "Tavily Search",
+        "confidence": 1.0
+      }
+    ],
+    "contraindications": [],
+    "recommendation": "It is best to avoid the combination of ginger and warfarin except under medical supervision due to potential interactions.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search",
+      "PubMed",
+      "OpenAlex"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/21919844/",
+      "https://doi.org/10.1111/j.1365-2125.2005.02322.x",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3976951",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4619316",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4338259"
+    ],
+    "pmids": [
+      "21919844"
+    ],
+    "source_count": 7,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.845,
+    "groq_validation_score": 0.6666666666666666,
+    "pubmed_paper_count": 10,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Allium sativum",
+    "herb_common": "Garlic",
+    "drug_canonical": "Warfarin",
+    "condition": "coagulation impairment",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "both",
+    "mechanism": "Garlic has antithrombotic activity and is a potent inhibitor of platelet aggregation. It may also inhibit or induce cytochrome P450 isoenzymes like CYP2C9, CYP3A, and CYP2D6.",
+    "active_compound": "allicin, S-allylcysteine",
+    "allopathic_base": {
+      "value": "25 mg warfarin",
+      "quote": "single dose of 25 mg warfarin",
+      "source": "OpenAlex",
+      "confidence": 0.9
+    },
+    "ayurvedic_base": {
+      "value": "5 mL aged Garlic extract (Kyolic) twice daily",
+      "quote": "5 mL of aged Garlic extract (Kyolic) twice daily",
+      "source": "Tavily Search",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "INR",
+        "quote": "INR",
+        "source": "OpenAlex",
+        "confidence": 0.9
+      },
+      {
+        "parameter": "platelet aggregation",
+        "quote": "platelet aggregation",
+        "source": "OpenAlex",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "clotting factor activity",
+        "quote": "clotting factor activity",
+        "source": "OpenAlex",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "warfarin concentration",
+        "quote": "warfarin concentration",
+        "source": "Tavily Search",
+        "confidence": 0.7
+      }
+    ],
+    "contraindications": [
+      {
+        "condition": "significant dietary garlic consumption before warfarin therapy",
+        "quote": "Patients with a significant dietary garlic consumption before warfarin therapy must be evaluated",
+        "source": "Tavily Search",
+        "confidence": 0.9
+      }
+    ],
+    "recommendation": "It may be prudent to consider a complication of bleeding when Garlic was given with warfarin.",
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search",
+      "OpenAlex"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/21919844/",
+      "https://doi.org/10.1038/bjp.2008.210",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3976951",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9920503",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5552262"
+    ],
+    "pmids": [
+      "21919844"
+    ],
+    "source_count": 7,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.855,
+    "groq_validation_score": 1.0,
+    "pubmed_paper_count": 10,
+    "openalex_paper_count": 9,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Allium sativum",
+    "herb_common": "Garlic",
+    "drug_canonical": "Aspirin",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "moderate",
+    "interaction_type": "both",
+    "mechanism": "Allicin and other garlic organosulfur compounds exhibit antiplatelet activity, perhaps through inhibition of thromboxane synthesis and platelet aggregation.",
+    "active_compound": "Allicin and other garlic organosulfur compounds",
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": "high-dose or prolonged garlic supplementation",
+      "quote": "high-dose or prolonged garlic supplementation",
+      "source": "Tavily Search",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": "Concurrent use of garlic with aspirin may increase the risk of bleeding, particularly with high-dose or prolonged garlic supplementation.",
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/21919844/",
+      "https://pubmed.ncbi.nlm.nih.gov/19719333",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC13093131",
+      "https://www.drugs.com/interactions-check.php?drug_list=705-0%2C1160-0&professional=1",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC139960"
+    ],
+    "pmids": [
+      "21919844"
+    ],
+    "source_count": 6,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.855,
+    "groq_validation_score": 1.0,
+    "pubmed_paper_count": 10,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Ocimum tenuiflorum",
+    "herb_common": "Tulsi",
+    "drug_canonical": "Warfarin",
+    "condition": null,
+    "interaction_found": false,
+    "severity": null,
+    "interaction_type": null,
+    "mechanism": null,
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8787711"
+    ],
+    "pmids": [],
+    "source_count": 1,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "validation_status": "Experimental",
+    "evidence_score": 0.0
+  },
+  {
+    "herb_canonical": "Bacopa monnieri",
+    "herb_common": "Brahmi",
+    "drug_canonical": "Diazepam",
+    "condition": "alcohol abstinence-induced anxiety-like behavior",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": null,
+    "active_compound": null,
+    "allopathic_base": {
+      "value": "Diazepam 2mg/kg",
+      "quote": "diazepam (2 mg/kg) were administered via gavage",
+      "source": "PubMed",
+      "confidence": 0.8
+    },
+    "ayurvedic_base": {
+      "value": "Bacopa monnieri extract 100, 200, 500 mg/kg",
+      "quote": "doses (100, 200, and 500 mg/kg) of BME",
+      "source": "PubMed",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": "for three consecutive days",
+      "quote": "for three consecutive days in the alcohol abstinence period",
+      "source": "PubMed",
+      "confidence": 0.7
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/30841457/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12158153",
+      "https://examine.com/supplements/bacopa-monnieri/research"
+    ],
+    "pmids": [
+      "30841457"
+    ],
+    "source_count": 3,
+    "contradiction_flags": [],
+    "evidence_score": 0.7,
+    "groq_validation_score": 0.5,
+    "pubmed_paper_count": 2,
+    "openalex_paper_count": 9,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Validated"
+  },
+  {
+    "herb_canonical": "Azadirachta indica",
+    "herb_common": "Neem",
+    "drug_canonical": "Glibenclamide",
+    "condition": "type 2 diabetes",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Neem and glibenclamide considerably lower blood glucose, fat, and enzyme concentrations when combined. Neem also shows extra-pancreatic action comparable to glibenclamide.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": "Neem root bark extract 800 mg/kg body weight",
+      "quote": "higher doses of this extract (800 mg/kg body weight) and declined by 54%",
+      "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+      "confidence": 0.7
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "blood glucose levels",
+        "quote": "considerably lower blood glucose, fat, and enzyme concentrations when combined",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "fat concentrations",
+        "quote": "considerably lower blood glucose, fat, and enzyme concentrations when combined",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+        "confidence": 0.7
+      },
+      {
+        "parameter": "enzyme concentrations",
+        "quote": "considerably lower blood glucose, fat, and enzyme concentrations when combined",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+        "confidence": 0.7
+      }
+    ],
+    "contraindications": [],
+    "recommendation": "Monitor blood glucose levels closely due to increased risk of hypoglycemia when combining Neem with Glibenclamide.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/npp/neem.html"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12400164",
+      "https://www.drugs.com/npp/neem.html"
+    ],
+    "pmids": [],
+    "source_count": 2,
+    "contradiction_flags": [],
+    "evidence_score": 0.585,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 1,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Experimental"
+  },
+  {
+    "herb_canonical": "Glycyrrhiza glabra",
+    "herb_common": "Licorice",
+    "drug_canonical": "Digoxin",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "high",
+    "interaction_type": "both",
+    "mechanism": "Licorice intake can induce hypokalemia, leading to digoxin toxicity. Additionally, glabridin, a licorice component, inhibited P-glycoprotein-mediated transport of digoxin.",
+    "active_compound": "glycyrrhizin, glabridin",
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "Potassium levels",
+        "quote": "digoxin toxicity due to hypokalemia induced by licorice intake",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3498851",
+        "confidence": 1.0
+      }
+    ],
+    "contraindications": [
+      {
+        "condition": "Patients taking digoxin",
+        "quote": "patients taking digoxin or warfarin to avoid the risk of toxicity.",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258",
+        "confidence": 1.0
+      },
+      {
+        "condition": "Elderly patients taking digitalis",
+        "quote": "The combination of medicine containing licorice and digitalis can cause toxicity, especially in elderly patients.",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258",
+        "confidence": 1.0
+      },
+      {
+        "condition": "Patients on medicines lowering potassium levels",
+        "quote": "patients who are on medicines lowering potassium levels",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258",
+        "confidence": 0.8
+      },
+      {
+        "condition": "Congestive heart failure",
+        "quote": "people suffering from congestive heart failure should completely abstain from products containing licorice.",
+        "source": "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258",
+        "confidence": 0.8
+      }
+    ],
+    "recommendation": "Patients taking digoxin should avoid licorice due to the increased risk of digoxin toxicity and potential cardiac arrest.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC3498851",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC8328722",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC7122586",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC3498851",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC8328722",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7122586",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6836258"
+    ],
+    "pmids": [],
+    "source_count": 4,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.585,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 0,
+    "openalex_paper_count": 7,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Experimental"
+  },
+  {
+    "herb_canonical": "Terminalia arjuna",
+    "herb_common": "Arjuna",
+    "drug_canonical": "Digoxin",
+    "condition": null,
+    "interaction_found": false,
+    "severity": null,
+    "interaction_type": null,
+    "mechanism": null,
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC4220499"
+    ],
+    "pmids": [],
+    "source_count": 1,
+    "contradiction_flags": [],
+    "validation_status": "Experimental",
+    "evidence_score": 0.0
+  },
+  {
+    "herb_canonical": "Momordica charantia",
+    "herb_common": "Bitter Melon",
+    "drug_canonical": "Insulin",
+    "condition": "Type 2 diabetes mellitus",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "BG68 and mcIRBP-9 synergistically enhanced glucose clearance with insulin. mcIRBP-9 provided a 'second hit' to IR following insulin binding, further enhancing IR activation.",
+    "active_compound": "BG68, mcIRBP-9",
+    "allopathic_base": {
+      "value": "Insulin",
+      "quote": "often managed with insulin therapy",
+      "source": "PubMed",
+      "confidence": 0.8
+    },
+    "ayurvedic_base": {
+      "value": "Bitter gourd fruit juice (2.4 g/day)",
+      "quote": "freeze-dried bitter gourd (BG) fruit juice (2.4 g/day)",
+      "source": "PubMed",
+      "confidence": 0.8
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "Fasting Plasma Glucose (FPG)",
+        "quote": "significant reductions of FPG (p = 0.014)",
+        "source": "PubMed",
+        "confidence": 0.9
+      },
+      {
+        "parameter": "Fasting Insulin",
+        "quote": "significant reductions of... fasting insulin (p = 0.007)",
+        "source": "PubMed",
+        "confidence": 0.9
+      },
+      {
+        "parameter": "HbA1c",
+        "quote": "Effects on... HbA1c... were also analyzed",
+        "source": "PubMed",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Fructosamine",
+        "quote": "Effects on... fructosamine... were also analyzed",
+        "source": "PubMed",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Postprandial Glucose",
+        "quote": "postprandial glucose after an oral glucose tolerance test",
+        "source": "PubMed",
+        "confidence": 0.8
+      },
+      {
+        "parameter": "Insulin Receptor (IR) phosphorylation",
+        "quote": "mcIRBP-9 significantly enhanced IR phosphorylation",
+        "source": "PubMed",
+        "confidence": 0.9
+      }
+    ],
+    "contraindications": [],
+    "recommendation": "Monitor glucose levels closely when combining bitter melon with insulin due to synergistic enhancement of glucose clearance.",
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed",
+      "Tavily Search",
+      "OpenAlex"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/41287595/",
+      "https://pubmed.ncbi.nlm.nih.gov/40306528/",
+      "https://pubmed.ncbi.nlm.nih.gov/40191975/",
+      "https://pubmed.ncbi.nlm.nih.gov/40199408/",
+      "https://doi.org/10.1186/1472-6750-13-37"
+    ],
+    "pmids": [
+      "41287595",
+      "40306528",
+      "40191975",
+      "40199408"
+    ],
+    "source_count": 13,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.705,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 13,
+    "openalex_paper_count": 13,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Experimental"
+  },
+  {
+    "herb_canonical": "Trigonella foenum-graecum",
+    "herb_common": "Fenugreek",
+    "drug_canonical": "Metformin",
+    "condition": "diabetic patients",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "both",
+    "mechanism": "Taking fenugreek and metformin at the same time boosted the metformin bioavailability and reduced the drug distribution volume. The anti-diabetic effect was through inhibition of carbohydrate digestion, absorption, and enhanced peripheral insulin.",
+    "active_compound": "4-hydroxyisoleucine (4-OH-Ile)",
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [
+      {
+        "parameter": "blood glucose levels",
+        "quote": "control the blood sugar levels in diabetic patients.",
+        "source": "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9182856",
+        "confidence": 0.9
+      },
+      {
+        "parameter": "plasma glucose level",
+        "quote": "significant reduction in plasma glucose level (20.7%)",
+        "source": "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5527439",
+        "confidence": 0.9
+      },
+      {
+        "parameter": "serum glucose",
+        "quote": "A reduction in serum glucose and an increase in liver glycogen was observed",
+        "source": "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9182856",
+        "confidence": 0.9
+      }
+    ],
+    "contraindications": [],
+    "recommendation": "This combination could be a useful way to control the blood sugar levels in diabetic patients.",
+    "evidence_level": 3,
+    "key_sources": [
+      "PubMed | Year: 2016 | URL: https://pubmed.ncbi.nlm.nih.gov/26835874/",
+      "PubMed | Year: 2014 | URL: https://pubmed.ncbi.nlm.nih.gov/24702915/",
+      "PubMed | Year: 2013 | URL: https://pubmed.ncbi.nlm.nih.gov/23246901/",
+      "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9182856",
+      "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5527439",
+      "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC8694443",
+      "Tavily Search | Year: 2024 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12858439"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/26835874/",
+      "https://pubmed.ncbi.nlm.nih.gov/24702915/",
+      "https://pubmed.ncbi.nlm.nih.gov/23246901/",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9182856",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5527439"
+    ],
+    "pmids": [
+      "26835874",
+      "24702915",
+      "23246901"
+    ],
+    "source_count": 7,
+    "contradiction_flags": [
+      "Mixed safety signals found in sources"
+    ],
+    "evidence_score": 0.625,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 11,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Experimental"
+  },
+  {
+    "herb_canonical": "Commiphora mukul",
+    "herb_common": "Guggul",
+    "drug_canonical": "Propranolol",
+    "condition": null,
+    "interaction_found": true,
+    "severity": "moderate",
+    "interaction_type": "pharmacokinetic",
+    "mechanism": "Guggul might decrease how much propranolol (Inderal) the body absorbs. Taking guggul along with propranolol (Inderal) might decrease the effectiveness of propranolol (Inderal).",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": "Be cautious with this combination and talk with your health provider.",
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.webmd.com/vitamins/ai/ingredientmono-591/guggul",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.rxlist.com/supplements/guggul.htm",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.drugs.com/npp/guggul.html",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6087759"
+    ],
+    "source_urls": [
+      "https://pubmed.ncbi.nlm.nih.gov/17317650/",
+      "https://www.webmd.com/vitamins/ai/ingredientmono-591/guggul",
+      "https://www.rxlist.com/supplements/guggul.htm",
+      "https://www.drugs.com/npp/guggul.html",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6087759"
+    ],
+    "pmids": [
+      "17317650"
+    ],
+    "source_count": 5,
+    "contradiction_flags": [],
+    "evidence_score": 0.665,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 2,
+    "openalex_paper_count": 10,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  },
+  {
+    "herb_canonical": "Triphala",
+    "herb_common": "Triphala",
+    "drug_canonical": "Methotrexate",
+    "condition": "methotrexate-induced small intestinal damage",
+    "interaction_found": true,
+    "severity": null,
+    "interaction_type": "pharmacodynamic",
+    "mechanism": "Triphala protected from intestinal injuries by improving epithelial cell integrity. It decreased MPO and XO levels and increased GSH and SOD levels in intestinal mucosa.",
+    "active_compound": null,
+    "allopathic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "ayurvedic_base": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "timing_guidance": {
+      "value": null,
+      "quote": null,
+      "source": null,
+      "confidence": 0.0
+    },
+    "monitoring_parameters": [],
+    "contraindications": [],
+    "recommendation": null,
+    "evidence_level": 3,
+    "key_sources": [
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC6052535",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC12089839",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://www.mskcc.org/cancer-care/integrative-medicine/herbs/triphala",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5567597",
+      "Tavily Search | Year: 2024 | Evidence Level: 3 | URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC9424961"
+    ],
+    "source_urls": [
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC6052535",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC12089839",
+      "https://www.mskcc.org/cancer-care/integrative-medicine/herbs/triphala",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC5567597",
+      "https://pmc.ncbi.nlm.nih.gov/articles/PMC9424961"
+    ],
+    "pmids": [],
+    "source_count": 5,
+    "contradiction_flags": [],
+    "evidence_score": 0.505,
+    "groq_validation_score": 0.0,
+    "pubmed_paper_count": 0,
+    "openalex_paper_count": 11,
+    "pdf_evidence_count": 0,
+    "tavily_result_count": 5,
+    "validation_status": "Review Required"
+  }
+]

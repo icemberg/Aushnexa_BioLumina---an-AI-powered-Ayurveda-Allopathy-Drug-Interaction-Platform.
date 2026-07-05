@@ -9,6 +9,8 @@ GET  /auth/profile  — Get current user profile
 from fastapi import APIRouter, Depends, HTTPException, status, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
+from sqlalchemy.exc import SQLAlchemyError, IntegrityError
+from loguru import logger
 
 from app.db.connection import get_db
 from app.db.models import User, QueryHistory
@@ -36,15 +38,20 @@ async def check_rate_limit(request: Request, endpoint: str):
     ip = request.client.host
     key = f"ratelimit:{endpoint}:{ip}"
     
-    current = await redis_client.incr(key)
-    if current == 1:
-        await redis_client.expire(key, 600)  # 10 minutes
-        
-    if current > 5:
-        raise HTTPException(
-            status_code=429,
-            detail={"code": "TOO_MANY_REQUESTS", "error": "Too many login attempts. Try again in 10 minutes"}
-        )
+    try:
+        current = await redis_client.incr(key)
+        if current == 1:
+            await redis_client.expire(key, 600)  # 10 minutes
+            
+        if current > 5:
+            raise HTTPException(
+                status_code=429,
+                detail={"code": "TOO_MANY_REQUESTS", "error": "Too many login attempts. Try again in 10 minutes"}
+            )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.warning(f"Rate limiting failed (Redis might be down), allowing request: {e}")
 
 
 @router.post("/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
@@ -56,23 +63,33 @@ async def register(
     """Register a new user account."""
     await check_rate_limit(request, "register")
     
-    # Check for duplicate email
-    existing = await db.execute(
-        select(User).where(User.email == payload.email)
-    )
-    if existing.scalar_one_or_none():
-        raise DuplicateUserError()
+    try:
+        # Check for duplicate email
+        existing = await db.execute(
+            select(User).where(User.email == payload.email)
+        )
+        if existing.scalar_one_or_none():
+            raise DuplicateUserError()
 
-    # Create user
-    user = User(
-        email=payload.email,
-        password_hash=hash_password(payload.password),
-        full_name=payload.full_name or None,
-        role="PATIENT",
-    )
-    db.add(user)
-    await db.flush()
-    await db.refresh(user)
+        # Create user
+        user = User(
+            email=payload.email,
+            password_hash=hash_password(payload.password),
+            full_name=payload.full_name or None,
+            role="PATIENT",
+        )
+        db.add(user)
+        await db.flush()
+        await db.refresh(user)
+    except DuplicateUserError:
+        raise
+    except IntegrityError:
+        await db.rollback()
+        raise DuplicateUserError()
+    except SQLAlchemyError as e:
+        await db.rollback()
+        logger.error(f"Database error during registration: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
     return UserResponse(
         id=str(user.id),
@@ -93,10 +110,14 @@ async def login(
     """Authenticate and return a JWT access token in an HttpOnly cookie."""
     await check_rate_limit(request, "login")
     
-    result = await db.execute(
-        select(User).where(User.email == payload.email)
-    )
-    user = result.scalar_one_or_none()
+    try:
+        result = await db.execute(
+            select(User).where(User.email == payload.email)
+        )
+        user = result.scalar_one_or_none()
+    except SQLAlchemyError as e:
+        logger.error(f"Database error during login: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
 
     if not user:
         raise InvalidCredentialsError(error_msg="No account found with this email address.")
@@ -151,12 +172,16 @@ async def get_profile(
 ):
     """Get the authenticated user's profile with query stats."""
     # Count total queries
-    result = await db.execute(
-        select(func.count(QueryHistory.id)).where(
-            QueryHistory.user_id == current_user.id
+    try:
+        result = await db.execute(
+            select(func.count(QueryHistory.id)).where(
+                QueryHistory.user_id == current_user.id
+            )
         )
-    )
-    total_queries = result.scalar() or 0
+        total_queries = result.scalar() or 0
+    except SQLAlchemyError as e:
+        logger.error(f"Database error fetching profile stats: {e}")
+        total_queries = 0
 
     return ProfileResponse(
         id=str(current_user.id),

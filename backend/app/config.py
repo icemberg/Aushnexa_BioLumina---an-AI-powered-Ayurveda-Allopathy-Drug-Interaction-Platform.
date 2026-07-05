@@ -4,7 +4,7 @@ Aushnexa Backend Configuration
 Loads all environment variables using Pydantic Settings.
 """
 
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
 from functools import lru_cache
 from pathlib import Path
@@ -73,11 +73,12 @@ class Settings(BaseSettings):
         """Parse comma-separated CORS origins into a list."""
         return [origin.strip() for origin in self.cors_origins.split(",")]
 
-    model_config = {
-        "env_file": str(BASE_DIR / ".env"),
-        "env_file_encoding": "utf-8",
-        "case_sensitive": False,
-    }
+    model_config = SettingsConfigDict(
+        env_file=str(BASE_DIR / ".env"),
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        extra="ignore",
+    )
 
 
 @lru_cache

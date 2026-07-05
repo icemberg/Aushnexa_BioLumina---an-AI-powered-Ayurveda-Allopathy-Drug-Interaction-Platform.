@@ -53,3 +53,6 @@ backend/*.egg-info/
 # Databases
 *.sqlite3
 *.db
+
+
+data_pipeline/protocols/storage/raw_documents/*

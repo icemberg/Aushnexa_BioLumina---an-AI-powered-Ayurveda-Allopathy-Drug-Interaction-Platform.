@@ -17,7 +17,8 @@ Return ONLY a valid JSON object matching exactly this schema:
     "drugs": ["list", "of", "drugs"],
     "compounds": ["list", "of", "compounds"],
     "conditions": ["list", "of", "medical", "conditions"]
-  }
+  },
+  "patient_parameters": "Any patient specific parameters like age, pregnancy, conditions, dosage modifiers, or constraints found in the query (usually enclosed in brackets). If none, return null."
 }
 Do not include markdown blocks, just the JSON.
 """
@@ -31,10 +32,10 @@ Return ONLY a valid JSON object matching exactly this schema:
       {"id": "entity_name_lowercase", "label": "Entity Name", "type": "compound|drug", "color": "teal|amber"}
     ],
     "edges": [
-      {"from": "id1", "to": "id2", "risk": "low|moderate|high|critical", "label": "Short mechanism"}
+      {"from": "id1", "to": "id2", "risk": "low|moderate|high|critical|severe|unknown", "label": "Short mechanism"}
     ],
     "selected_interaction": "Entity1 + Entity2",
-    "risk_level": "low|moderate|high|critical"
+    "risk_level": "low|moderate|high|critical|severe|unknown"
   },
   "protocol": {
     "title": "Integrative Protocol",
@@ -57,7 +58,7 @@ Return ONLY a valid JSON object matching exactly this schema:
   }
 }
 
-Use the provided Neo4j Graph Data to inform your response. CRITICAL: The graph data may be in Spanish. You MUST translate all medical mechanisms, effects, and text into English. Your entire generated JSON response MUST be in English. If graph data is empty, state clearly in the insights that it is a theoretical interaction. Do not invent interactions.
+Use the provided Neo4j Graph Data to inform your response. CRITICAL: The graph data may be in Spanish. You MUST translate all medical mechanisms, effects, and text into English. Your entire generated JSON response MUST be in English. If graph data is empty, state clearly in the insights that it is a theoretical interaction, but you MUST still evaluate and provide a valid risk_level (low|moderate|high|critical) based on your clinical knowledge. Do not leave the risk level as unknown if a known clinical interaction exists.
 Do not include markdown blocks, just the JSON.
 """
 
@@ -80,12 +81,58 @@ class AIService:
 
         # Step 1: Entity Extraction
         logger.info(f"Extracting entities for query: {query}")
-        extraction_resp = await self._call_groq(query, EXTRACT_PROMPT, temp=0.1)
         try:
+            extraction_resp = await self._call_groq(query, EXTRACT_PROMPT, temp=0.1)
             extraction = json.loads(extraction_resp)
         except Exception as e:
-            logger.error(f"Failed to parse extraction JSON: {extraction_resp}")
+            logger.error(f"Entity extraction call or JSON parsing failed: {e}")
             extraction = {"intent": "interaction_analysis", "entities": {"herbs": [], "drugs": [], "compounds": [], "conditions": []}}
+
+        # Step 1.5: Protocol Search
+        legacy_response = None
+        try:
+            from app.services.protocol_search import ProtocolSearch
+            from app.services.protocol_adapter import ProtocolAdapter
+            
+            entities = extraction.get("entities", {})
+            conditions = entities.get("conditions", [])
+            herbs = entities.get("herbs", [])
+            drugs = entities.get("drugs", [])
+            patient_parameters = extraction.get("patient_parameters")
+            
+            async with get_driver().session() as session:
+                best_protocol = await ProtocolSearch.find_best_protocol(session, conditions, herbs, drugs)
+                
+                if best_protocol:
+                    logger.info(f"Using validated protocol from library: {best_protocol.get('title')}")
+                    legacy_response = ProtocolAdapter.protocol_to_legacy_response(best_protocol)
+                    
+                    if not patient_parameters or patient_parameters.lower() == "null":
+                        await cache_set(cache_key, json.dumps(legacy_response), ttl=3600)
+                        return legacy_response
+                    else:
+                        logger.info("Patient parameters detected. Passing baseline protocol to generator for adaptation.")
+        except Exception as e:
+            logger.error(f"Protocol search failed: {e}")
+
+        # Step 1.7: Deep Generation Pipeline
+        if not legacy_response and herbs and drugs:
+            logger.info("No existing protocol found. Triggering Deep AI Scan.")
+            try:
+                from app.services.collection_service import CollectionService
+                collection_svc = CollectionService()
+                generated_protocol = await collection_svc.run_single_pair_pipeline(herbs[0], drugs[0])
+                from app.services.protocol_adapter import ProtocolAdapter
+                legacy_response = ProtocolAdapter.protocol_to_legacy_response(generated_protocol)
+                
+                if not patient_parameters or patient_parameters.lower() == "null":
+                    legacy_response["_source"] = "generated"
+                    await cache_set(cache_key, json.dumps(legacy_response), ttl=3600)
+                    return legacy_response
+                else:
+                    logger.info("Patient parameters detected for generated protocol. Passing to generator for adaptation.")
+            except Exception as e:
+                logger.error(f"Deep AI Scan failed: {e}. Falling back to groq generation.")
 
         # Step 2: Graph Retrieval
         all_entities = []
@@ -113,12 +160,19 @@ class AIService:
                 logger.error(f"Graph retrieval failed: {e}")
 
         # Step 3: Structured Generation
-        context_prompt = f"User Query: {query}\n\nExtracted Entities: {json.dumps(extraction)}\n\nNeo4j Graph Data: {json.dumps(graph_data)}\n\nGenerate structured JSON."
+        context_prompt = f"User Query: {query}\n\nExtracted Entities: {json.dumps(extraction)}\n\nNeo4j Graph Data: {json.dumps(graph_data)}\n\n"
+        
+        patient_parameters = extraction.get("patient_parameters")
+        if legacy_response and patient_parameters and patient_parameters.lower() != "null":
+            context_prompt += f"Baseline Protocol to Adapt:\n{json.dumps(legacy_response)}\n\n"
+            context_prompt += f"CRITICAL: You MUST adapt the Baseline Protocol above based on these Patient Parameters: {patient_parameters}. Change dosages, warnings, and add specific insights relevant to the patient's age, pregnancy status, or conditions. Maintain the JSON structure.\n\n"
+            
+        context_prompt += "Generate structured JSON."
         
         logger.info("Generating structured response...")
-        gen_resp = await self._call_groq(context_prompt, GENERATE_PROMPT, temp=0.3)
-        
         try:
+            gen_resp = await self._call_groq(context_prompt, GENERATE_PROMPT, temp=0.3)
+            
             # Strip potential markdown formatting that LLMs sometimes add despite instructions
             cleaned_resp = gen_resp.strip()
             if cleaned_resp.startswith("```json"):
@@ -129,9 +183,18 @@ class AIService:
                 cleaned_resp = cleaned_resp[:-3]
                 
             final_data = json.loads(cleaned_resp.strip())
+            
+            # Save generated protocol as draft
+            try:
+                from app.services.protocol_search import ProtocolSearch
+                async with get_driver().session() as session:
+                    await ProtocolSearch.save_draft_protocol(session, final_data, query)
+            except Exception as save_err:
+                logger.error(f"Failed to save draft protocol: {save_err}")
+                
         except Exception as e:
-            logger.error(f"Failed to parse generation JSON: {gen_resp}")
-            raise Exception("AI failed to return valid JSON structure.")
+            logger.error(f"Generation API call or parsing failed: {e}")
+            raise Exception("AI failed to generate a valid response. Please try again.") from e
 
         # Cache valid response
         await cache_set(cache_key, json.dumps(final_data), ttl=3600) # 1 hour cache

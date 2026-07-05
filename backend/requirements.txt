@@ -55,3 +55,7 @@ scrapy
 playwright
 chromium
 webkit
+
+# PDF parser
+PyMuPDF
+pdfplumber

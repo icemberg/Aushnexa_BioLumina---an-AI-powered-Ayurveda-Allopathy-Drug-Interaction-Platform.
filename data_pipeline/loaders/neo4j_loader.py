@@ -17,7 +17,9 @@ async def create_constraints(driver):
     queries = [
         "CREATE CONSTRAINT IF NOT EXISTS FOR (h:Herb) REQUIRE h.name IS UNIQUE",
         "CREATE CONSTRAINT IF NOT EXISTS FOR (d:Drug) REQUIRE d.name IS UNIQUE",
-        "CREATE CONSTRAINT IF NOT EXISTS FOR (c:Compound) REQUIRE c.name IS UNIQUE"
+        "CREATE CONSTRAINT IF NOT EXISTS FOR (c:Compound) REQUIRE c.name IS UNIQUE",
+        "CREATE CONSTRAINT IF NOT EXISTS FOR (ds:Disease) REQUIRE ds.name IS UNIQUE",
+        "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Protocol) REQUIRE p.protocol_id IS UNIQUE"
     ]
     async with driver.session() as session:
         for q in queries:

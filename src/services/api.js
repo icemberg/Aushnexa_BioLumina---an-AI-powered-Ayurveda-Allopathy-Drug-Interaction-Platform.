@@ -1,9 +1,10 @@
 import axios from 'axios'
 import { jwtDecode } from 'jwt-decode'
 import { useAppStore } from '../store/appStore'
+import toast from 'react-hot-toast'
 
 const api = axios.create({
-  baseURL: '/v1',
+  baseURL: 'http://localhost:8000/v1',
   timeout: 60000,
   withCredentials: true,
   headers: { 'Content-Type': 'application/json' }
@@ -19,6 +20,10 @@ api.interceptors.response.use(
       if (window.location.pathname !== '/login') {
         window.location.href = '/login'
       }
+    } else if (error.code === 'ERR_NETWORK') {
+      toast.error('Network error: Unable to reach the server. Please check your connection.', { id: 'network-err' })
+    } else if (error.response?.status >= 500) {
+      toast.error('Internal server error. Our team has been notified.', { id: 'server-err' })
     }
     return Promise.reject(error)
   }
@@ -52,7 +57,7 @@ export const fetchHistory = (page = 1, limit = 20) =>
  */
 export const translateText = (text, targetLang) =>
   api.post('/translate', { text, target_language: targetLang })
-     .then(r => r.data)
+    .then(r => r.data)
 
 /**
  * Fetch evidence from multiple sources

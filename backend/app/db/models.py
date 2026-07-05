@@ -115,3 +115,71 @@ class ClinicalFeedback(Base):
 
     # Relationships
     query = relationship("QueryHistory", back_populates="feedback")
+
+
+class ProtocolSubmission(Base):
+    """
+    Manual curation portal submissions for new clinical protocols.
+    """
+    __tablename__ = "protocol_submissions"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    submitter_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=True)
+    title = Column(String(255), nullable=False)
+    condition = Column(String(255), nullable=False)
+    payload = Column(JSON, nullable=False)  # The extracted protocol fields
+    status = Column(String(50), default="pending_review")  # pending_review, approved, rejected
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    # Relationships
+    submitter = relationship("User", foreign_keys=[submitter_id])
+    reviews = relationship("ProtocolReview", back_populates="submission", lazy="selectin")
+
+
+class ProtocolReview(Base):
+    """
+    Reviews for protocol submissions by an ADMIN or clinician.
+    """
+    __tablename__ = "protocol_reviews"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    submission_id = Column(UUID(as_uuid=True), ForeignKey("protocol_submissions.id"), nullable=False)
+    reviewer_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=False)
+    decision = Column(String(50), nullable=False)  # approve, reject, request_changes
+    comments = Column(Text, nullable=True)
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+    # Relationships
+    submission = relationship("ProtocolSubmission", back_populates="reviews")
+    reviewer = relationship("User", foreign_keys=[reviewer_id])
+
+
+class ProtocolVersion(Base):
+    """
+    Tracks versions of Neo4j Protocol nodes for audit and rollback purposes.
+    """
+    __tablename__ = "protocol_versions"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    protocol_id = Column(String(255), nullable=False, index=True)  # The UUID from Neo4j Protocol node
+    version = Column(Integer, nullable=False)
+    payload = Column(JSON, nullable=False)  # Full snapshot of the protocol node
+    created_by = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=True)
+    status = Column(String(50), nullable=False) # e.g. active, deprecated
+    created_at = Column(DateTime, default=datetime.utcnow)
+
+
+class ProtocolAuditLog(Base):
+    """
+    Audit log for any changes to protocols.
+    """
+    __tablename__ = "protocol_audit_logs"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    protocol_id = Column(String(255), nullable=False, index=True)
+    action = Column(String(100), nullable=False) # created, updated, status_changed
+    actor_id = Column(UUID(as_uuid=True), ForeignKey("users.id"), nullable=True)
+    details = Column(JSON, nullable=True)
+    timestamp = Column(DateTime, default=datetime.utcnow)
+
