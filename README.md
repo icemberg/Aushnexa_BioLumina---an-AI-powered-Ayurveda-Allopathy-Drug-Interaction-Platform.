@@ -26,7 +26,7 @@ Aushnexa detects dangerous interactions between Ayurvedic herbs and allopathic m
 7. [Project Structure](#project-structure)
 8. [Getting Started](#getting-started)
 9. [Docker Architecture](#docker-architecture)
-10. [Security](#security)
+10. [Security & Reliability](#security--reliability)
 11. [Data Pipeline](#data-pipeline)
 12. [Testing](#testing)
 13. [Deployment](#deployment)
@@ -40,44 +40,47 @@ Aushnexa detects dangerous interactions between Ayurvedic herbs and allopathic m
 
 ## System Architecture
 
-Aushnexa operates on a decoupled architecture utilizing a React frontend, a FastAPI backend, and a multi-database persistence layer relying on PostgreSQL (relational), Neo4j (graph), and Redis (caching/rate limiting). It dynamically orchestrates external API calls to Anthropic's Claude and Sarvam AI to provide intelligent, localized interaction analysis.
+Aushnexa operates on a decoupled architecture utilizing a React frontend, a FastAPI backend, and a multi-database persistence layer relying on PostgreSQL (relational), Neo4j (graph), and Redis (caching/rate limiting). It dynamically orchestrates external API calls to Groq, Gemini, and Sarvam AI to provide intelligent, localized interaction analysis.
 
 ```mermaid
 flowchart TD
-    subgraph Client
-        UI[React Frontend]
+    subgraph Client Layer
+        UI["React Frontend (Vite)"]
     end
 
-    subgraph Reverse Proxy
-        NGINX[Nginx]
+    subgraph API Gateway
+        NGINX["Nginx Reverse Proxy"]
     end
 
-    subgraph Backend Services
-        API[FastAPI Backend]
+    subgraph Core Services
+        API["FastAPI Backend"]
     end
 
-    subgraph Databases
-        Neo4j[(Neo4j Knowledge Graph)]
-        PG[(PostgreSQL)]
-        Redis[(Redis Cache)]
+    subgraph Persistence Layer
+        Neo4j[("Neo4j Knowledge Graph")]
+        PG[("PostgreSQL")]
+        Redis[("Redis Cache")]
     end
 
-    subgraph External APIs
-        Claude[Anthropic Claude API]
-        Sarvam[Sarvam AI API]
-        PubMed[NCBI PubMed API]
-        CTgov[ClinicalTrials.gov API]
-        Semantic[Semantic Scholar Graph]
-        CTRI[CTRI India Scraper]
+    subgraph External Integrations
+        Groq["Groq API"]
+        Gemini["Google Gemini API"]
+        Sarvam["Sarvam AI API"]
+        PubMed["NCBI PubMed API"]
+        CTgov["ClinicalTrials.gov API"]
+        Semantic["Semantic Scholar Graph"]
+        CTRI["CTRI India Scraper"]
     end
 
     UI -->|HTTPS| NGINX
-    NGINX -->|Proxy / /v1/| API
+    NGINX -->|"/v1/"| API
+    
     API <--> Neo4j
     API <--> PG
     API <--> Redis
 
-    API <--> Claude
+    API <--> Groq
+    API <--> Gemini
     API <--> Sarvam
     API <--> PubMed
     API <--> CTgov
@@ -120,7 +123,7 @@ flowchart TD
 | **Backend** | Python 3.11+, FastAPI | High-performance asynchronous API |
 | **Databases** | Neo4j 5.x, PostgreSQL 15, Redis | Graph relations, relational user data, and caching |
 | **Backend Tools** | SQLAlchemy 2.0, Alembic, Passlib | Async ORM, migrations, and bcrypt password hashing |
-| **AI / LLM** | Anthropic Claude API | Explanation generation and integrative protocol synthesis |
+| **AI / LLM** | Groq, Gemini | Explanation generation and integrative protocol synthesis |
 | **Translation** | Sarvam AI | Indian language translation and TTS |
 | **External Integrations**| PubMed, CT.gov, Semantic Scholar, CTRI | Evidence aggregation and literature citation |
 | **DevOps** | Docker, Nginx, Certbot | Container orchestration, reverse proxy, and automated SSL |
@@ -208,11 +211,11 @@ sequenceDiagram
     participant User
     participant Frontend
     participant FastAPI
-    participant NormService as NormalizationService
-    participant Graph as Neo4jGraph
-    participant Risk as RiskService
-    participant Claude as ExplanationService
-    participant Sarvam as TranslationService
+    participant NormService as "Normalization Service"
+    participant Graph as "Neo4j Graph"
+    participant Risk as "Risk Service"
+    participant Groq as "Groq / Gemini (Explanation)"
+    participant Sarvam as "Translation Service"
 
     User->>Frontend: Enters entities (e.g. "Ashwagandha", "Thyroxine")
     Frontend->>FastAPI: POST /api/v1/check-interactions
@@ -222,8 +225,8 @@ sequenceDiagram
     Graph-->>FastAPI: Raw interaction & mechanism data
     FastAPI->>Risk: Calculate weighted risk scores
     Risk-->>FastAPI: Risk metrics
-    FastAPI->>Claude: Generate clinical explanations based on mechanisms
-    Claude-->>FastAPI: Synthesized English explanation
+    FastAPI->>Groq: Generate clinical explanations based on mechanisms
+    Groq-->>FastAPI: Synthesized English explanation
     FastAPI->>Sarvam: Translate to selected Indian language (optional)
     Sarvam-->>FastAPI: Translated text
     FastAPI-->>Frontend: InteractionResponse JSON
@@ -235,22 +238,22 @@ The proprietary risk score is calculated using four heavily weighted factors to 
 
 ```mermaid
 flowchart TD
-    S[Severity Score] -->|x 0.40| Total
-    E[Evidence Level] -->|x 0.30| Total
-    M[Mechanism Clarity] -->|x 0.20| Total
-    P[Patient Factors] -->|x 0.10| Total
+    S["Severity Score"] -->|x 0.40| Total
+    E["Evidence Level"] -->|x 0.30| Total
+    M["Mechanism Clarity"] -->|x 0.20| Total
+    P["Patient Factors"] -->|x 0.10| Total
 
-    Total[Calculate Composite Score 0-100]
+    Total["Calculate Composite Score (0-100)"]
 
-    Total --> Cond1{Score >= 80?}
-    Cond1 -- Yes --> C[Critical - Red Flag]
-    Cond1 -- No --> Cond2{Score >= 60?}
+    Total --> Cond1{"Score >= 80?"}
+    Cond1 -- Yes --> C["Critical (Red Flag)"]
+    Cond1 -- No --> Cond2{"Score >= 60?"}
     
-    Cond2 -- Yes --> Maj[Major - High Caution]
-    Cond2 -- No --> Cond3{Score >= 40?}
+    Cond2 -- Yes --> Maj["Major (High Caution)"]
+    Cond2 -- No --> Cond3{"Score >= 40?"}
     
-    Cond3 -- Yes --> Mod[Moderate - Monitor]
-    Cond3 -- No --> Min[Minor - Low Risk]
+    Cond3 -- Yes --> Mod["Moderate (Monitor)"]
+    Cond3 -- No --> Min["Minor (Low Risk)"]
 ```
 
 ### 3. Evidence Aggregation Pipeline
@@ -258,31 +261,31 @@ Clinical evidence is concurrently scraped, fetched, and aggregated in real-time 
 
 ```mermaid
 flowchart LR
-    Req[Evidence Request] --> Split
+    Req["Evidence Request"] --> Split
     
-    Split --> CTG[ClinicalTrials.gov API]
-    Split --> PUB[PubMed E-utilities]
-    Split --> CTRI[CTRI India Scraper]
-    Split --> SEM[Semantic Scholar Graph]
+    Split --> CTG["ClinicalTrials.gov API"]
+    Split --> PUB["PubMed E-utilities"]
+    Split --> CTRI["CTRI India Scraper"]
+    Split --> SEM["Semantic Scholar Graph"]
 
     CTG --> Agg
     PUB --> Agg
     CTRI --> Agg
     SEM --> Agg
 
-    Agg[Deduplication Layer] --> Score[Relevance Scoring]
-    Score --> Unify[Unified Evidence Response]
+    Agg["Deduplication Layer"] --> Score["Relevance Scoring"]
+    Score --> Unify["Unified Evidence Response"]
 ```
 
 ### 4. AI Query Pipeline (Aushnexa AI Tab)
-When clinicians ask open-ended questions about combinatorial regimens, Aushnexa leverages Claude for intent detection and structured extraction before querying the hard graph data.
+When clinicians ask open-ended questions about combinatorial regimens, Aushnexa leverages Groq and Gemini for intent detection and structured extraction before querying the hard graph data.
 
 ```mermaid
 sequenceDiagram
     participant User
-    participant NLP as Claude (Intent Detection)
-    participant Graph as Neo4j Graph
-    participant Synth as Claude (Generation)
+    participant NLP as "Groq / Gemini (Intent)"
+    participant Graph as "Neo4j Graph"
+    participant Synth as "Groq / Gemini (Generation)"
     
     User->>NLP: "Is turmeric safe with blood thinners for a diabetic?"
     NLP->>NLP: Extract entities (Turmeric, Blood Thinners)
@@ -291,6 +294,69 @@ sequenceDiagram
     NLP->>Synth: Pass graph facts for structured synthesis
     Synth->>Synth: Validate against safety guardrails
     Synth-->>User: Returns Interaction Matrix + Integrative Protocol
+```
+
+---
+
+## Security & Reliability
+
+Aushnexa is engineered for maximum uptime and clinical safety, featuring robust "Fail-Safe" and "Graceful Degradation" mechanisms.
+
+### Reliability Features (Graceful Degradation)
+* **Neo4j Fail-Safe**: If the graph database goes offline, the backend catches the error and dynamically falls back to the LLM (Groq / Gemini) to generate a synthetic risk analysis, preventing a complete 500 server crash.
+* **Redis Fail-Open**: If the Redis cache (used for rate-limiting) is unreachable, the authentication system "fails open," allowing legitimate users to log in rather than locking them out.
+* **Global Error Handling**: The frontend utilizes global Axios interceptors and React Query to gracefully catch network disconnections (`ERR_NETWORK`) and server errors, displaying clean toast notifications instead of failing silently.
+
+### Security Implementations
+* **Rate Limiting**: Strict Redis-backed IP rate limiting on authentication and LLM inference endpoints.
+* **JWT & Passwords**: JWT with HS256 signatures; all passwords hashed via Bcrypt with dynamic salting.
+* **Input Sanitization**: Extensive Pydantic v2 schema validation; strict null-byte and HTML tag stripping on user inputs.
+* **Session Storage**: JWT tokens stored purely in `sessionStorage` (cleared on browser close) rather than persistent `localStorage`.
+* **Database Isolation**: Alembic schema migrations enforce exact ENUM constraints for roles.
+* **Secure Headers**: Nginx enforces HSTS, blocks framing, and sets strict CORS policies.
+
+### Authentication Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Redis as "Redis (RateLimit)"
+    participant API
+    participant Postgres
+
+    User->>Frontend: Submit Login Credentials
+    Frontend->>API: POST /api/v1/auth/login
+    API->>Redis: Check login attempts
+    Redis-->>API: Allow
+    API->>Postgres: Lookup user by email
+    Postgres-->>API: Return hashed password
+    API->>API: Verify bcrypt hash
+    API->>API: Generate signed JWT
+    API-->>Frontend: Return JWT (1440m expiry)
+    Frontend->>Frontend: Store in sessionStorage
+```
+
+### Role-Based Access Control
+
+```mermaid
+flowchart LR
+    User["Anonymous User"] --> Reg["Registration"]
+    Reg --> P("PATIENT")
+    Reg --> C("CLINICIAN")
+    Reg --> Ph("PHARMACIST")
+    Reg --> R("RESEARCHER")
+    
+    DB[("Database Override")] -.->|Manual SQL Only| A("ADMIN")
+
+    P -->|Allowed| Int["Interaction Checker"]
+    C -->|Allowed| AI["AI Protocols"]
+    C -->|Allowed| Ev["Evidence Portal"]
+    Ph -->|Allowed| KB["Knowledge Base"]
+    R -->|Allowed| KB
+    
+    A -->|Restricted Access| Dash["Admin Dashboard"]
+    A -->|Restricted Access| Logs["System Audit Logs"]
 ```
 
 ---
@@ -450,7 +516,7 @@ aushnexa/
 * Docker and Docker Compose
 * Node.js 20+ (for local frontend development)
 * Python 3.11+ (for local backend development)
-* API Keys for GROQ API and Sarvam AI
+* API Keys for Groq, Gemini, and Sarvam AI
 
 ### Environment Variables
 Copy `.env.example` to `.env` in the root directory.
@@ -487,9 +553,13 @@ REDIS_HOST=redis
 REDIS_PORT=6379
 REDIS_URL=redis://redis:6379/0
 
-# ─── Groq / Anthropic API (Explanation Generation) ───
-GROQ_API_KEY=your-anthropic-or-groq-api-key-here
-GROQ_MODEL=claude-sonnet-4-20250514
+# ─── Groq API (Explanation Generation) ───
+GROQ_API_KEY=your-groq-api-key-here
+GROQ_MODEL=llama-3.3-70b-versatile
+
+# ─── Google Gemini API ───
+GEMINI_API_KEY=your-gemini-api-key-here
+GEMINI_MODEL=gemini-2.0-flash
 
 # ─── Sarvam AI (Translation & TTS) ───
 SARVAM_API_KEY=your-sarvam-api-key-here
@@ -551,77 +621,21 @@ This allows the entire application to be deployed as a single Web Service, conne
 
 ---
 
-## Security
-
-### Authentication Flow
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant Frontend
-    participant Redis (RateLimit)
-    participant API
-    participant Postgres
-
-    User->>Frontend: Submit Login Credentials
-    Frontend->>API: POST /api/v1/auth/login
-    API->>Redis (RateLimit): Check login attempts
-    Redis (RateLimit)-->>API: Allow
-    API->>Postgres: Lookup user by email
-    Postgres-->>API: Return hashed password
-    API->>API: Verify bcrypt hash
-    API->>API: Generate signed JWT
-    API-->>Frontend: Return JWT (1440m expiry)
-    Frontend->>Frontend: Store in sessionStorage
-```
-
-### Role-Based Access Control
-
-```mermaid
-flowchart LR
-    User[Anonymous User] --> Reg[Registration]
-    Reg --> P(PATIENT)
-    Reg --> C(CLINICIAN)
-    Reg --> Ph(PHARMACIST)
-    Reg --> R(RESEARCHER)
-    
-    DB[(Database Override)] -.->|Manual SQL Only| A(ADMIN)
-
-    P -->|Allowed| Int[Interaction Checker]
-    C -->|Allowed| AI[AI Protocols]
-    C -->|Allowed| Ev[Evidence Portal]
-    Ph -->|Allowed| KB[Knowledge Base]
-    R -->|Allowed| KB
-    
-    A -->|Restricted Access| Dash[Admin Dashboard]
-    A -->|Restricted Access| Logs[System Audit Logs]
-```
-
-### Security Implementations
-* **Rate Limiting**: Strict Redis-backed IP rate limiting on authentication and LLM inference endpoints.
-* **JWT & Passwords**: JWT with HS256 signatures; all passwords hashed via Bcrypt with dynamic salting.
-* **Input Sanitization**: Extensive Pydantic v2 schema validation; strict null-byte and HTML tag stripping on user inputs.
-* **Session Storage**: JWT tokens stored purely in `sessionStorage` (cleared on browser close) rather than persistent `localStorage`.
-* **Database Isolation**: Alembic schema migrations enforce exact ENUM constraints for roles.
-* **Secure Headers**: Nginx enforces HSTS, blocks framing, and sets strict CORS policies.
-
----
-
 ## Data Pipeline
 
 Aushnexa ships with a high-fidelity foundational dataset mapping thousands of compounds to physical mechanisms of action.
 
 ```mermaid
 flowchart TD
-    Raw1[herbs.json] --> Parser[Data Parser]
-    Raw2[interactions.json] --> Parser
-    Raw3[drug_classes.json] --> Parser
+    Raw1["herbs.json"] --> Parser["Data Parser"]
+    Raw2["interactions.json"] --> Parser
+    Raw3["drug_classes.json"] --> Parser
     
-    Parser --> Loader[load_graph.py]
-    Loader --> Neo4j[(Neo4j Graph)]
+    Parser --> Loader["load_graph.py"]
+    Loader --> Neo4j[("Neo4j Graph")]
     
-    Neo4j --> Syn[synonyms.json generation]
-    Syn --> Norm[NormalizationService Cache]
+    Neo4j --> Syn["synonyms.json generation"]
+    Syn --> Norm["NormalizationService Cache"]
 ```
 
 ### Datasets Used
@@ -675,7 +689,7 @@ Aushnexa is fully containerized and designed to be deployed seamlessly across mo
    *   `NEO4J_URI` (Your AuraDB `neo4j+s://` URI)
    *   `NEO4J_USER` & `NEO4J_PASSWORD`
    *   `REDIS_URL` (Your Railway Redis connection string)
-   *   `GROQ_API_KEY`, `ANTHROPIC_API_KEY`, & `SARVAM_API_KEY`
+   *   `GROQ_API_KEY`, `GEMINI_API_KEY`, & `SARVAM_API_KEY`
 4. **Launch**:
    Render will build the image, automatically expose port `10000`, and run the `start-all.sh` entrypoint script which handles database migrations and starts both FastAPI and Nginx simultaneously.
 
@@ -703,14 +717,6 @@ Sarvam AI integration enables seamless medical translation into 7 core Indian la
 * **Banned Entities Enforcement**: Highly toxic botanicals and strictly regulated synthetic drugs immediately flag interactions as "CRITICAL" overriding default algorithms.
 * **Evidence Degradation**: If an interaction is purely theoretical (no clinical papers found), the maximum severity score is automatically handicapped to prevent alarmism without evidence.
 
-### Evidence Level Scale
-1. Systematic Reviews / Meta-Analysis
-2. Randomized Controlled Trials (RCT)
-3. Cohort Studies
-4. Case-Control Studies
-5. Case Reports
-6. Animal / In-Vitro Models (Theoretical)
-
 > **DISCLAIMER:** Aushnexa BioLumina is an informational platform utilizing artificial intelligence and aggregated biomedical databases. It is **NOT** a substitute for professional medical advice, diagnosis, or treatment. Always consult a licensed healthcare provider before modifying any medication regimen or incorporating new botanical supplements.
 
 ---
@@ -732,7 +738,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-* **[Anthropic Claude](https://www.anthropic.com/)** for unmatched reasoning and clinical protocol synthesis.
+* **[Groq](https://groq.com/)** for lightning-fast LPU inference enabling real-time clinical protocol synthesis.
+* **[Google Gemini](https://deepmind.google/technologies/gemini/)** for advanced multimodal context and reasoning.
 * **[Sarvam AI](https://www.sarvam.ai/)** for bringing state-of-the-art native Indian language models.
 * **[Neo4j](https://neo4j.com/)** for the powerful graph database engine.
 * **NCBI PubMed & ClinicalTrials.gov** for public access to humanity's medical research.
