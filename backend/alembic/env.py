@@ -16,6 +16,7 @@ if config.config_file_name is not None:
 
 import asyncio
 from sqlalchemy.ext.asyncio import create_async_engine
+import uuid
 
 from app.db.models import Base
 from app.config import get_settings
@@ -50,6 +51,7 @@ async def run_migrations_online() -> None:
         url,
         connect_args={
             "statement_cache_size": 0,
+            "prepared_statement_name_func": lambda: f"__asyncpg_{uuid.uuid4()}__",
         }
     )
     async with connectable.connect() as connection:

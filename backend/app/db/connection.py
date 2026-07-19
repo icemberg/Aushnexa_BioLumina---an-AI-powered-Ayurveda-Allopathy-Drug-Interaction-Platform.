@@ -10,6 +10,7 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
 )
 from loguru import logger
+import uuid
 
 from app.config import get_settings
 
@@ -31,9 +32,9 @@ async def init_db():
         max_overflow=20,
         pool_pre_ping=True,
         pool_recycle=3600,
-        prepared_statement_cache_size=0,
         connect_args={
             "statement_cache_size": 0,
+            "prepared_statement_name_func": lambda: f"__asyncpg_{uuid.uuid4()}__",
         }
     )
 
