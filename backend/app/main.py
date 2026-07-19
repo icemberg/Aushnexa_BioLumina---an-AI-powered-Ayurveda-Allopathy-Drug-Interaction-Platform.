@@ -30,6 +30,7 @@ from app.core.tasks import start_background_tasks
 from fastapi.responses import JSONResponse
 from fastapi import Request, Response
 from fastapi.exceptions import RequestValidationError
+from sqlalchemy.exc import SQLAlchemyError
 
 # Context variable for request ID tracking across async calls
 request_id_ctx_var = contextvars.ContextVar("request_id", default="-")
@@ -167,6 +168,26 @@ def create_app() -> FastAPI:
         }
 
     # ─── Exception Handlers ───
+    @app.exception_handler(Exception)
+    async def global_exception_handler(request: Request, exc: Exception):
+        logger.exception("Unhandled Exception Caught by Global Handler")
+        response_data = ErrorResponse(
+            error="An unexpected internal server error occurred.",
+            code="INTERNAL_SERVER_ERROR",
+            status=500
+        ).model_dump()
+        return JSONResponse(status_code=500, content=response_data)
+
+    @app.exception_handler(SQLAlchemyError)
+    async def sqlalchemy_exception_handler(request: Request, exc: SQLAlchemyError):
+        logger.error(f"Database Error Caught by Global Handler: {exc}")
+        response_data = ErrorResponse(
+            error="Database operation failed.",
+            code="DATABASE_ERROR",
+            status=503
+        ).model_dump()
+        return JSONResponse(status_code=503, content=response_data)
+
     @app.exception_handler(AushNexaException)
     async def aushnexa_exception_handler(request: Request, exc: AushNexaException):
         response_data = ErrorResponse(

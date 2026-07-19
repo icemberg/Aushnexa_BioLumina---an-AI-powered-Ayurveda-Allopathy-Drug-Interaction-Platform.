@@ -18,18 +18,10 @@ class TTSRequest(BaseModel):
 
 @router.post("/query")
 async def ai_query(req: AIQueryRequest):
-    try:
-        response = await ai_service.process_query(req.query)
-        return response
-    except Exception as e:
-        logger.error(f"AI Query failed: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    response = await ai_service.process_query(req.query)
+    return response
 
 @router.post("/tts")
 async def generate_tts(req: TTSRequest):
-    try:
-        base64_audios = await tts_service.generate_audio(req.text, req.language)
-        return {"audios": base64_audios}
-    except Exception as e:
-        logger.error(f"TTS generation failed: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    base64_audios = await tts_service.generate_audio(req.text, req.language)
+    return {"audios": base64_audios}

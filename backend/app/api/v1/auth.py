@@ -84,12 +84,7 @@ async def register(
     except DuplicateUserError:
         raise
     except IntegrityError:
-        await db.rollback()
         raise DuplicateUserError()
-    except SQLAlchemyError as e:
-        await db.rollback()
-        logger.error(f"Database error during registration: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
 
     return UserResponse(
         id=str(user.id),
@@ -110,14 +105,10 @@ async def login(
     """Authenticate and return a JWT access token in an HttpOnly cookie."""
     await check_rate_limit(request, "login")
     
-    try:
-        result = await db.execute(
-            select(User).where(User.email == payload.email)
-        )
-        user = result.scalar_one_or_none()
-    except SQLAlchemyError as e:
-        logger.error(f"Database error during login: {e}")
-        raise HTTPException(status_code=500, detail="Internal Server Error")
+    result = await db.execute(
+        select(User).where(User.email == payload.email)
+    )
+    user = result.scalar_one_or_none()
 
     if not user:
         raise InvalidCredentialsError(error_msg="No account found with this email address.")
@@ -143,7 +134,8 @@ async def login(
     )
 
     return TokenResponse(
-        message="Login successful",
+        access_token=access_token,
+        token_type="bearer",
         user=UserInfo(
             id=str(user.id),
             email=user.email,
@@ -172,16 +164,12 @@ async def get_profile(
 ):
     """Get the authenticated user's profile with query stats."""
     # Count total queries
-    try:
-        result = await db.execute(
-            select(func.count(QueryHistory.id)).where(
-                QueryHistory.user_id == current_user.id
-            )
+    result = await db.execute(
+        select(func.count(QueryHistory.id)).where(
+            QueryHistory.user_id == current_user.id
         )
-        total_queries = result.scalar() or 0
-    except SQLAlchemyError as e:
-        logger.error(f"Database error fetching profile stats: {e}")
-        total_queries = 0
+    )
+    total_queries = result.scalar() or 0
 
     return ProfileResponse(
         id=str(current_user.id),

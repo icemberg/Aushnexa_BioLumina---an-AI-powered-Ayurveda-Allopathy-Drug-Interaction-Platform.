@@ -37,15 +37,11 @@ async def get_knowledge_graph():
     if cached:
         return json.loads(cached)
         
-    try:
-        async with get_driver().session() as session:
-            data = await get_initial_graph(session)
-            
-            await cache_set(cache_key, json.dumps(data), ttl=3600)
-            return data
-    except Exception as e:
-        logger.error(f"Failed to fetch initial graph: {e}")
-        raise HTTPException(status_code=500, detail="Database query failed")
+    async with get_driver().session() as session:
+        data = await get_initial_graph(session)
+        
+        await cache_set(cache_key, json.dumps(data), ttl=3600)
+        return data
 
 @router.get("/node")
 async def get_node_details_api(node_id: str = Query(..., alias="id")):
