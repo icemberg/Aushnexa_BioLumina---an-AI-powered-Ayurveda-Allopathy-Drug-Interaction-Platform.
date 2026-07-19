@@ -48,7 +48,6 @@ async def run_migrations_online() -> None:
     url = get_settings().database_url
     connectable = create_async_engine(
         url,
-        prepared_statement_cache_size=0,
         connect_args={
             "statement_cache_size": 0,
         }

@@ -77,6 +77,10 @@ class Settings(BaseSettings):
             self.database_url = self.database_url.replace("postgres://", "postgresql+asyncpg://", 1)
         elif self.database_url.startswith("postgresql://") and not self.database_url.startswith("postgresql+asyncpg://"):
             self.database_url = self.database_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+            
+        if "prepared_statement_cache_size" not in self.database_url:
+            connector = "&" if "?" in self.database_url else "?"
+            self.database_url += f"{connector}prepared_statement_cache_size=0"
         
         return self
 
