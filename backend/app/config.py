@@ -5,7 +5,7 @@ Loads all environment variables using Pydantic Settings.
 """
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import Field
+from pydantic import Field, model_validator
 from functools import lru_cache
 from pathlib import Path
 
@@ -41,7 +41,7 @@ class Settings(BaseSettings):
     postgres_db: str = "aushnexa"
     postgres_user: str = "aushnexa_user"
     postgres_password: str = "aushnexa_secure_password_2024"
-    database_url: str = "postgresql+asyncpg://aushnexa_user:aushnexa_secure_password_2024@localhost:5432/aushnexa"
+    database_url: str | None = None
 
     # ─── Neo4j ───
     neo4j_uri: str = "bolt://localhost:7687"
@@ -67,6 +67,18 @@ class Settings(BaseSettings):
 
     # ─── Logging ───
     log_level: str = "INFO"
+
+    @model_validator(mode="after")
+    def assemble_db_connection(self) -> "Settings":
+        if not self.database_url:
+            self.database_url = f"postgresql+asyncpg://{self.postgres_user}:{self.postgres_password}@{self.postgres_host}:{self.postgres_port}/{self.postgres_db}"
+        
+        if self.database_url.startswith("postgres://"):
+            self.database_url = self.database_url.replace("postgres://", "postgresql+asyncpg://", 1)
+        elif self.database_url.startswith("postgresql://") and not self.database_url.startswith("postgresql+asyncpg://"):
+            self.database_url = self.database_url.replace("postgresql://", "postgresql+asyncpg://", 1)
+        
+        return self
 
     @property
     def cors_origins_list(self) -> list[str]:
