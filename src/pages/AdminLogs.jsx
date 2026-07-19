@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 
 const fetchLogs = async ({ page, status }) => {
   const token = localStorage.getItem('access_token');
-  const res = await fetch(`http://localhost:8000/v1/admin/access-logs?page=${page}&limit=10${status && status !== 'All' ? `&status=${status}` : ''}`, {
+  const res = await fetch(`/v1/admin/access-logs?page=${page}&limit=10${status && status !== 'All' ? `&status=${status}` : ''}`, {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!res.ok) throw new Error('Failed to fetch logs');
@@ -13,7 +13,7 @@ const fetchLogs = async ({ page, status }) => {
 
 const verifyInstitution = async (logId) => {
   const token = localStorage.getItem('access_token');
-  const res = await fetch(`http://localhost:8000/v1/admin/access-logs/${logId}/verify`, {
+  const res = await fetch(`/v1/admin/access-logs/${logId}/verify`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}` }
   });
@@ -47,7 +47,7 @@ export default function AdminLogs() {
 
   const handleExport = () => {
     const token = localStorage.getItem('access_token');
-    fetch('http://localhost:8000/v1/admin/access-logs/export', {
+    fetch('/v1/admin/access-logs/export', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => res.blob())

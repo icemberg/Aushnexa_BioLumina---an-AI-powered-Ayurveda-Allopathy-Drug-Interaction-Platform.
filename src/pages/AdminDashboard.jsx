@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 
 const fetchSystemStatus = async () => {
   const token = localStorage.getItem('access_token');
-  const res = await fetch('http://localhost:8000/v1/admin/system-status', {
+  const res = await fetch('/v1/admin/system-status', {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!res.ok) throw new Error('Failed to fetch status');
@@ -13,7 +13,7 @@ const fetchSystemStatus = async () => {
 
 const fetchMetrics = async () => {
   const token = localStorage.getItem('access_token');
-  const res = await fetch('http://localhost:8000/v1/admin/metrics', {
+  const res = await fetch('/v1/admin/metrics', {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!res.ok) throw new Error('Failed to fetch metrics');
@@ -22,7 +22,7 @@ const fetchMetrics = async () => {
 
 const fetchRecentLogs = async () => {
   const token = localStorage.getItem('access_token');
-  const res = await fetch('http://localhost:8000/v1/admin/access-logs?page=1&limit=5', {
+  const res = await fetch('/v1/admin/access-logs?page=1&limit=5', {
     headers: { Authorization: `Bearer ${token}` }
   });
   if (!res.ok) throw new Error('Failed to fetch logs');

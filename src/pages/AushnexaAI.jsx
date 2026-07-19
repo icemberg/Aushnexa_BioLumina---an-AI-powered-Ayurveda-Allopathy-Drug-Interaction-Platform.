@@ -59,7 +59,7 @@ const AushnexaAI = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:8000/v1/ai/query', { query: finalQuery });
+      const response = await axios.post('/v1/ai/query', { query: finalQuery });
       setAiData(response.data);
       if (response.data?.matrix?.edges?.length > 0) {
         setSelectedEdge(response.data.matrix.edges[0]);

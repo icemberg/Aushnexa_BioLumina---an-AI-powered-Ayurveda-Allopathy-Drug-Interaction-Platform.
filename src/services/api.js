@@ -4,7 +4,7 @@ import { useAppStore } from '../store/appStore'
 import toast from 'react-hot-toast'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/v1',
+  baseURL: import.meta.env.VITE_API_URL || '/v1',
   timeout: 60000,
   withCredentials: true,
   headers: { 'Content-Type': 'application/json' }
